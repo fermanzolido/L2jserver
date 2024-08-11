@@ -6,19 +6,29 @@ import logging
 import importlib.metadata
 
 # Configurar logging
-logging.basicConfig(filename='modification_log.txt', level=logging.INFO,
-                    format='%(asctime)s - %(message)s')
+logging.basicConfig(
+    filename="modification_log.txt",
+    level=logging.INFO,
+    format="%(asctime)s - %(message)s",
+)
+
 
 def check_git_repo():
     """Verifica si el directorio actual es un repositorio Git."""
     try:
-        result = subprocess.run(["git", "rev-parse", "--is-inside-work-tree"], capture_output=True, text=True, check=True)
-        if result.stdout.strip() == 'true':
+        result = subprocess.run(
+            ["git", "rev-parse", "--is-inside-work-tree"],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        if result.stdout.strip() == "true":
             print("Repositorio Git encontrado.")
             return True
     except subprocess.CalledProcessError:
         print("Este directorio no parece ser un repositorio Git.")
         return False
+
 
 def check_required_files():
     """Verifica si los archivos requeridos existen y los crea si no están presentes."""
@@ -27,12 +37,13 @@ def check_required_files():
         ".gitignore": "*.log\n*.pyc\n__pycache__/\nnode_modules/\n*.class\n*.jar\n",
     }
 
-    for file, content in required_files.items():
+    for file, content in list(required_files.items()):
         if not os.path.exists(file):
             print(f"Advertencia: {file} no encontrado. Creando {file}...")
             create_file(file, content)
         else:
             print(f"{file} encontrado.")
+
 
 def create_file(filename, content):
     """Crea un archivo con el contenido proporcionado."""
@@ -42,6 +53,7 @@ def create_file(filename, content):
         print(f"{filename} creado con éxito.")
     except IOError as e:
         print(f"Error al crear el archivo {filename}: {e}")
+
 
 def create_requirements_txt():
     """Genera un archivo requirements.txt con las dependencias necesarias del proyecto."""
@@ -55,6 +67,7 @@ def create_requirements_txt():
     except Exception as e:
         print(f"Error al crear requirements.txt: {e}")
         logging.info(f"Error al crear requirements.txt: {e}")
+
 
 def update_jar_files():
     """Actualiza los archivos .jar a versiones compatibles con Java 21."""
@@ -79,6 +92,7 @@ def update_jar_files():
             print(f"Error al actualizar {jar_file}: {e}")
             logging.info(f"Error al actualizar {jar_file}: {e}")
 
+
 def handle_file_encoding(file_path):
     """Repara la codificación de archivos Python si es necesario."""
     try:
@@ -95,6 +109,7 @@ def handle_file_encoding(file_path):
             print(f"Codificación reparada en {file_path}.")
         except Exception as e:
             print(f"Error al reparar codificación en {file_path}: {e}")
+
 
 def refactor_python_code():
     """Refactoriza y formatea código Python en el proyecto."""
@@ -116,6 +131,7 @@ def refactor_python_code():
     except subprocess.CalledProcessError as e:
         print(f"Error al refactorizar código Python: {e}")
 
+
 def refactor_java_code():
     """Refactoriza y actualiza código Java en el proyecto."""
     print("Refactorizando y actualizando código Java...")
@@ -125,6 +141,7 @@ def refactor_java_code():
         print("Código Java refactorizado y actualizado con éxito.")
     except subprocess.CalledProcessError as e:
         print(f"Error al refactorizar código Java: {e}")
+
 
 def run_tests():
     """Ejecuta pruebas dependiendo de los archivos de prueba disponibles."""
@@ -138,6 +155,7 @@ def run_tests():
     except subprocess.CalledProcessError as e:
         print(f"Error al ejecutar pruebas: {e}")
 
+
 def detect_and_refactor_code():
     """Detecta y refactoriza código según el lenguaje utilizado."""
     detected_python = detected_java = detected_jar = False
@@ -150,7 +168,9 @@ def detect_and_refactor_code():
             elif file.endswith(".jar"):
                 detected_jar = True
             else:
-                logging.info(f"Archivo no manejado: {file} - Se requiere una extensión válida para editar.")
+                logging.info(
+                    f"Archivo no manejado: {file} - Se requiere una extensión válida para editar."
+                )
 
     if detected_python:
         refactor_python_code()
@@ -159,11 +179,15 @@ def detect_and_refactor_code():
     if detected_jar:
         update_jar_files()
 
+
 def git_create_branch(branch_name):
     """Crea una nueva rama Git o cambia a una existente."""
     try:
         result = subprocess.run(
-            ["git", "branch", "--list", branch_name], capture_output=True, text=True, check=True
+            ["git", "branch", "--list", branch_name],
+            capture_output=True,
+            text=True,
+            check=True,
         )
         if result.stdout.strip():
             print(f"La rama '{branch_name}' ya existe. Cambiando a ella...")
@@ -173,6 +197,7 @@ def git_create_branch(branch_name):
             print(f"Rama '{branch_name}' creada y cambiada a ella.")
     except subprocess.CalledProcessError as e:
         print(f"Error al gestionar ramas de Git: {e}")
+
 
 def git_add_commit_push(message, branch="main"):
     """Añade, comitea y empuja los cambios a la rama especificada."""
@@ -184,13 +209,17 @@ def git_add_commit_push(message, branch="main"):
     except subprocess.CalledProcessError as e:
         print(f"Error al comitear o empujar cambios: {e}")
 
+
 def git_status():
     """Muestra el estado actual del repositorio Git."""
     try:
-        result = subprocess.run(["git", "status"], capture_output=True, text=True, check=True)
-        print(result.stdout)
+        result = subprocess.run(
+            ["git", "status"], capture_output=True, text=True, check=True
+        )
+        print((result.stdout))
     except subprocess.CalledProcessError as e:
         print(f"Error al obtener el estado del repositorio Git: {e}")
+
 
 def main():
     """Función principal que orquesta todas las operaciones."""
@@ -213,6 +242,7 @@ def main():
     )
 
     print("Cambios realizados y empujados a la rama 'auto-update-and-refactor'.")
+
 
 if __name__ == "__main__":
     main()
