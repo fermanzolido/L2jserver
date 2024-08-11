@@ -9,66 +9,72 @@ qn = "261_DreamOfMoneylender1"
 GIANT_SPIDER_LEG = 1087
 ADENA = 57
 
-class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+class Quest(JQuest):
 
- def onEvent (self,event,st) :
-    htmltext = event
-    if event == "30222-03.htm" :
-      st.set("cond","1")
-      st.setState(STARTED)
-      st.playSound("ItemSound.quest_accept")
-    return htmltext
+    def __init__(self, id, name, descr):
+        JQuest.__init__(self, id, name, descr)
 
- def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
-   st = player.getQuestState(qn)
-   if not st : return htmltext
+    def onEvent(self, event, st):
+        htmltext = event
+        if event == "30222-03.htm":
+            st.set("cond", "1")
+            st.setState(STARTED)
+            st.playSound("ItemSound.quest_accept")
+        return htmltext
 
-   npcId = npc.getNpcId()
-   id = st.getState()
+    def onTalk(self, npc, player):
+        htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
+        st = player.getQuestState(qn)
+        if not st:
+            return htmltext
 
-   if id == CREATED :
-     st.set("cond","0")
-   if st.getInt("cond")==0 :
-     if player.getLevel() >= 15 :
-       htmltext = "30222-02.htm"
-     else:
-       htmltext = "30222-01.htm"
-       st.exitQuest(1)
-   else :
-     if st.getQuestItemsCount(GIANT_SPIDER_LEG) >= 8 :
-       st.giveItems(ADENA,1000)
-       st.takeItems(GIANT_SPIDER_LEG,-1)
-       st.addExpAndSp(2000,0)
-       htmltext = "30222-05.htm"
-       st.exitQuest(1)
-       st.playSound("ItemSound.quest_finish")
-     else:
-       htmltext = "30222-04.htm"
-   return htmltext
+        npcId = npc.getNpcId()
+        id = st.getState()
 
- def onKill(self,npc,player,isPet):
-   st = player.getQuestState(qn)
-   if not st : return 
-   if st.getState() != STARTED : return 
-   
-   count = st.getQuestItemsCount(GIANT_SPIDER_LEG)
-   if count < 8 :
-     st.giveItems(GIANT_SPIDER_LEG,1)
-     if count == 7 :
-       st.playSound("ItemSound.quest_middle")
-       st.set("cond","2")
-     else:
-       st.playSound("ItemSound.quest_itemget")
-   return
+        if id == CREATED:
+            st.set("cond", "0")
+        if st.getInt("cond") == 0:
+            if player.getLevel() >= 15:
+                htmltext = "30222-02.htm"
+            else:
+                htmltext = "30222-01.htm"
+                st.exitQuest(1)
+        else:
+            if st.getQuestItemsCount(GIANT_SPIDER_LEG) >= 8:
+                st.giveItems(ADENA, 1000)
+                st.takeItems(GIANT_SPIDER_LEG, -1)
+                st.addExpAndSp(2000, 0)
+                htmltext = "30222-05.htm"
+                st.exitQuest(1)
+                st.playSound("ItemSound.quest_finish")
+            else:
+                htmltext = "30222-04.htm"
+        return htmltext
 
-QUEST       = Quest(261,qn,"Dream Of Moneylender1")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
+    def onKill(self, npc, player, isPet):
+        st = player.getQuestState(qn)
+        if not st:
+            return
+        if st.getState() != STARTED:
+            return
+
+        count = st.getQuestItemsCount(GIANT_SPIDER_LEG)
+        if count < 8:
+            st.giveItems(GIANT_SPIDER_LEG, 1)
+            if count == 7:
+                st.playSound("ItemSound.quest_middle")
+                st.set("cond", "2")
+            else:
+                st.playSound("ItemSound.quest_itemget")
+        return
+
+
+QUEST = Quest(261, qn, "Dream Of Moneylender1")
+CREATED = State("Start", QUEST)
+STARTING = State("Starting", QUEST)
+STARTED = State("Started", QUEST)
+COMPLETED = State("Completed", QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30222)
@@ -79,4 +85,4 @@ QUEST.addKillId(20308)
 QUEST.addKillId(20460)
 QUEST.addKillId(20466)
 
-STARTED.addQuestDrop(20460,GIANT_SPIDER_LEG,1)
+STARTED.addQuestDrop(20460, GIANT_SPIDER_LEG, 1)

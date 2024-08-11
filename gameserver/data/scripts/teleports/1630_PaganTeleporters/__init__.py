@@ -1,4 +1,4 @@
-#Quest correct like L2OFF by OnePaTuBHuK for L2jFrozen project.
+# Quest correct like L2OFF by OnePaTuBHuK for L2jFrozen project.
 import sys
 from com.l2jfrozen.gameserver.datatables.csv import DoorTable
 from com.l2jfrozen.gameserver.model.actor.instance import L2PcInstance
@@ -8,6 +8,7 @@ from com.l2jfrozen.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "1630_PaganTeleporters"
 NPCS = [32034, 32035, 32036, 32037]
+
 
 # Main Quest Code
 class Quest(JQuest):
@@ -27,11 +28,16 @@ class Quest(JQuest):
         npcId = npc.getNpcId()
         htmltext = None
         if npcId == 32034:
-            if st.getQuestItemsCount(8064) == 0 and st.getQuestItemsCount(8065) == 0 and st.getQuestItemsCount(
-                8067) == 0:
+            if (
+                st.getQuestItemsCount(8064) == 0
+                and st.getQuestItemsCount(8065) == 0
+                and st.getQuestItemsCount(8067) == 0
+            ):
                 return "<html><body>The Temple Gatekeeper:<br>You have nothing that would cover the holes.<br>(You must have a Visitor's Mark, a Faded Visitor's Mark, or a Pagan's Mark in order to open this door.)</body></html>"
             if st.getQuestItemsCount(8064):
-                st.takeItems(8064, 1) # TODO: this part must happen when u walk through doors >.<
+                st.takeItems(
+                    8064, 1
+                )  # TODO: this part must happen when u walk through doors >.<
                 st.giveItems(8065, 1)
             htmltext = "FadedMark.htm"
             DoorTable.getInstance().getDoor(19160001).openMe()
@@ -55,6 +61,7 @@ class Quest(JQuest):
             htmltext = "FadedMark.htm"
         st.exitQuest(1)
         return htmltext
+
 
 # Quest class and state definition
 QUEST = Quest(-1, qn, "Teleports")

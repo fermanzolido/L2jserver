@@ -1,4 +1,4 @@
-#Quest reworked by OnePaTuBHuK special for L2JFrozen. All rights reserved.
+# Quest reworked by OnePaTuBHuK special for L2JFrozen. All rights reserved.
 import sys
 from com.l2jfrozen import Config
 from com.l2jfrozen.gameserver.model.quest import State
@@ -7,10 +7,10 @@ from com.l2jfrozen.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "641_AttackSailren"
 
-#NPC
+# NPC
 STATUE = 32109
 
-#MOBS
+# MOBS
 VEL1 = 22196
 VEL2 = 22197
 VEL3 = 22198
@@ -18,74 +18,83 @@ VEL4 = 22218
 VEL5 = 22223
 PTE = 22199
 
-#ITEMS
+# ITEMS
 FRAGMENTS = 8782
 GAZKH = 8784
 
-class Quest (JQuest):
 
- def __init__(self,id,name,descr): 
-     JQuest.__init__(self,id,name,descr)
-     self.questItemIds = []
+class Quest(JQuest):
 
- def onEvent (self,event,st):
-   htmltext = event
-   if event == "32109-03.htm" :
-     st.set("cond","1")
-     st.setState(STARTED)
-     st.playSound("ItemSound.quest_accept")
-   if event == "32109-05.htm" :
-     st.playSound("ItemSound.quest_finish")
-     st.takeItems(FRAGMENTS,30)
-     st.giveItems(GAZKH,1)
-     st.exitQuest(1)
-   return htmltext
+    def __init__(self, id, name, descr):
+        JQuest.__init__(self, id, name, descr)
+        self.questItemIds = []
 
- def onTalk (self,npc,player):
-   st = player.getQuestState(qn)
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
-   if not st : return htmltext
-   npcId = npc.getNpcId()
-   id = st.getState()
-   cond = st.getInt("cond")
-   if npcId == STATUE :
-     if id == CREATED :
-       if player.getLevel() >= 77 :
-         first = player.getQuestState("125_TheNameofEvilPart1")
-         second = player.getQuestState("126_TheNameofEvilPart2")
-         if first and second and first.getState().getName() == 'Completed' and second.getState().getName() == 'Completed' :
-           htmltext = "32109-01.htm"
-         else:
-           htmltext = "Quest only for the characters, that finished quest <font color=LEVEL>The Name Of Evil - Part 2</font>"
-           st.exitQuest(1)
-           return
-       else :
-         st.exitQuest(1)
-         return
-     elif cond == 1 :
-       htmltext = "32109-03.htm"
-     elif cond == 2 :
-       htmltext = "32109-04.htm"
-   return htmltext
+    def onEvent(self, event, st):
+        htmltext = event
+        if event == "32109-03.htm":
+            st.set("cond", "1")
+            st.setState(STARTED)
+            st.playSound("ItemSound.quest_accept")
+        if event == "32109-05.htm":
+            st.playSound("ItemSound.quest_finish")
+            st.takeItems(FRAGMENTS, 30)
+            st.giveItems(GAZKH, 1)
+            st.exitQuest(1)
+        return htmltext
 
- def onKill (self,npc,player,isPet):
-   st = player.getQuestState(qn)
-   if not st : return
-   if st.getState() == STARTED :
-     npcId = npc.getNpcId()
-     if npcId in [VEL1,VEL2,VEL3,VEL4,VEL5,PTE] :
-       if st.getQuestItemsCount(FRAGMENTS) < 30 :
-         st.giveItems(FRAGMENTS,1)
-         if st.getQuestItemsCount(FRAGMENTS) == 30 :
-           st.playSound("ItemSound.quest_middle")
-           st.set("cond","2")
-         else:
-           st.playSound("ItemSound.quest_itemget")
-   return
+    def onTalk(self, npc, player):
+        st = player.getQuestState(qn)
+        htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+        if not st:
+            return htmltext
+        npcId = npc.getNpcId()
+        id = st.getState()
+        cond = st.getInt("cond")
+        if npcId == STATUE:
+            if id == CREATED:
+                if player.getLevel() >= 77:
+                    first = player.getQuestState("125_TheNameofEvilPart1")
+                    second = player.getQuestState("126_TheNameofEvilPart2")
+                    if (
+                        first
+                        and second
+                        and first.getState().getName() == "Completed"
+                        and second.getState().getName() == "Completed"
+                    ):
+                        htmltext = "32109-01.htm"
+                    else:
+                        htmltext = "Quest only for the characters, that finished quest <font color=LEVEL>The Name Of Evil - Part 2</font>"
+                        st.exitQuest(1)
+                        return
+                else:
+                    st.exitQuest(1)
+                    return
+            elif cond == 1:
+                htmltext = "32109-03.htm"
+            elif cond == 2:
+                htmltext = "32109-04.htm"
+        return htmltext
 
-QUEST       = Quest(641,qn,"Attack Sailren!")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
+    def onKill(self, npc, player, isPet):
+        st = player.getQuestState(qn)
+        if not st:
+            return
+        if st.getState() == STARTED:
+            npcId = npc.getNpcId()
+            if npcId in [VEL1, VEL2, VEL3, VEL4, VEL5, PTE]:
+                if st.getQuestItemsCount(FRAGMENTS) < 30:
+                    st.giveItems(FRAGMENTS, 1)
+                    if st.getQuestItemsCount(FRAGMENTS) == 30:
+                        st.playSound("ItemSound.quest_middle")
+                        st.set("cond", "2")
+                    else:
+                        st.playSound("ItemSound.quest_itemget")
+        return
+
+
+QUEST = Quest(641, qn, "Attack Sailren!")
+CREATED = State("Start", QUEST)
+STARTED = State("Started", QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(STATUE)

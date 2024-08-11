@@ -4,80 +4,89 @@
 
 import sys
 
-from com.l2jfrozen.gameserver.model.quest        import State
-from com.l2jfrozen.gameserver.model.quest        import QuestState
+from com.l2jfrozen.gameserver.model.quest import State
+from com.l2jfrozen.gameserver.model.quest import QuestState
 from com.l2jfrozen.gameserver.model.quest.jython import QuestJython as JQuest
+
 qn = "30525_bronk_occupation_change"
-#print "30525. Bronk occupation change"
+# print "30525. Bronk occupation change"
 HEAD_BLACKSMITH_BRONK = 30525
 
-class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+class Quest(JQuest):
 
- def onEvent (self,event,st):
+    def __init__(self, id, name, descr):
+        JQuest.__init__(self, id, name, descr)
 
-   htmltext = "No Quest"
+    def onEvent(self, event, st):
 
-   Race     = st.getPlayer().getRace()
-   ClassId  = st.getPlayer().getClassId()
-   Level    = st.getPlayer().getLevel()
+        htmltext = "No Quest"
 
-   if event == "30525-01.htm":
-     return "30525-01.htm"
+        Race = st.getPlayer().getRace()
+        ClassId = st.getPlayer().getClassId()
+        Level = st.getPlayer().getLevel()
 
-   if event == "30525-02.htm":
-     return "30525-02.htm"
+        if event == "30525-01.htm":
+            return "30525-01.htm"
 
-   if event == "30525-03.htm":
-     return "30525-03.htm"
+        if event == "30525-02.htm":
+            return "30525-02.htm"
 
-   if event == "30525-04.htm":
-     return "30525-04.htm"
+        if event == "30525-03.htm":
+            return "30525-03.htm"
 
-   st.setState(COMPLETED)
-   st.exitQuest(1)
-   return htmltext
+        if event == "30525-04.htm":
+            return "30525-04.htm"
 
- def onTalk (Self,npc,player):
-   st = player.getQuestState(qn)
-   npcId = npc.getNpcId()
+        st.setState(COMPLETED)
+        st.exitQuest(1)
+        return htmltext
 
-   Race    = st.getPlayer().getRace()
-   ClassId = st.getPlayer().getClassId()
-   
-   # Dwarfs got accepted
-   if npcId == HEAD_BLACKSMITH_BRONK and Race in [Race.dwarf]:
-     if ClassId in [ClassId.dwarvenFighter]:
-       htmltext = "30525-01.htm"
-       st.setState(STARTED)
-       return htmltext
-     if ClassId in [ClassId.artisan]:
-       htmltext = "30525-05.htm"
-       st.setState(COMPLETED)
-       st.exitQuest(1)
-       return htmltext
-     if ClassId in [ClassId.warsmith]:
-       htmltext = "30525-06.htm"
-       st.setState(COMPLETED)
-       st.exitQuest(1)
-       return htmltext
-     if ClassId in [ClassId.scavenger, ClassId.bountyHunter]:
-       htmltext = "30525-07.htm"
-       st.setState(COMPLETED)
-       st.exitQuest(1)
-       return htmltext
+    def onTalk(Self, npc, player):
+        st = player.getQuestState(qn)
+        npcId = npc.getNpcId()
 
-   # All other Races must be out
-   if npcId == HEAD_BLACKSMITH_BRONK and Race in [Race.orc, Race.darkelf, Race.elf, Race.human]:
-     st.setState(COMPLETED)
-     st.exitQuest(1)
-     return "30525-07.htm"
+        Race = st.getPlayer().getRace()
+        ClassId = st.getPlayer().getClassId()
 
-QUEST   = Quest(30525,qn,"village_master")
-CREATED   = State('Start',     QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
+        # Dwarfs got accepted
+        if npcId == HEAD_BLACKSMITH_BRONK and Race in [Race.dwarf]:
+            if ClassId in [ClassId.dwarvenFighter]:
+                htmltext = "30525-01.htm"
+                st.setState(STARTED)
+                return htmltext
+            if ClassId in [ClassId.artisan]:
+                htmltext = "30525-05.htm"
+                st.setState(COMPLETED)
+                st.exitQuest(1)
+                return htmltext
+            if ClassId in [ClassId.warsmith]:
+                htmltext = "30525-06.htm"
+                st.setState(COMPLETED)
+                st.exitQuest(1)
+                return htmltext
+            if ClassId in [ClassId.scavenger, ClassId.bountyHunter]:
+                htmltext = "30525-07.htm"
+                st.setState(COMPLETED)
+                st.exitQuest(1)
+                return htmltext
+
+        # All other Races must be out
+        if npcId == HEAD_BLACKSMITH_BRONK and Race in [
+            Race.orc,
+            Race.darkelf,
+            Race.elf,
+            Race.human,
+        ]:
+            st.setState(COMPLETED)
+            st.exitQuest(1)
+            return "30525-07.htm"
+
+
+QUEST = Quest(30525, qn, "village_master")
+CREATED = State("Start", QUEST)
+STARTED = State("Started", QUEST)
+COMPLETED = State("Completed", QUEST)
 
 QUEST.setInitialState(CREATED)
 
