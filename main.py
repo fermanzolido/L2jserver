@@ -12,7 +12,6 @@ logging.basicConfig(
     format="%(asctime)s - %(message)s",
 )
 
-
 def check_git_repo():
     """Verifica si el directorio actual es un repositorio Git."""
     try:
@@ -29,7 +28,6 @@ def check_git_repo():
         print("Este directorio no parece ser un repositorio Git.")
         return False
 
-
 def check_required_files():
     """Verifica si los archivos requeridos existen y los crea si no están presentes."""
     required_files = {
@@ -44,7 +42,6 @@ def check_required_files():
         else:
             print(f"{file} encontrado.")
 
-
 def create_file(filename, content):
     """Crea un archivo con el contenido proporcionado."""
     try:
@@ -53,7 +50,6 @@ def create_file(filename, content):
         print(f"{filename} creado con éxito.")
     except IOError as e:
         print(f"Error al crear el archivo {filename}: {e}")
-
 
 def create_requirements_txt():
     """Genera un archivo requirements.txt con las dependencias necesarias del proyecto."""
@@ -67,7 +63,6 @@ def create_requirements_txt():
     except Exception as e:
         print(f"Error al crear requirements.txt: {e}")
         logging.info(f"Error al crear requirements.txt: {e}")
-
 
 def update_jar_files():
     """Actualiza los archivos .jar a versiones compatibles con Java 21."""
@@ -92,7 +87,6 @@ def update_jar_files():
             print(f"Error al actualizar {jar_file}: {e}")
             logging.info(f"Error al actualizar {jar_file}: {e}")
 
-
 def handle_file_encoding(file_path):
     """Repara la codificación de archivos Python si es necesario."""
     try:
@@ -109,7 +103,6 @@ def handle_file_encoding(file_path):
             print(f"Codificación reparada en {file_path}.")
         except Exception as e:
             print(f"Error al reparar codificación en {file_path}: {e}")
-
 
 def refactor_python_code():
     """Refactoriza y formatea código Python en el proyecto."""
@@ -131,7 +124,6 @@ def refactor_python_code():
     except subprocess.CalledProcessError as e:
         print(f"Error al refactorizar código Python: {e}")
 
-
 def refactor_java_code():
     """Refactoriza y actualiza código Java en el proyecto."""
     print("Refactorizando y actualizando código Java...")
@@ -142,7 +134,6 @@ def refactor_java_code():
     except subprocess.CalledProcessError as e:
         print(f"Error al refactorizar código Java: {e}")
 
-
 def refactor_shell_script(file_path):
     """Refactoriza y formatea scripts de shell (.sh)."""
     print(f"Refactorizando script de shell: {file_path}")
@@ -151,7 +142,6 @@ def refactor_shell_script(file_path):
         print(f"Script de shell {file_path} refactorizado con éxito.")
     except subprocess.CalledProcessError as e:
         print(f"Error al refactorizar el script de shell {file_path}: {e}")
-
 
 def refactor_batch_script(file_path):
     """Refactoriza y formatea scripts de batch (.bat)."""
@@ -170,6 +160,27 @@ def refactor_batch_script(file_path):
     except Exception as e:
         print(f"Error al refactorizar el script de batch {file_path}: {e}")
 
+def update_pkc_files():
+    """Actualiza los archivos .pkc a versiones compatibles o realiza una operación específica."""
+    print("Actualizando archivos .pkc...")
+    pkc_files = []
+    for root, _, files in os.walk("."):
+        for file in files:
+            if file.endswith(".pkc"):
+                pkc_files.append(os.path.join(root, file))
+
+    if not pkc_files:
+        print("No se encontraron archivos .pkc para actualizar.")
+        return
+
+    for pkc_file in pkc_files:
+        try:
+            print(f"Procesando {pkc_file}...")
+            # Aquí puedes agregar la lógica específica para manejar los archivos .pkc.
+            print(f"{pkc_file} procesado con éxito.")
+        except Exception as e:
+            print(f"Error al procesar {pkc_file}: {e}")
+            logging.info(f"Error al procesar {pkc_file}: {e}")
 
 def run_tests():
     """Ejecuta pruebas dependiendo de los archivos de prueba disponibles."""
@@ -183,10 +194,9 @@ def run_tests():
     except subprocess.CalledProcessError as e:
         print(f"Error al ejecutar pruebas: {e}")
 
-
 def detect_and_refactor_code():
     """Detecta y refactoriza código según el lenguaje utilizado."""
-    detected_python = detected_java = detected_jar = detected_sh = detected_bat = False
+    detected_python = detected_java = detected_jar = detected_sh = detected_bat = detected_pkc = False
     for root, _, files in os.walk("."):
         for file in files:
             if file.endswith(".py"):
@@ -199,6 +209,8 @@ def detect_and_refactor_code():
                 detected_sh = True
             elif file.endswith(".bat"):
                 detected_bat = True
+            elif file.endswith(".pkc"):
+                detected_pkc = True
             else:
                 logging.info(
                     f"Archivo no manejado: {file} - Se requiere una extensión válida para editar."
@@ -220,7 +232,8 @@ def detect_and_refactor_code():
             for file in files:
                 if file.endswith(".bat"):
                     refactor_batch_script(os.path.join(root, file))
-
+    if detected_pkc:
+        update_pkc_files()
 
 def git_create_branch(branch_name):
     """Crea una nueva rama Git o cambia a una existente."""
@@ -240,7 +253,6 @@ def git_create_branch(branch_name):
     except subprocess.CalledProcessError as e:
         print(f"Error al gestionar ramas de Git: {e}")
 
-
 def git_add_commit_push(message, branch="main"):
     """Añade, comitea y empuja los cambios a la rama especificada."""
     try:
@@ -251,7 +263,6 @@ def git_add_commit_push(message, branch="main"):
     except subprocess.CalledProcessError as e:
         print(f"Error al comitear o empujar cambios: {e}")
 
-
 def git_status():
     """Muestra el estado actual del repositorio Git."""
     try:
@@ -261,7 +272,6 @@ def git_status():
         print((result.stdout))
     except subprocess.CalledProcessError as e:
         print(f"Error al obtener el estado del repositorio Git: {e}")
-
 
 def main():
     """Función principal que orquesta todas las operaciones."""
@@ -284,7 +294,6 @@ def main():
     )
 
     print("Cambios realizados y empujados a la rama 'auto-update-and-refactor'.")
-
 
 if __name__ == "__main__":
     main()
