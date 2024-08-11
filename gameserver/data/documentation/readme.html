@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>AKUMU GEODATA</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<style type="text/css">
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	color: black;
+	background-color: white;
+	text-align: center;
+	font-size: 11px;
+}
+
+#main {
+	width: 700px;
+	padding: 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	background: #E7FCB8;
+	text-align: left;
+	border: 1px solid #333;
+}
+
+html>body #content {
+	width: 584px;
+}
+.fineprint {
+	border: 1px solid black;
+	padding: 8px;
+	background: #ffffff;
+}
+
+.text,li {
+	font-family: verdana, sans-serif;
+	font-size: 11px;
+	margin-left: 20px;
+	margin-right: 20px;
+	line-height: 140%;
+	text-align: justify;
+}
+
+.tiny {
+	font-family: verdana, sans-serif;
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+
+li {
+	margin-bottom: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="main">
+	<div align="center">
+		<h1><b>Akumu Geodata</b></h1>
+	</div>
+	<div class="text">
+		<p>
+			Благодарим Вас за приобретение Interlude геодаты от Akumu. Ваш выбор очень важен для нас!<br /><br />
+		</p>
+		<p><b>Установка геодаты на вашу сборку</b></p>
+		<ol type="1">
+			<li>Для начала откройте конфигурационный файл геодвижка вашей сборке (обычно файл находится по адресу <b>./data/config/geodata.properties</b>), если вам не удаётся найти данный файл, уточните его расположение у разработчиков вашего эмулятора.</li>
+			<br />
+			<li>
+				Найдите переменную отвечающую за активацию геодвижка вашей сборки. (обычно <b>GeoData</b>)<br /><br />
+				<div class="fineprint"><br />
+				# GeoData options: (no recommendations, for each his own) <br />
+				# <b>0</b> = <font color="red">GeoData and PathFinding OFF</font> (default)<br />
+				# <b>1</b> = GeoData is used to check Line Of Sight (LOS) targeting and <br />
+				#     L2Playable movement. You need to download files for data/geodata folder.<br />
+				#     Monsters can pass walls but not aggro (no line of sight) through them.<br />
+				# <b>2</b> = <font color="green">Full GeoData enabled.</font> Includes PathFinding (requires also /data/pathnode <br />
+				#     files if CellPathFinding not enabled) and all character moves go through <br />
+				#     geodata checks (if a mob passes a wall, pathfinding didn't find a route <br />
+				#     but we allow attack and returning home).<br />
+				#     Recommended server memory minimum 2 GB, rather 3 GB.<br />
+				<b>GeoData</b> = 0<br />
+				</div><br />
+				Установите значение переменной в <b>1</b> для активации использования геодаты, либо <b>2</b> для использования геодаты + поиска пути.
+				<br /><br />
+			</li>
+
+			<li>
+				Переместите содержание архива геодаты akumu в отдельную папку.<br />
+				Скопируйте содержание папок <b>geodata</b> и <b>pathnode</b> в директории <b>./data/geodata</b> и <b>./data/pathnode</b> соответственно.<br />
+				<br /><br />
+			</li>
+			
+			<li>
+				Запустите/перезагрузите свой игровой сервер (<i>GS</i>) для того, чтобы изменения вступили в силу.<br /><br/>
+			</li>
+			
+			<li>
+				В том случае если вы приобрели геодату более недели назад, имеет смысл проверить наличае обновлений на сайте разработчика.<br/><br/>
+				Последние обновления геодаты: <a href="http://l2geo.ru/changelog.html" target="_blank">http://l2geo.ru/changelog.html</a><br/><br/>
+			</li>
+		</ol>
+	</div>
+</div>
+</body>
+</html>
