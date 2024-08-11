@@ -22,7 +22,7 @@ REQUIRED = 108  # how many items will be paid for a reward (affects onkill sound
 SN_SCALE = 5868
 
 # Rewards
-REWARDS = range(6329, 6340, 2) + range(5364, 5367, 2)
+REWARDS = list(range(6329, 6340, 2)) + list(range(5364, 5367, 2))
 
 # Changing this value to non-zero, will turn recipes to 100% instead of 70/60%
 ALT_RP_100 = 0

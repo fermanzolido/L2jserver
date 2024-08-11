@@ -47,7 +47,7 @@ Fire_Heart = 7244
 
 
 def AutoChat(npc, text):
-    chars = npc.getKnownList().getKnownPlayers().values().toArray()
+    chars = list(npc.getKnownList().getKnownPlayers().values()).toArray()
     if chars != None:
         for pc in chars:
             sm = CreatureSay(npc.getObjectId(), 0, npc.getName(), text)
@@ -61,7 +61,7 @@ class Quest(JQuest):
         self.questItemIds = [Fire_Heart]
         test = self.loadGlobalQuestVar("616_respawn")
         if test.isdigit():
-            remain = long(test) - System.currentTimeMillis()
+            remain = int(test) - System.currentTimeMillis()
             if remain <= 0:
                 self.addSpawn(31558, 142368, -82512, -6487, 58000, False, 0)
             else:

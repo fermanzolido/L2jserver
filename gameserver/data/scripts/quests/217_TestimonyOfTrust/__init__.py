@@ -37,7 +37,7 @@ LETTER_TO_DARKELF_ID = 1556
     LETTER_TO_NICHOLA_ID,
     ORDER_OF_NICHOLA_ID,
     HEART_OF_PORTA_ID,
-) = range(2737, 2762)
+) = list(range(2737, 2762))
 
 DROPLIST = {
     # For condition 2
@@ -388,7 +388,7 @@ class Quest(JQuest):
                         st.playSound("Itemsound.quest_middle")
                     else:
                         st.playSound("Itemsound.quest_itemget")
-        elif cond in [2, 6, 19] and npcId in DROPLIST.keys():
+        elif cond in [2, 6, 19] and npcId in list(DROPLIST.keys()):
             required, item, maxqty = DROPLIST[npcId]
             count = st.getQuestItemsCount(item)
             if st.getQuestItemsCount(required) and count < maxqty:
@@ -469,7 +469,7 @@ QUEST.addTalkId(30565)
 QUEST.addTalkId(30621)
 QUEST.addTalkId(30657)
 
-for i in DROPLIST.keys() + [20013, 20019, 20036, 20044, 20553]:
+for i in list(DROPLIST.keys()) + [20013, 20019, 20036, 20044, 20553]:
     QUEST.addKillId(i)
 
 STARTED.addQuestDrop(30358, SCROLL_OF_DARKELF_TRUST_ID, 1)

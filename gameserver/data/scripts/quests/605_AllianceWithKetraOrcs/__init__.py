@@ -365,9 +365,9 @@ class Quest(JQuest):
                         chance = Chance[npcId]
                         # This is support for quest 606: War With Varka Silenos. Basically, if the person has both this quest and 606, then they only get one quest item, 50% chance for 606 quest item and 50% chance for this quest's item
                         if st2:
-                            if (
-                                st.getRandom(2) == 1 or item == 0
-                            ) and npcId in Chance_mane.keys():
+                            if (st.getRandom(2) == 1 or item == 0) and npcId in list(
+                                Chance_mane.keys()
+                            ):
                                 item = 57
                                 MAX = 100
                                 drop = Mane
@@ -388,7 +388,7 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Wahkan)
 QUEST.addTalkId(Wahkan)
 
-for mobId in Chance.keys():
+for mobId in list(Chance.keys()):
     QUEST.addKillId(mobId)
 STARTED.addQuestDrop(Wahkan, Varka_Badge_Soldier, 1)
 STARTED.addQuestDrop(Wahkan, Varka_Badge_Officer, 1)

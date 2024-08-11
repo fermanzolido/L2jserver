@@ -71,12 +71,12 @@ MARK_OF_SUMMONER = 3336
     CRYSTAL_OF_FOUL6,
     CRYSTAL_OF_DEFEAT6,
     CRYSTAL_OF_VICTORY6,
-) = range(3337, 3390)
+) = list(range(3337, 3390))
 
 # Lists and other Info-Stores
 
 # any npcIds
-NPC = [30063] + range(30634, 30641)
+NPC = [30063] + list(range(30634, 30641))
 
 # all stats
 STATS = [
@@ -379,7 +379,7 @@ class Quest(JQuest):
                             st.takeItems(LISTS[LaraPart][2], -1)
                             st.set("Lara_Part", "0")
                             st.set("Beginner_Arcanas", str(BeginnerArcanas + 2))
-            elif npcId in SUMMONERS.keys():  # just Summon Master related stuff
+            elif npcId in list(SUMMONERS.keys()):  # just Summon Master related stuff
                 SummonerStat = int(st.get(SUMMONERS[npcId][0]))
                 if step > 1:
                     if (
@@ -422,7 +422,7 @@ class Quest(JQuest):
     ):  # if players summon dies, the crystal of defeat is given to the player and set stat to lose
         npcId = killer.getNpcId()
         ##      if (deadPerson == st.getPlayer() or deadPerson = st.getPlayer().getPet()) and npcId in DROPLIST_SUMMON.keys() :
-        if npcId in DROPLIST_SUMMON.keys():
+        if npcId in list(DROPLIST_SUMMON.keys()):
             # var means the variable of the SummonerManager, the rest are all Crystalls wich mark the status
             var, start, progress, foul, defeat, victory = DROPLIST_SUMMON[npcId]
             if int(st.get(var)) == 3:
@@ -434,10 +434,10 @@ class Quest(JQuest):
     def onAttack(self, npc, player, damage, isPet):
         npcId = npc.getNpcId()
         st = player.getQuestState(qn)
-        if npcId in DROPLIST_SUMMON.keys():
+        if npcId in list(DROPLIST_SUMMON.keys()):
             var, start, progress, foul, defeat, victory = DROPLIST_SUMMON[npcId]
             # check if this npc has been attacked before
-            if self.inProgressDuelMobs.has_key(npcId):
+            if npcId in self.inProgressDuelMobs:
                 if self.inProgressDuelMobs[npcId][
                     2
                 ]:  # if a foul already occured, skip all other checks
@@ -473,7 +473,7 @@ class Quest(JQuest):
         npcId = npc.getNpcId()
         st = player.getQuestState(qn)
         # this part is just for laras parts.  It is only available to players who are doing the quest
-        if npcId in DROPLIST_LARA.keys():
+        if npcId in list(DROPLIST_LARA.keys()):
             if not st:
                 return
             if st.getState() == COMPLETED:
@@ -492,12 +492,12 @@ class Quest(JQuest):
             var, start, progress, foul, defeat, victory = DROPLIST_SUMMON[npcId]
             # 1-hit kill and bad synch may make onKill run before onAttack, having no previous attacker
             # If the attacker is the pet of a player who is doing the quest, mark it as a valid hit.
-            if not self.inProgressDuelMobs.has_key(npcId) and isPet and st:
+            if npcId not in self.inProgressDuelMobs and isPet and st:
                 if st.getInt(var) == 2:
                     self.inProgressDuelMobs[npcId] = [player, player.getPet(), False]
 
             # if the killed mob is now in the progress list, there is work to be done...
-            if self.inProgressDuelMobs.has_key(npcId):
+            if npcId in self.inProgressDuelMobs:
                 # check if the attacker is the same pet as the one that attacked before.
                 # if not, mark this as a foul.
                 if not isPet:
@@ -549,9 +549,9 @@ QUEST.addStartNpc(NPC[1])
 # adds all npcs, mobs to the progress state
 for npcId in NPC:
     QUEST.addTalkId(npcId)
-for mobId in DROPLIST_LARA.keys():
+for mobId in list(DROPLIST_LARA.keys()):
     QUEST.addKillId(mobId)
-for mobId in DROPLIST_SUMMON.keys():
+for mobId in list(DROPLIST_SUMMON.keys()):
     QUEST.addKillId(mobId)
     QUEST.addAttackId(mobId)
 # for summonId in PLAYER_SUMMONS:

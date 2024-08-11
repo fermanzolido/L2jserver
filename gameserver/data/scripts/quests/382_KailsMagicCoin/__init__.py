@@ -82,7 +82,7 @@ QUEST.addStartNpc(VERGARA)
 
 QUEST.addTalkId(VERGARA)
 
-for npc in MOBS.keys():
+for npc in list(MOBS.keys()):
     QUEST.addKillId(npc)
 
 for coin in range(5961, 5964):

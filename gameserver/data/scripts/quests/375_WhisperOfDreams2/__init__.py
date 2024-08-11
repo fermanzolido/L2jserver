@@ -19,7 +19,7 @@ qn = "375_WhisperOfDreams2"
 ALT_RP_100 = 0
 
 # Quest items
-MSTONE, K_HORN, CH_SKULL = range(5887, 5890)
+MSTONE, K_HORN, CH_SKULL = list(range(5887, 5890))
 
 # Quest collections
 REWARDS = [5348, 5350, 5352]
@@ -125,6 +125,6 @@ QUEST.addStartNpc(MANAKIA)
 # Quest initialization
 QUEST.addTalkId(MANAKIA)
 
-for i in DROPLIST.keys():
+for i in list(DROPLIST.keys()):
     QUEST.addKillId(i)
     STARTED.addQuestDrop(i, DROPLIST[i][0], 1)

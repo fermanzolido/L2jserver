@@ -22,10 +22,10 @@ qn = "2211_HuntingGroundsTeleport"
     HEINE_DUSK,
     OREN_DUSK,
     ADEN_DUSK,
-) = range(31078, 31092)
-HW_DAWN, HW_DUSK = range(31168, 31170)
-GODDARD_DAWN, GODDARD_DUSK, RUNE_DAWN, RUNE_DUSK = range(31692, 31696)
-SCHUTTGART_DAWN, SCHUTTGART_DUSK = range(31997, 31999)
+) = list(range(31078, 31092))
+HW_DAWN, HW_DUSK = list(range(31168, 31170))
+GODDARD_DAWN, GODDARD_DUSK, RUNE_DAWN, RUNE_DUSK = list(range(31692, 31696))
+SCHUTTGART_DAWN, SCHUTTGART_DUSK = list(range(31997, 31999))
 
 
 class Quest(JQuest):
@@ -68,10 +68,10 @@ CREATED = State("Start", QUEST)
 QUEST.setInitialState(CREATED)
 
 for i in (
-    range(31078, 31092)
-    + range(31168, 31170)
-    + range(31692, 31696)
-    + range(31997, 31999)
+    list(range(31078, 31092))
+    + list(range(31168, 31170))
+    + list(range(31692, 31696))
+    + list(range(31997, 31999))
 ):
     QUEST.addStartNpc(i)
     QUEST.addTalkId(i)

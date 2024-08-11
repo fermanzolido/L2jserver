@@ -14,7 +14,7 @@ TREVOR = 32166
 FEATHER = 9748
 
 # MOB'S
-MOBS = range(22239, 22241) + range(22242, 22244) + range(22245, 22247)
+MOBS = list(range(22239, 22241)) + list(range(22242, 22244)) + list(range(22245, 22247))
 
 
 class Quest(JQuest):

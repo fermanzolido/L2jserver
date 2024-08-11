@@ -73,7 +73,7 @@ class Quest(JQuest):
         elif event == "31554-07.htm":  # Cancelling the quest
             st.exitQuest(1)
             st.playSound("ItemSound.quest_giveup")
-        elif event in BUFF.keys() and cond == 3:  # Asking for buff
+        elif event in list(BUFF.keys()) and cond == 3:  # Asking for buff
             skillId, level, coins = BUFF[event]
             if st.getQuestItemsCount(GOLDEN_RAM_COIN) >= coins:
                 st.takeItems(GOLDEN_RAM_COIN, coins)

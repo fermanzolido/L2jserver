@@ -94,7 +94,7 @@ class Quest(JQuest):
                 itemTemplate = Item.getItem()
                 weaponType = itemTemplate.getItemType().toString()
                 if (
-                    TopBGradeWeaponData.has_key(weaponType)
+                    weaponType in TopBGradeWeaponData
                     and not Item.isEquipped()
                     and itemTemplate.getCrystalType() == 0x03
                     and itemTemplate.getDuration() == -1
@@ -368,7 +368,7 @@ class Quest(JQuest):
     def onKill(self, npc, player, isPet):
         npcId = npc.getNpcId()
         # the chests always spawn, even if the RB is killed with nobody nearby doing the quest.
-        if npcId in CHEST_SPAWNS.keys():
+        if npcId in list(CHEST_SPAWNS.keys()):
             self.addSpawn(
                 CHEST_SPAWNS[npcId],
                 npc.getX(),
@@ -384,7 +384,7 @@ class Quest(JQuest):
                 return
             if st.getState() != STARTED:
                 return
-            if npcId in DROPLIST.keys():
+            if npcId in list(DROPLIST.keys()):
                 value, dropId, chance = DROPLIST[npcId]
                 if st.getInt("cond") == value:
                     if chance > 0:
@@ -410,10 +410,10 @@ QUEST.addStartNpc(NPC[0])
 for npcId in NPC:
     QUEST.addTalkId(npcId)
 
-for mobId in DROPLIST.keys():
+for mobId in list(DROPLIST.keys()):
     QUEST.addKillId(mobId)
 
-for mobId in CHEST_SPAWNS.keys():
+for mobId in list(CHEST_SPAWNS.keys()):
     QUEST.addKillId(mobId)
 
 QUEST.addAttackId(29020)

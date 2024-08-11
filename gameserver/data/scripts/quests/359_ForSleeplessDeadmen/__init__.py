@@ -24,7 +24,7 @@ REQUIRED = 60  # how many items will be paid for a reward
 REMAINS = 5869
 
 # Rewards
-REWARDS = range(6341, 6347) + range(5494, 5496)
+REWARDS = list(range(6341, 6347)) + list(range(5494, 5496))
 
 # Messages
 default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
@@ -33,7 +33,7 @@ default = "<html><body>You are either not carrying out your quest or don't meet 
 ORVEN = 30857
 
 # Mobs
-MOBS = range(21006, 21009)
+MOBS = list(range(21006, 21009))
 
 
 class Quest(JQuest):

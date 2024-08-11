@@ -18,7 +18,7 @@ qn = "171_ActsOfEvil"
     CERTIFICATE,
     CARGOBOX,
     OL_MAHUM_HEAD,
-) = range(4239, 4250)
+) = list(range(4239, 4250))
 
 ADENA = 57
 
@@ -257,5 +257,5 @@ STARTED.addQuestDrop(ALVAH, CERTIFICATE, 1)
 STARTED.addQuestDrop(ALVAH, BLADE_MOLD, 1)
 STARTED.addQuestDrop(ALVAH, WEAPON_TRADE_CONTRACT, 1)
 
-for i in range(20494, 20500) + [20062, 20066, 20438]:
+for i in list(range(20494, 20500)) + [20062, 20066, 20438]:
     QUEST.addKillId(i)

@@ -32,7 +32,7 @@ STOLEN_ITEM = {
 
 # Helper function - If player have all stolen items returns 1, otherwise 0
 def HaveAllStolenItems(st):
-    for i in STOLEN_ITEM.keys():
+    for i in list(STOLEN_ITEM.keys()):
         if st.getQuestItemsCount(STOLEN_ITEM[i]) == 0:
             return 0
     return 1
@@ -106,7 +106,7 @@ class Quest(JQuest):
                 st.takeItems(NETIS_BOW, 1)
                 st.takeItems(NETIS_DAGGER, 1)
                 st.takeItems(WANTED_BILL, 1)
-                for i in STOLEN_ITEM.keys():
+                for i in list(STOLEN_ITEM.keys()):
                     st.takeItems(STOLEN_ITEM[i], -1)
                 st.set("cond", "0")
                 st.setState(COMPLETED)
@@ -210,7 +210,7 @@ QUEST.addTalkId(30425)
 
 QUEST.addKillId(27038)
 
-for StolenItemId in STOLEN_ITEM.keys():
+for StolenItemId in list(STOLEN_ITEM.keys()):
     STARTED.addQuestDrop(27038, STOLEN_ITEM[StolenItemId], 1)
 
 for mobId in (20035, 20042, 20045, 20051, 20054, 20060):

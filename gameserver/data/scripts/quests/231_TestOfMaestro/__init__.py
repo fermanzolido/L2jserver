@@ -270,5 +270,5 @@ for npcId in [30532, 30533, 30535, 30536, 30556, 30671, 30672, 30673, 30675]:
 for mobId in [20225, 20229, 20233, 27133]:
     QUEST.addKillId(mobId)
 
-for item in range(2864, 2867) + range(2868, 2879) + [2916]:
+for item in list(range(2864, 2867)) + list(range(2868, 2879)) + [2916]:
     STARTED.addQuestDrop(30531, item, 1)

@@ -51,7 +51,7 @@ CROSS_COMPATIBLE = True
     TANAPIS_ORDER1,
     SCEPTER_OF_TANTOS,
     RITUAL_BOX,
-) = range(3203, 3238)
+) = list(range(3203, 3238))
 
 
 # ID :[ REQUIRED, ITEM, MAX_QUANTY]
@@ -577,7 +577,7 @@ class Quest(JQuest):
 
         npcId = npc.getNpcId()
         cond = st.getInt("cond")
-        if cond == 1 and npcId in DROPLIST_COND_1.keys():
+        if cond == 1 and npcId in list(DROPLIST_COND_1.keys()):
             required, item, maxquanty = DROPLIST_COND_1[npcId]
             count = st.getQuestItemsCount(item)
             if st.getQuestItemsCount(required) and count < maxquanty:
@@ -594,7 +594,7 @@ class Quest(JQuest):
                         st.playSound("Itemsound.quest_itemget")
                 else:
                     st.playSound("Itemsound.quest_itemget")
-        elif cond == 4 and npcId in DROPLIST_COND_4.keys():
+        elif cond == 4 and npcId in list(DROPLIST_COND_4.keys()):
             required, item, maxquanty = DROPLIST_COND_4[npcId]
             count = st.getQuestItemsCount(item)
             if st.getQuestItemsCount(required) and count < maxquanty:
@@ -623,7 +623,7 @@ class Quest(JQuest):
                             st.playSound("Itemsound.quest_middle")
                     else:
                         st.playSound("Itemsound.quest_itemget")
-        elif cond == 6 and npcId in DROPLIST_COND_6.keys():
+        elif cond == 6 and npcId in list(DROPLIST_COND_6.keys()):
             required, item, maxquanty, chance = DROPLIST_COND_6[npcId]
             count = st.getQuestItemsCount(item)
             if st.getQuestItemsCount(required) and count < maxquanty:
@@ -685,9 +685,9 @@ QUEST.addTalkId(30619)
 QUEST.addTalkId(30642)
 
 for i in (
-    DROPLIST_COND_1.keys()
-    + DROPLIST_COND_4.keys()
-    + DROPLIST_COND_6.keys()
+    list(DROPLIST_COND_1.keys())
+    + list(DROPLIST_COND_4.keys())
+    + list(DROPLIST_COND_6.keys())
     + [20778, 20779, 27086]
 ):
     QUEST.addKillId(i)

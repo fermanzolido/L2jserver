@@ -123,11 +123,11 @@ class Quest(JQuest):
                     htmltext = "30517-08.htm"
                     st.takeItems(LEG, -1)
                     if settype == 1:
-                        set = range(7851, 7854)  # heavy
+                        set = list(range(7851, 7854))  # heavy
                     elif settype == 2:
-                        set = range(7854, 7857)  # light
+                        set = list(range(7854, 7857))  # light
                     elif settype == 3:
-                        set = range(7857, 7860)  # robe
+                        set = list(range(7857, 7860))  # robe
                     for item in [7850] + set:
                         st.giveItems(item, 1)
                     st.unset("cond")
@@ -221,7 +221,7 @@ QUEST.addStartNpc(PINTER)
 
 QUEST.addTalkId(PINTER)
 
-for mob in DROPLIST.keys():
+for mob in list(DROPLIST.keys()):
     QUEST.addKillId(mob)
 
 PROGRESS.addQuestDrop(PINTER, BLOOD, 1)

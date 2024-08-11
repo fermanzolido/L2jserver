@@ -160,7 +160,7 @@ class Quest(JQuest):
         elif string == "QT":
             Ex = st.getInt("Ex")
             if Ex == -2:
-                if classId in QTEXMTWO.keys():
+                if classId in list(QTEXMTWO.keys()):
                     voice, htmltext = QTEXMTWO[classId]
                     st.playTutorialVoice(voice)
                     if st.getQuestItemsCount(5588) == 0:
@@ -211,15 +211,15 @@ class Quest(JQuest):
                 elif event_id == 12:
                     st.closeTutorialHtml()
                 elif event_id == 23:
-                    if classId in TCLb.keys():
+                    if classId in list(TCLb.keys()):
                         htmltext = TCLb[classId]
                 elif event_id == 24:
-                    if classId in TCLc.keys():
+                    if classId in list(TCLc.keys()):
                         htmltext = TCLc[classId]
                 elif event_id == 25:
                     htmltext = "tutorial_22cc.htm"
                 elif event_id == 26:
-                    if classId in TCLa.keys():
+                    if classId in list(TCLa.keys()):
                         htmltext = TCLa[classId]
                 elif event_id == 27:
                     htmltext = "tutorial_29.htm"
@@ -245,7 +245,7 @@ class Quest(JQuest):
                         st.onTutorialClientEvent(8)
                 elif event_id == 8:
                     if playerLevel < 6:
-                        if classId in CEEa.keys():
+                        if classId in list(CEEa.keys()):
                             htmltext, x, y, z = CEEa[classId]
                             st.playSound("ItemSound.quest_tutorial")
                             st.addRadar(x, y, z)
@@ -370,13 +370,13 @@ class Quest(JQuest):
                 if MarkId == 1:
                     st.playTutorialVoice("tutorial_voice_007")
                     st.set("Ex", "-5")
-                    if classId in CEEa.keys():
+                    if classId in list(CEEa.keys()):
                         htmltext, x, y, z = CEEa[classId]
                         st.addRadar(x, y, z)
                 elif MarkId == 3:
                     htmltext = "tutorial_09.htm"
                 elif MarkId == 5:
-                    if classId in CEEa.keys():
+                    if classId in list(CEEa.keys()):
                         htmltext, x, y, z = CEEa[classId]
                         st.addRadar(x, y, z)
                     htmltext = "tutorial_11.htm"
@@ -386,13 +386,13 @@ class Quest(JQuest):
                 elif MarkId == 8:
                     htmltext = "tutorial_18.htm"
                 elif MarkId == 9:
-                    if classId in QMCa.keys():
+                    if classId in list(QMCa.keys()):
                         htmltext, x, y, z = QMCa[classId]
                         st.addRadar(x, y, z)
                 elif MarkId == 10:
                     htmltext = "tutorial_19.htm"
                 elif MarkId == 11:
-                    if classId in QMCa.keys():
+                    if classId in list(QMCa.keys()):
                         htmltext, x, y, z = QMCa[classId]
                         st.addRadar(x, y, z)
                 elif MarkId == 12:
@@ -405,7 +405,7 @@ class Quest(JQuest):
                 elif MarkId == 23:
                     htmltext = "tutorial_24.htm"
                 elif MarkId == 24:
-                    if classId in QMCb.keys():
+                    if classId in list(QMCb.keys()):
                         htmltext = QMCb[classId]
                 elif MarkId == 26:
                     if player.getClassId().isMage() and classId != 49:
@@ -417,7 +417,7 @@ class Quest(JQuest):
                 elif MarkId == 34:
                     htmltext = "tutorial_28.htm"
                 elif MarkId == 35:
-                    if classId in QMCc.keys():
+                    if classId in list(QMCc.keys()):
                         htmltext = QMCc[classId]
         if htmltext == "":
             return

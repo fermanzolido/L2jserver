@@ -101,7 +101,7 @@ class Quest(JQuest):
 
     def onKill(self, npc, player, isPet):
         npcId = npc.getNpcId()
-        if npcId in UNDEADS.keys():
+        if npcId in list(UNDEADS.keys()):
             partyMember = self.getRandomPartyMemberState(player, STARTED)
             if not partyMember:
                 return
@@ -111,7 +111,7 @@ class Quest(JQuest):
             if st.getRandom(1000) < UNDEADS[npcId]:
                 st.giveItems(Z_LIVER, 1)
                 st.playSound("ItemSound.quest_itemget")
-        elif npcId in DAMOBS.keys():
+        elif npcId in list(DAMOBS.keys()):
             partyMember = self.getRandomPartyMember(player, "cond", "1")
             if not partyMember:
                 return
@@ -132,9 +132,9 @@ QUEST = Quest(633, qn, "In The Forgotten Village")
 CREATED = State("Start", QUEST)
 STARTED = State("Started", QUEST)
 
-for i in DAMOBS.keys():
+for i in list(DAMOBS.keys()):
     QUEST.addKillId(i)
-for i in UNDEADS.keys():
+for i in list(UNDEADS.keys()):
     QUEST.addKillId(i)
 
 QUEST.setInitialState(CREATED)

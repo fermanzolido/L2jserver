@@ -49,7 +49,7 @@ qn = "214_TrialOfScholar"
     SCRIPTURE_CHAPTER_4_ID,
     VALKONS_REQUEST_ID,
     POITANS_NOTES_ID,
-) = range(2674, 2712)
+) = list(range(2674, 2712))
 (
     STRONG_LIQUOR_ID,
     CRYSTAL_OF_PURITY2_ID,
@@ -59,7 +59,7 @@ qn = "214_TrialOfScholar"
     FETTEREDSOULS_ICHOR_ID,
     ENCHT_GARGOYLES_NAIL_ID,
     SYMBOL_OF_CRONOS_ID,
-) = range(2713, 2721)
+) = list(range(2713, 2721))
 
 # npcs
 NPC = [

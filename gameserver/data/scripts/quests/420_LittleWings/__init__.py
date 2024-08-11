@@ -34,11 +34,11 @@ EGG_DROP = 50
     SCALE_5,
     SH_EGG,
     FRY_DUST,
-) = range(3816, 3832) + [3499]
+) = list(range(3816, 3832)) + [3499]
 
 # NPCs
 PM_COOPER, SG_CRONOS, GD_BYRON, MC_MARIA, FR_MYMYU = 30829, 30610, 30711, 30608, 30747
-DK_EXARION, DK_ZWOV, DK_KALIBRAN, WM_SUZET, WM_SHAMHAI = range(30748, 30753)
+DK_EXARION, DK_ZWOV, DK_KALIBRAN, WM_SUZET, WM_SHAMHAI = list(range(30748, 30753))
 
 # mobs
 TD_LORD = 20231  # toad lord
@@ -579,7 +579,7 @@ class Quest(JQuest):
                         st.giveItems(eggs, numItems)
         # fairy stone destruction
         elif id == STARTING and st.getQuestItemsCount(FRY_STN_DLX) == 1:
-            if npcId in range(20589, 20600) + [20719]:
+            if npcId in list(range(20589, 20600)) + [20719]:
                 st.takeItems(FRY_STN_DLX, 1)
                 st.set("progress", "7")
                 return "you lost fairy stone deluxe!"
@@ -597,14 +597,14 @@ QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(PM_COOPER)
 # Quest Item Drop initialization
-for i in [3499] + range(3816, 3832):
+for i in [3499] + list(range(3816, 3832)):
     STARTING.addQuestDrop(PM_COOPER, i, 1)
 
 # Quest mob initialization
 # back skins
 QUEST.addKillId(TD_LORD)
 # fairy stone dlx destroyers
-for i in range(20589, 20600) + [21797]:
+for i in list(range(20589, 20600)) + [21797]:
     QUEST.addKillId(i)
 # eggs
 QUEST.addKillId(LO_LZRD_W)

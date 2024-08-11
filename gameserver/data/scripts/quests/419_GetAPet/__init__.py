@@ -25,7 +25,7 @@ REQUIRED_SPIDER_LEGS = 50
     SPIDER_LEG3,
     SPIDER_LEG4,
     SPIDER_LEG5,
-) = range(3417, 3428)
+) = list(range(3417, 3428))
 # Chance of drop in %
 SPIDER_LEG_DROP = 100
 # mobs

@@ -10,7 +10,7 @@ qn = "326_VanquishRemnants"
     RED_CROSS_BADGE,
     BLUE_CROSS_BADGE,
     BLACK_CROSS_BADGE,
-) = range(1359, 1362)
+) = list(range(1359, 1362))
 ADENA = 57
 BLACK_LION_MARK = 1369
 

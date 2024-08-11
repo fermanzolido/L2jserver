@@ -18,7 +18,7 @@ MetalReport = 10366
 Accessory = 10367
 
 # Monsters
-Mobs = range(20577, 20583)
+Mobs = list(range(20577, 20583))
 
 
 class Quest(JQuest):

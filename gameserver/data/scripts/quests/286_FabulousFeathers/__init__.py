@@ -15,7 +15,7 @@ ERINU = 32164
 FEATHER = 9746
 
 # MOB'S
-MOBS = range(22253, 22257) + [22251]
+MOBS = list(range(22253, 22257)) + [22251]
 
 
 class Quest(JQuest):

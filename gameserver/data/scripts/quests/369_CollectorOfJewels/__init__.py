@@ -88,10 +88,10 @@ class Quest(JQuest):
         partyMember, st, item, chance = 0, 0, 0, 0
         npcId = npc.getNpcId()
         # get a random party member that still awaits drop from this NPC
-        if npcId in DROPLIST_FREEZE.keys():
+        if npcId in list(DROPLIST_FREEZE.keys()):
             partyMember = self.getRandomPartyMember(player, "awaitsFreezing", "1")
             item, chance = DROPLIST_FREEZE[npc.getNpcId()]
-        elif npcId in DROPLIST_FLARE.keys():
+        elif npcId in list(DROPLIST_FLARE.keys()):
             partyMember = self.getRandomPartyMember(player, "awaitsFlare", "1")
             item, chance = DROPLIST_FLARE[npc.getNpcId()]
 
@@ -138,9 +138,9 @@ QUEST.addStartNpc(NELL)
 
 QUEST.addTalkId(NELL)
 
-for mob in DROPLIST_FREEZE.keys():
+for mob in list(DROPLIST_FREEZE.keys()):
     QUEST.addKillId(mob)
-for mob in DROPLIST_FLARE.keys():
+for mob in list(DROPLIST_FLARE.keys()):
     QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(NELL, FLARE_SHARD, 1)

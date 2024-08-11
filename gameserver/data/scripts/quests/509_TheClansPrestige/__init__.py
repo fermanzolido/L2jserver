@@ -72,7 +72,7 @@ class Quest(JQuest):
                 st.set("cond", "1")
                 st.setState(STARTED)
         elif event.isdigit():
-            if int(event) in REWARDS_LIST.keys():
+            if int(event) in list(REWARDS_LIST.keys()):
                 st.set("raid", event)
                 htmltext = "31331-" + event + ".htm"
                 x, y, z = RADAR[int(event)]
@@ -103,7 +103,7 @@ class Quest(JQuest):
             id = st.getState()
             if id == CREATED and cond == 0:
                 htmltext = "31331-0c.htm"
-            elif id == STARTED and cond == 1 and raid in REWARDS_LIST.keys():
+            elif id == STARTED and cond == 1 and raid in list(REWARDS_LIST.keys()):
                 npc, item, min, max = REWARDS_LIST[raid]
                 count = st.getQuestItemsCount(item)
                 CLAN_POINTS_REWARD = Rnd.get(min, max)
@@ -138,7 +138,7 @@ class Quest(JQuest):
         if (
             st.getInt("cond") == 1
             and st.getState() == STARTED
-            and option in REWARDS_LIST.keys()
+            and option in list(REWARDS_LIST.keys())
         ):
             raid, item, min, max = REWARDS_LIST[option]
             npcId = npc.getNpcId()
@@ -158,5 +158,5 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(VALDIS)
 QUEST.addTalkId(VALDIS)
 
-for npc, item, min, max in REWARDS_LIST.values():
+for npc, item, min, max in list(REWARDS_LIST.values()):
     QUEST.addKillId(npc)

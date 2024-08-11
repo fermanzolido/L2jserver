@@ -10,7 +10,7 @@ qn = "8000_RaidbossInfo"
 
 # print "8000. Raidboss Info"
 
-NPC = range(31729, 31842)
+NPC = list(range(31729, 31842))
 
 # NpcId:[x,y,z] #name (lvl)
 RADAR = {
@@ -235,7 +235,7 @@ class Quest(JQuest):
         if event.isdigit():
             htmltext = None
             rbid = int(event)
-            if rbid in RADAR.keys():
+            if rbid in list(RADAR.keys()):
                 x, y, z = RADAR[rbid]
                 player.sendPacket(RadarControl(2, 2, x, y, z))
                 player.sendPacket(RadarControl(0, 1, x, y, z))

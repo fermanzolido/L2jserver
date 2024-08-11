@@ -181,5 +181,5 @@ QUEST.addTalkId(ERRICKIN)
 QUEST.addTalkId(CLAYTON)
 QUEST.addFirstTalkId(AVANTGARDE)
 
-for mob in DROPLIST.keys():
+for mob in list(DROPLIST.keys()):
     QUEST.addKillId(mob)

@@ -14,7 +14,7 @@ KLEIN = 31540
 HILDA = 31271
 
 # QUEST ITEMS
-VACUALITE_ORE, VACUALITE, FLOATING_STONE = range(7265, 7268)
+VACUALITE_ORE, VACUALITE, FLOATING_STONE = list(range(7265, 7268))
 
 # CHANCE
 CHANCE_FOR_QUEST_ITEMS = 50
@@ -115,7 +115,9 @@ QUEST.addStartNpc(KLEIN)
 QUEST.addTalkId(KLEIN)
 QUEST.addTalkId(HILDA)
 
-for mob in range(21274, 21278) + range(21282, 21286) + range(21290, 21294):
+for mob in (
+    list(range(21274, 21278)) + list(range(21282, 21286)) + list(range(21290, 21294))
+):
     QUEST.addKillId(mob)
 
 for item in range(7265, 7267):

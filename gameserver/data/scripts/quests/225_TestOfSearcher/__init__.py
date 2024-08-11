@@ -38,7 +38,7 @@ qn = "225_TestOfSearcher"
     GOLD_BAR,
     ALANKELLS_RECOMMEND,
     MARK_OF_SEARCHER,
-) = range(2784, 2810)
+) = list(range(2784, 2810))
 
 # Shadow Weapon Exchange Coupon
 SHADOW_WEAPON_COUPON_CGRADE = 8870
@@ -55,7 +55,7 @@ DROPLIST = {
 
 NPC = [30291, 30420, 30628, 30690, 30728, 30729, 30730, 30627]
 
-MOB = DROPLIST.keys()
+MOB = list(DROPLIST.keys())
 
 
 class Quest(JQuest):

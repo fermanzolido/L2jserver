@@ -451,8 +451,8 @@ QUEST.addStartNpc(30630)
 for npcId in NPC:
     QUEST.addTalkId(npcId)
 
-for mobId in DROPLIST.keys():
+for mobId in list(DROPLIST.keys()):
     QUEST.addKillId(mobId)
 
-for item in range(3308, 3336) + [3029]:
+for item in list(range(3308, 3336)) + [3029]:
     STARTED.addQuestDrop(30630, item, 1)

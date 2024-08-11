@@ -64,7 +64,7 @@ class Quest(JQuest):
                 st.giveItems(57, 500 + (st.getRandom(5) * 300))
                 count = 0
                 while count < 1:
-                    for item in REWARDS.keys():
+                    for item in list(REWARDS.keys()):
                         qty, chance = REWARDS[item]
                         if st.getRandom(1000) < chance and count < 2:
                             st.giveItems(item, st.getRandom(qty) + 1)

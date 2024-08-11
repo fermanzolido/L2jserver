@@ -14,7 +14,7 @@ qn = "640_TheZeroHour"
 Kahman = 31554
 
 # MONSTERS
-MONSTERS = range(22105, 22112) + range(22113, 22120) + [22121]
+MONSTERS = list(range(22105, 22112)) + list(range(22113, 22120)) + [22121]
 
 # ITEMS
 Fang = 8085
@@ -50,7 +50,7 @@ class Quest(JQuest):
         elif event == "31554-08.htm":
             st.playSound("ItemSound.quest_finish")
             st.exitQuest(True)
-        elif event in REWARDS.keys():
+        elif event in list(REWARDS.keys()):
             cost, item, amount = REWARDS[event]
             if st.getQuestItemsCount(Fang) >= cost:
                 st.takeItems(Fang, cost)

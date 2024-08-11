@@ -38,7 +38,7 @@ SHOP_LIST = {
 ADENA_X = int(Config.RATE_DROP_ADENA)
 
 # Quest items
-CB_TOOTH, DW_LIGHT, SEALD_MSTONE, MSTONE = range(5884, 5888)
+CB_TOOTH, DW_LIGHT, SEALD_MSTONE, MSTONE = list(range(5884, 5888))
 # Messages
 default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
 
@@ -51,7 +51,7 @@ DROPLIST = {20620: [CB_TOOTH, "awaitTooth"], 20621: [DW_LIGHT, "awaitLight"]}
 
 def render_shop():
     html = '<html><body><font color="LEVEL">Robe Armor Fabrics:</font><table border=0 width=300>'
-    for i in SHOP_LIST.keys():
+    for i in list(SHOP_LIST.keys()):
         html += (
             "<tr><td width=35 height=45><img src=icon."
             + SHOP_LIST[i][0]
@@ -115,7 +115,7 @@ class Quest(JQuest):
                     htmltext = "30515-10.htm"
         elif event == "buy":
             htmltext = render_shop()
-        elif int(event) in SHOP_LIST.keys():
+        elif int(event) in list(SHOP_LIST.keys()):
             st.set("allow", "0")
             st.giveItems(57, SHOP_LIST[int(event)][2])
             st.giveItems(int(event), SHOP_LIST[int(event)][1])
@@ -202,6 +202,6 @@ QUEST.addTalkId(MANAKIA)
 
 QUEST.addTalkId(TORAI)
 
-for i in DROPLIST.keys():
+for i in list(DROPLIST.keys()):
     QUEST.addKillId(i)
     STARTING.addQuestDrop(i, DROPLIST[i][0], 1)

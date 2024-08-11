@@ -92,7 +92,7 @@ def suscribe_members(st):
     )
     offline.setInt(1, clan)
     rs = offline.executeQuery()
-    while rs.next():
+    while next(rs):
         char_id = rs.getInt("obj_Id")
         try:
             insertion = con.prepareStatement(
@@ -155,7 +155,7 @@ def getLeaderVar(st, var):
     offline.setString(3, qn)
     rs = offline.executeQuery()
     if rs:
-        rs.next()
+        next(rs)
         try:
             val = rs.getInt("value")
             con.close()
@@ -612,7 +612,9 @@ class Quest(JQuest):
                             )
                     self.ImpGraveKepperStat = 2
                 else:
-                    players = npc.getKnownList().getKnownPlayers().values().toArray()
+                    players = list(
+                        npc.getKnownList().getKnownPlayers().values()
+                    ).toArray()
                     if len(players):
                         playerToTP = players[Rnd.get(int(len(players)))]
                         playerToTP.setXYZ(185462, 20342, -3250)
@@ -681,10 +683,10 @@ QUEST.addStartNpc(NPC[3])
 for npcId in NPC:
     QUEST.addTalkId(npcId)
 
-for mobId in DROPLIST.keys():
+for mobId in list(DROPLIST.keys()):
     QUEST.addKillId(mobId)
 
 QUEST.addAttackId(27181)
 
-for i in range(3839, 3848) + range(3866, 3870):
+for i in list(range(3839, 3848)) + list(range(3866, 3870)):
     PROGRESS.addQuestDrop(27181, i, 1)

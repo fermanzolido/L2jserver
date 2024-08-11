@@ -7,7 +7,7 @@ from com.l2jfrozen.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "7000_HeroItems"
 
-MONUMENTS = [31690] + range(31769, 31773)
+MONUMENTS = [31690] + list(range(31769, 31773))
 
 HERO_ITEMS = {
     6611: [
@@ -93,7 +93,7 @@ HERO_ITEMS = {
 def render_list(mode, item):
     html = '<html><body><font color="LEVEL">List of Hero Items:</font><table border=0 width=300>'
     if mode == "list":
-        for i in HERO_ITEMS.keys():
+        for i in list(HERO_ITEMS.keys()):
             html += (
                 "<tr><td width=35 height=45><img src=icon."
                 + HERO_ITEMS[i][0]
@@ -140,7 +140,7 @@ class Quest(JQuest):
         if st.getPlayer().isHero():
             if event == "buy":
                 htmltext = render_list("list", 0)
-            elif event.isdigit() and int(event) in HERO_ITEMS.keys():
+            elif event.isdigit() and int(event) in list(HERO_ITEMS.keys()):
                 htmltext = render_list("item", int(event))
             elif event.startswith("_"):
                 item = int(event.split("_")[1])

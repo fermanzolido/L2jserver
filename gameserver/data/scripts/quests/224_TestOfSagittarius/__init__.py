@@ -349,5 +349,7 @@ for mobId in [
 ]:
     QUEST.addKillId(mobId)
 
-for item in range(2864, 2867) + range(2868, 2879) + range(3293, 3307) + [3028]:
+for item in (
+    list(range(2864, 2867)) + list(range(2868, 2879)) + list(range(3293, 3307)) + [3028]
+):
     STARTED.addQuestDrop(30514, item, 1)

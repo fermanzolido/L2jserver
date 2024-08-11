@@ -11,7 +11,7 @@ qn = "38_DragonFangs"
 
 # Quest items
 FEATHER_ORNAMENT, TOOTH_OF_TOTEM, TOOTH_OF_DRAGON, LETTER_OF_IRIS, LETTER_OF_ROHMER = (
-    range(7173, 7178)
+    list(range(7173, 7178))
 )
 
 # Drop info:
@@ -148,7 +148,7 @@ QUEST.addTalkId(LUIS)
 QUEST.addTalkId(IRIS)
 QUEST.addTalkId(ROHMER)
 
-for mob in DROPLIST.keys():
+for mob in list(DROPLIST.keys()):
     QUEST.addKillId(mob)
 
 for item in range(7173, 7178):

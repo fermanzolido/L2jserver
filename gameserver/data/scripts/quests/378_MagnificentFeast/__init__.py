@@ -10,9 +10,9 @@ qn = "378_MagnificentFeast"
 RANSPO = 30594
 
 # ITEMS
-WINE_15, WINE_30, WINE_60 = range(5956, 5959)
+WINE_15, WINE_30, WINE_60 = list(range(5956, 5959))
 SCORE = 4421
-RP_SALAD, RP_SAUCE, RP_STEAK = range(1455, 1458)
+RP_SALAD, RP_SAUCE, RP_STEAK = list(range(1455, 1458))
 RP_DESSERT = 5959
 # REWARDS
 REWARDS = {
@@ -118,7 +118,7 @@ class Quest(JQuest):
             htmltext = "30594-7.htm"
         elif cond == 4:
             score = st.getInt("score")
-            if st.getQuestItemsCount(RP_DESSERT) and score in REWARDS.keys():
+            if st.getQuestItemsCount(RP_DESSERT) and score in list(REWARDS.keys()):
                 item, qty, adena = REWARDS[score]
                 st.giveItems(item, qty)
                 if adena:

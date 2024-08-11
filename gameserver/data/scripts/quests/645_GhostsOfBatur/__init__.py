@@ -39,7 +39,7 @@ class Quest(JQuest):
                 st.set("cond", "1")
                 st.setState(STARTED)
                 st.playSound("ItemSound.quest_accept")
-        elif event in REWARDS.keys():
+        elif event in list(REWARDS.keys()):
             if st.getQuestItemsCount(GRAVE_GOODS) == 180:
                 item, qty = REWARDS[event]
                 st.takeItems(GRAVE_GOODS, -1)

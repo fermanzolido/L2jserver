@@ -19,12 +19,12 @@ SAUCE = 7205
 FOOD = 7209
 MEAT = 7210
 # Rewards dye +2str-2con/+2str-2dex/+2con-2str/+2con-2dex/+2dex-2str/+2dex-2con
-REWARDS = range(4589, 4595)
+REWARDS = list(range(4589, 4595))
 
 
 def AutoChat(npc, text):
     objId = npc.getObjectId()
-    chars = npc.getKnownList().getKnownPlayers().values().toArray()
+    chars = list(npc.getKnownList().getKnownPlayers().values()).toArray()
     if chars != None:
         for pc in chars:
             sm = CreatureSay(objId, 0, npc.getName(), text)
@@ -37,7 +37,7 @@ class Quest(JQuest):
         self.questItemIds = [FOOD, MEAT]
         test = self.loadGlobalQuestVar("625_respawn")
         if test.isdigit():
-            remain = long(test) - System.currentTimeMillis()
+            remain = int(test) - System.currentTimeMillis()
             if remain <= 0:
                 self.addSpawn(31542, 157136, -121456, -2363, 0, False, 40000)
             else:

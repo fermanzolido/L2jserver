@@ -29,9 +29,9 @@ class feedable_beasts(JQuest):
         JQuest.__init__(self, id, name, descr)
         # DEFINE MEMBER VARIABLES FOR THIS AI
         # all mobs that can eat...
-        self.tamedBeasts = range(16013, 16019)
+        self.tamedBeasts = list(range(16013, 16019))
         self.feedableBeasts = (
-            range(21451, 21508) + range(21824, 21830) + self.tamedBeasts
+            list(range(21451, 21508)) + list(range(21824, 21830)) + self.tamedBeasts
         )
         # all mobs that grow by eating
         # mobId: current_growth_level, {food: [list of possible mobs[possible sublist of tamed pets]]}, chance of growth
@@ -255,7 +255,7 @@ class feedable_beasts(JQuest):
 
     def onAdvEvent(self, event, npc, player):
         if event == "polymorph Mad Cow" and npc and player:
-            if npc.getNpcId() in self.madCowPolymorph.keys():
+            if npc.getNpcId() in list(self.madCowPolymorph.keys()):
                 # remove the feed info from the previous mob
                 if self.feedInfo[npc.getObjectId()] == player.getObjectId():
                     self.feedInfo.pop(npc.getObjectId())
@@ -298,7 +298,7 @@ class feedable_beasts(JQuest):
             ]
 
         # remove the feedinfo of the mob that got despawned, if any
-        if self.feedInfo.has_key(npc.getObjectId()):
+        if npc.getObjectId() in self.feedInfo:
             if self.feedInfo[npc.getObjectId()] == player.getObjectId():
                 self.feedInfo.pop(npc.getObjectId())
 
@@ -425,12 +425,12 @@ class feedable_beasts(JQuest):
         # first gather some values on local variables
         objectId = npc.getObjectId()
         growthLevel = 3  # if a mob is in feedableBeasts but not in growthCapableMobs, then it's at max growth (3)
-        if self.growthCapableMobs.has_key(npcId):
+        if npcId in self.growthCapableMobs:
             growthLevel = self.growthCapableMobs[npcId][0]
 
         # prevent exploit which allows 2 players to simultaneously raise the same 0-growth beast
         # If the mob is at 0th level (when it still listens to all feeders) lock it to the first feeder!
-        if (growthLevel == 0) and self.feedInfo.has_key(objectId):
+        if (growthLevel == 0) and objectId in self.feedInfo:
             return
         else:
             self.feedInfo[objectId] = player.getObjectId()
@@ -445,7 +445,7 @@ class feedable_beasts(JQuest):
         npc.broadcastPacket(SocialAction(objectId, 2))
 
         # if this pet can't grow, it's all done.
-        if npcId in self.growthCapableMobs.keys():
+        if npcId in list(self.growthCapableMobs.keys()):
             # do nothing if this mob doesn't eat the specified food (food gets consumed but has no effect).
             if len(self.growthCapableMobs[npcId][1][food]) == 0:
                 return
@@ -494,7 +494,7 @@ class feedable_beasts(JQuest):
 
     def onKill(self, npc, player, isPet):
         # remove the feedinfo of the mob that got killed, if any
-        if self.feedInfo.has_key(npc.getObjectId()):
+        if npc.getObjectId() in self.feedInfo:
             self.feedInfo.pop(npc.getObjectId())
 
 

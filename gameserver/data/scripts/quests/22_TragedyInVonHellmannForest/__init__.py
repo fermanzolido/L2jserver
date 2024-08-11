@@ -14,18 +14,18 @@ TIFAREN = 31334
 WELL = 31527
 GHOST_PRIEST = 31528
 GHOST_ADVENTURER = 31529
-NPCS = range(31527, 31530) + [31328, 31334]
+NPCS = list(range(31527, 31530)) + [31328, 31334]
 
 # MOBS
 SOUL_OF_WELL = 27217
-MOBS = range(21553, 21557) + [21561]
+MOBS = list(range(21553, 21557)) + [21561]
 
 # ITEMS
-CROSS, SKULL, LETTER, JEWEL1, JEWEL2, SEALED_BOX, BOX = range(7141, 7148)
+CROSS, SKULL, LETTER, JEWEL1, JEWEL2, SEALED_BOX, BOX = list(range(7141, 7148))
 
 
 def AutoChat(npc, text):
-    chars = npc.getKnownList().getKnownPlayers().values().toArray()
+    chars = list(npc.getKnownList().getKnownPlayers().values()).toArray()
     if chars != None:
         for pc in chars:
             sm = CreatureSay(npc.getObjectId(), 0, npc.getName(), text)

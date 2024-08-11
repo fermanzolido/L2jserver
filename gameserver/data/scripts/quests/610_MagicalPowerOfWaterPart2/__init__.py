@@ -47,7 +47,7 @@ Ice_Heart = 7239
 
 
 def AutoChat(npc, text):
-    chars = npc.getKnownList().getKnownPlayers().values().toArray()
+    chars = list(npc.getKnownList().getKnownPlayers().values()).toArray()
     if chars != None:
         for pc in chars:
             sm = CreatureSay(npc.getObjectId(), 0, npc.getName(), text)
@@ -61,7 +61,7 @@ class Quest(JQuest):
         self.questItemIds = [Ice_Heart]
         test = self.loadGlobalQuestVar("610_respawn")
         if test.isdigit():
-            remain = long(test) - System.currentTimeMillis()
+            remain = int(test) - System.currentTimeMillis()
             if remain <= 0:
                 self.addSpawn(31560, 105452, -36775, -1050, 34000, False, 0)
             else:

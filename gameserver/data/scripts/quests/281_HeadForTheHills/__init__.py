@@ -17,7 +17,7 @@ REWARDS = [736, 876, 115]
 NEWBIE_REWARD = 32
 
 # MOB'S
-MOBS = range(22234, 22240)
+MOBS = list(range(22234, 22240))
 
 
 class Quest(JQuest):

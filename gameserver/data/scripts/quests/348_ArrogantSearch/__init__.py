@@ -227,7 +227,7 @@ class Quest(JQuest):
         elif event == "30864_10continue":  # next round of fabrics
             htmltext = "30864-08c.htm"  # more about angels blood
             st.giveItems(WHITE_FABRIC_1, 10)  # next 10 fabrics
-            for i in BLOODY_OWNERS.keys():  # must delivery again
+            for i in list(BLOODY_OWNERS.keys()):  # must delivery again
                 st.set(BLOODY_OWNERS[i][1], "0")
             st.set("cond", "29")  # start hunting angels again
         elif event == "30864_10quit":  # done with fabrics
@@ -267,7 +267,7 @@ class Quest(JQuest):
                     elif cond == 0:
                         st.set("cond", "1")
                         st.set("reward1", "0")  # for first reward in cond == 25
-                        for i in BLOODY_OWNERS.keys():  # goods are not delivered
+                        for i in list(BLOODY_OWNERS.keys()):  # goods are not delivered
                             st.set(BLOODY_OWNERS[i][1], "0")
                         htmltext = "30864-02.htm"  # Successful start: begin the dialog which will set cond=2
                     # Player abandoned in the middle of last dialog...repeat the dialog.
@@ -372,7 +372,7 @@ class Quest(JQuest):
                 htmltext = "30864-09.htm"  # Ah, 10 fabrics.
         # Other NPCs follow:
         elif cond == 5:
-            if npcId in ARK_OWNERS.keys():
+            if npcId in list(ARK_OWNERS.keys()):
                 # first meeting...have the letter
                 if st.getQuestItemsCount(ARK_OWNERS[npcId][0]) == 1:
                     st.takeItems(ARK_OWNERS[npcId][0], 1)
@@ -392,7 +392,7 @@ class Quest(JQuest):
                     )
                 else:  # have the item (done)
                     htmltext = ARK_OWNERS[npcId][4]
-            elif npcId in ARKS.keys():
+            elif npcId in list(ARKS.keys()):
                 # if you do not have the key (first meeting)
                 if st.getQuestItemsCount(ARKS[npcId][0]) == 0:
                     if ARKS[npcId][1] != 0:  # spawn the NPC, if appropriate
@@ -422,7 +422,7 @@ class Quest(JQuest):
                 else:
                     htmltext = "30980-03.htm"
         elif cond == 27:
-            if npcId in BLOODY_OWNERS.keys():
+            if npcId in list(BLOODY_OWNERS.keys()):
                 if st.getInt(BLOODY_OWNERS[npcId][1]) < 1:
                     if (
                         st.getQuestItemsCount(BLOODED_FABRIC) >= BLOODY_OWNERS[npcId][0]
@@ -444,7 +444,7 @@ class Quest(JQuest):
             return
 
         npcId = npc.getNpcId()
-        if npcId in ATTACK_DROPS_24.keys():
+        if npcId in list(ATTACK_DROPS_24.keys()):
             cond = ATTACK_DROPS_24[npcId][0]
             chance = ATTACK_DROPS_24[npcId][3]
             if (
@@ -458,7 +458,7 @@ class Quest(JQuest):
                 if cond == 24:
                     st.playSound("ItemSound.quest_finish")
                     st.exitQuest(1)
-        elif npcId in ATTACK_DROPS_25.keys():
+        elif npcId in list(ATTACK_DROPS_25.keys()):
             cond = ATTACK_DROPS_25[npcId][0]
             chance = ATTACK_DROPS_25[npcId][3]
             if (
@@ -482,7 +482,7 @@ class Quest(JQuest):
             return
 
         npcId = npc.getNpcId()
-        if npcId in DROPS.keys():
+        if npcId in list(DROPS.keys()):
             cond = DROPS[npcId][0]
             if (
                 st.getInt("cond") == cond
@@ -499,7 +499,7 @@ class Quest(JQuest):
                 if cond == 24:
                     st.playSound("ItemSound.quest_finish")
                     st.exitQuest(1)
-        if npcId in DROPS_29.keys():
+        if npcId in list(DROPS_29.keys()):
             cond = DROPS_29[npcId][0]
             if (
                 st.getInt("cond") == cond
@@ -529,10 +529,10 @@ QUEST.addStartNpc(HANELLIN)
 QUEST.addTalkId(HANELLIN)
 QUEST.addTalkId(ARK_GUARDIANS_CORPSE)
 
-for i in ARK_OWNERS.keys() + ARKS.keys() + BLOODY_OWNERS.keys():
+for i in list(ARK_OWNERS.keys()) + list(ARKS.keys()) + list(BLOODY_OWNERS.keys()):
     QUEST.addTalkId(i)
 
-for i in DROPS.keys():
+for i in list(DROPS.keys()):
     QUEST.addKillId(i)
 
 QUEST.addAttackId(PLATINUM_TRIBE_SHAMAN)

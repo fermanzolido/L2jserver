@@ -39,13 +39,13 @@ class retreat_onattack(JQuest):
     def onAttack(self, npc, player, damage, isPet):
         npcId = npc.getNpcId()
         objId = npc.getObjectId()
-        if self.MobSpawns.has_key(npcId):
+        if npcId in self.MobSpawns:
             if (
                 npc.getStatus().getCurrentHp()
                 <= npc.getMaxHp() * self.MobSpawns[npcId]["HP"] / 100
                 and Rnd.get(100) < self.MobSpawns[npcId]["chance"]
             ):
-                if self.MobTexts.has_key(npcId):
+                if npcId in self.MobTexts:
                     text = self.MobTexts[npcId][Rnd.get(len(self.MobTexts[npcId]))]
                     npc.broadcastPacket(CreatureSay(objId, 0, npc.getName(), text))
                 posX = npc.getX()
@@ -74,5 +74,5 @@ QUEST = retreat_onattack(-1, "retreat_onattack", "ai")
 CREATED = State("Start", QUEST)
 QUEST.setInitialState(CREATED)
 
-for i in QUEST.MobSpawns.keys():
+for i in list(QUEST.MobSpawns.keys()):
     QUEST.addAttackId(i)

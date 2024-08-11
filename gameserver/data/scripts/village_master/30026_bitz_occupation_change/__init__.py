@@ -44,7 +44,7 @@ class Quest(JQuest):
         if (
             npcId == GRAND_MASTER_BITZ
             and Race in [Race.human]
-            and pcId in range(0x0A) + range(88, 94)
+            and pcId in list(range(0x0A)) + list(range(88, 94))
         ):
             # fighter
             if pcId == 0x00:

@@ -114,5 +114,5 @@ QUEST.addTalkId(30895)
 STARTED.addQuestDrop(20991, ALLIGATOR_TOOTH, 1)
 STARTED.addQuestDrop(20991, TORN_MAP_FRAGMENT, 1)
 
-for i in range(20804, 20809) + [20991]:
+for i in list(range(20804, 20809)) + [20991]:
     QUEST.addKillId(i)

@@ -9,7 +9,9 @@ QUEST_DESCRIPTION = "Coins of Magic"
 default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
 
 # Quest items
-COIN_DIAGRAM, KALDIS_COIN, MEMBERSHIP_1, MEMBERSHIP_2, MEMBERSHIP_3 = range(3811, 3816)
+COIN_DIAGRAM, KALDIS_COIN, MEMBERSHIP_1, MEMBERSHIP_2, MEMBERSHIP_3 = list(
+    range(3811, 3816)
+)
 
 (
     BLOOD_MEDUSA,
@@ -39,7 +41,7 @@ COIN_DIAGRAM, KALDIS_COIN, MEMBERSHIP_1, MEMBERSHIP_2, MEMBERSHIP_3 = range(3811
     BELETHS_SILVER,
     MANAKS_SILVER_DRYAD,
     NIAS_SILVER_FAIRY,
-) = range(3472, 3499)
+) = list(range(3472, 3499))
 
 # NPCs
 SORINT, BERNARD, PAGE, HAGGER, STAN, RALFORD, FERRIS, COLLOB, PANO, DUNING, LORAIN = (
@@ -124,7 +126,7 @@ SORINT, BERNARD, PAGE, HAGGER, STAN, RALFORD, FERRIS, COLLOB, PANO, DUNING, LORA
     BUFALO2,
     BUFALO3,
     BUFALO4,
-) = range(21274, 21290)
+) = list(range(21274, 21290))
 (
     GRAVE_L,
     DOOM_ARC,
@@ -466,7 +468,7 @@ class Quest(JQuest):
             htmltext = promote(st)
         elif event.isdigit():
             item = int(event)
-            if item in TRADE_LIST.keys():
+            if item in list(TRADE_LIST.keys()):
                 j = 0
                 k = len(TRADE_LIST[item])
                 for i in range(len(TRADE_LIST[item])):
@@ -485,7 +487,7 @@ class Quest(JQuest):
         elif event.startswith("Li_"):
             action, npc, coin = event.split("_")
             if grade <= EXCHANGE_LEVEL[int(npc)]:
-                if int(coin) in EXCHANGE_LIST[int(npc)].keys():
+                if int(coin) in list(EXCHANGE_LIST[int(npc)].keys()):
                     htmltext = st.showHtmlFile(npc + "-06.htm").replace(
                         "%itemid%", coin
                     )
@@ -498,17 +500,17 @@ class Quest(JQuest):
             action, npc, coin, qty = event.split("_")
             npc, coin, qty = int(npc), int(coin), int(qty)
             if grade <= EXCHANGE_LEVEL[npc]:
-                if coin in EXCHANGE_LIST[npc].keys():
+                if coin in list(EXCHANGE_LIST[npc].keys()):
                     j = 0
                     i = len(EXCHANGE_LIST[npc][coin])
-                    for item in EXCHANGE_LIST[npc][coin].keys():
+                    for item in list(EXCHANGE_LIST[npc][coin].keys()):
                         if (
                             st.getQuestItemsCount(item)
                             >= EXCHANGE_LIST[npc][coin][item] * qty
                         ):
                             j += 1
                     if i == j:
-                        for k in EXCHANGE_LIST[npc][coin].keys():
+                        for k in list(EXCHANGE_LIST[npc][coin].keys()):
                             st.takeItems(k, EXCHANGE_LIST[npc][coin][k] * qty)
                         st.giveItems(coin, qty)
                         st.playSound("ItemSound.quest_itemget")
@@ -523,8 +525,8 @@ class Quest(JQuest):
             action, npc, coin, tries = event.split("_")
             npc, coin, tries = int(npc), int(coin), int(tries)
             if (
-                npc in GAMBLE_LIST.keys()
-                and coin in GAMBLE_LIST[npc].keys()
+                npc in list(GAMBLE_LIST.keys())
+                and coin in list(GAMBLE_LIST[npc].keys())
                 and grade <= EXCHANGE_LEVEL[npc]
                 and tries in range(2, 5)
             ):
@@ -670,7 +672,7 @@ class Quest(JQuest):
                 htmltext = "30702-01.htm"
             elif grade == 3:
                 htmltext = "30702-05.htm"
-        elif npcId in EXCHANGE_LIST.keys() and grade:
+        elif npcId in list(EXCHANGE_LIST.keys()) and grade:
             htmltext = str(npcId) + "-01.htm"
         return htmltext
 
@@ -735,10 +737,10 @@ for npc in [
 ]:
     QUEST.addTalkId(npc)
 
-for mob in DROP_LIST.keys():
+for mob in list(DROP_LIST.keys()):
     QUEST.addKillId(mob)
 
 SOLO.addQuestDrop(SORINT, 3811, 1)
 SOLO.addQuestDrop(SORINT, 3812, 1)
-for item in range(3472, 3499) + range(3813, 3816):
+for item in list(range(3472, 3499)) + list(range(3813, 3816)):
     PARTY.addQuestDrop(SORINT, item, 1)

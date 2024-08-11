@@ -10,7 +10,7 @@ qn = "5000_MissQueen"
 COUPON_ONE = 7832
 COUPON_TWO = 7833
 
-NPCs = range(31760, 31767)
+NPCs = list(range(31760, 31767))
 
 # enable/disable coupon give
 QUEEN_ENABLED = 1

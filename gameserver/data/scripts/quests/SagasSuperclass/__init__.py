@@ -12,7 +12,7 @@ from com.l2jfrozen.util.random import Rnd
 
 qn = "SagasSuperclass"
 
-Archon_Minions = range(21646, 21652)
+Archon_Minions = list(range(21646, 21652))
 Guardian_Angels = [27214, 27215, 27216]
 Archon_Hellisha_Norm = [18212, 18214, 18215, 18216, 18218]
 Mobs_Norm = Guardian_Angels + Archon_Minions + Archon_Hellisha_Norm
@@ -123,14 +123,14 @@ class Quest(JQuest):
         target.broadcastPacket(MagicSkillUser(npc, npc, skillId, level, 6000, 1))
 
     def FindTemplate(self, npcId):
-        for spawn in SpawnTable.getInstance().getSpawnTable().values():
+        for spawn in list(SpawnTable.getInstance().getSpawnTable().values()):
             if spawn.getNpcid() == npcId:
                 npcinstance = spawn.getLastSpawn()
                 break
         return npcinstance
 
     def AutoChat(self, npc, text):
-        chars = npc.getKnownList().getKnownPlayers().values().toArray()
+        chars = list(npc.getKnownList().getKnownPlayers().values()).toArray()
         if chars != None:
             for pc in chars:
                 sm = CreatureSay(npc.getObjectId(), 0, npc.getName(), text)
@@ -626,7 +626,7 @@ class Quest(JQuest):
             if party:
                 PartyQuestMembers = []
                 for player1 in party.getPartyMembers().toArray():
-                    for q in Quests.keys():
+                    for q in list(Quests.keys()):
                         st1 = player1.getQuestState(Quests[q])
                         if st1:
                             if player1.getClassId().getId() == QuestClass[int(q) - 70]:
@@ -637,7 +637,7 @@ class Quest(JQuest):
                     st2 = PartyQuestMembers[Rnd.get(len(PartyQuestMembers))]
                     st2.getQuest().giveHallishaMark(st2)
             else:
-                for q in Quests.keys():
+                for q in list(Quests.keys()):
                     st1 = player.getQuestState(Quests[q])
                     if st1:
                         if player.getClassId().getId() == QuestClass[int(q) - 70]:
@@ -645,7 +645,7 @@ class Quest(JQuest):
                                 st1.getQuest().giveHallishaMark(st1)
                                 break
         elif npcId in Archon_Hellisha_Norm:
-            for q in Quests.keys():
+            for q in list(Quests.keys()):
                 st1 = player.getQuestState(Quests[q])
                 if st1:
                     if player.getClassId().getId() == QuestClass[int(q) - 70]:
@@ -663,7 +663,7 @@ class Quest(JQuest):
                             st1.playSound("ItemSound.quest_middle")
                             break
         elif npcId in Guardian_Angels:
-            for q in Quests.keys():
+            for q in list(Quests.keys()):
                 st1 = player.getQuestState(Quests[q])
                 if st1:
                     if player.getClassId().getId() == QuestClass[int(q) - 70]:

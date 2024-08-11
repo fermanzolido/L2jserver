@@ -16,8 +16,8 @@ WOLF_TOOTH = 9810
 REWARD = [28, 35, 116]  # Pants, Cloth Shoes, Magic Ring
 
 # MOB'S
-MOBS_KELTIR = range(22229, 22232)
-MOBS_WOLF = range(22232, 22234)
+MOBS_KELTIR = list(range(22229, 22232))
+MOBS_WOLF = list(range(22232, 22234))
 
 
 class Quest(JQuest):

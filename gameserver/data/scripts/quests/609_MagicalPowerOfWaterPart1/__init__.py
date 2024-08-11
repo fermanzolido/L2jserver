@@ -70,7 +70,7 @@ Totem2 = 7238
 
 
 def AutoChat(npc, text):
-    chars = npc.getKnownList().getKnownPlayers().values().toArray()
+    chars = list(npc.getKnownList().getKnownPlayers().values()).toArray()
     if chars != None:
         for pc in chars:
             sm = CreatureSay(npc.getObjectId(), 0, npc.getName(), text)

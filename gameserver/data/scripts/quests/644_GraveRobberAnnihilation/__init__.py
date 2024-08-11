@@ -40,7 +40,7 @@ class Quest(JQuest):
                 st.set("cond", "1")
                 st.setState(STARTED)
                 st.playSound("ItemSound.quest_accept")
-        elif event in REWARDS.keys():
+        elif event in list(REWARDS.keys()):
             item, amount = REWARDS[event]
             st.takeItems(ORC_GOODS, -1)
             st.giveItems(item, amount)

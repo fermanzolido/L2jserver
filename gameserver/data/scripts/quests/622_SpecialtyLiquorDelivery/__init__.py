@@ -109,7 +109,9 @@ class Quest(JQuest):
             if st.getQuestItemsCount(FEE_OF_DRINK) == 5:
                 st.takeItems(FEE_OF_DRINK, 5)
                 if st.getRandom(100) < RPCHANCE:
-                    st.giveItems(range(6847 + ALT_RP100, 6853, 2)[st.getRandom(3)], 1)
+                    st.giveItems(
+                        list(range(6847 + ALT_RP100, 6853, 2))[st.getRandom(3)], 1
+                    )
                 else:
                     st.giveItems(ADENA, 18800)
                     st.giveItems(HASTE_POTION, 1)
@@ -194,7 +196,7 @@ QUEST.addStartNpc(31521)
 
 QUEST.addTalkId(31521)
 
-for i in range(31543, 31548) + [31267, 31521]:
+for i in list(range(31543, 31548)) + [31267, 31521]:
     QUEST.addTalkId(i)
 
 STARTED.addQuestDrop(31521, SPECIAL_DRINK, 1)

@@ -12,7 +12,7 @@ TORRANT = 32016
 # Drop rate
 DROP_CHANCE = 75
 # Mobs
-MOBS = range(22029, 22046) + [22047, 22049]
+MOBS = list(range(22029, 22046)) + [22047, 22049]
 # Item
 CURSED_DOLL = 8087
 # REWARDS
@@ -35,7 +35,7 @@ class Quest(JQuest):
             st.set("cond", "1")
             st.setState(STARTED)
             st.playSound("ItemSound.quest_accept")
-        elif event in REWARDS.keys():
+        elif event in list(REWARDS.keys()):
             item, amount = REWARDS[event]
             st.takeItems(CURSED_DOLL, -1)
             st.giveItems(item, amount)

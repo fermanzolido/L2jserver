@@ -76,12 +76,12 @@ ITEMS = {
     ABYSS_OIL,
     HELLFIRE_OIL,
     NIGHTMARE_OIL,
-) = range(6007, 6035)
+) = list(range(6007, 6035))
 MIXING_STONE1 = 5904
 # Mimir's Elixir items
-BLOOD_FIRE, MIMIRS_ELIXIR, PURE_SILVER, TRUE_GOLD = range(6318, 6322)
+BLOOD_FIRE, MIMIRS_ELIXIR, PURE_SILVER, TRUE_GOLD = list(range(6318, 6322))
 
-MATS = range(6011, 6032) + range(6320, 6322)
+MATS = list(range(6011, 6032)) + list(range(6320, 6322))
 # Messages
 default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
 # NPCs
@@ -202,7 +202,7 @@ class Quest(JQuest):
             st.giveItems(5904, 1)
             st.playSound("ItemSound.quest_accept")
         elif event == "30166-5.htm":
-            for i in range(6007, 6035) + [6317, 5904]:
+            for i in list(range(6007, 6035)) + [6317, 5904]:
                 st.takeItems(i, -1)
             st.exitQuest(1)
             st.playSound("ItemSound.quest_finish")
@@ -400,7 +400,7 @@ QUEST.addTalkId(WESLEY)
 
 QUEST.addTalkId(URN)
 
-for i in DROPLIST.keys():
+for i in list(DROPLIST.keys()):
     QUEST.addKillId(i)
 
 STARTED.addQuestDrop(WESLEY, 5904, 1)

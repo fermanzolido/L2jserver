@@ -20,10 +20,10 @@ SI_ORE = 6363
 # Rewards
 REWARDS = (
     [5529]
-    + range(5532, 5540)
-    + range(5541, 5549)
+    + list(range(5532, 5540))
+    + list(range(5541, 5549))
     + [8331]
-    + range(8341, 8343)
+    + list(range(8341, 8343))
     + [8346]
     + [8349]
 )
@@ -164,8 +164,8 @@ class Quest(JQuest):
             if st.getQuestItemsCount(SI_ORE) >= REQUIRED_ORE:
                 st.takeItems(SI_ORE, REQUIRED_ORE)
                 htmltext = bingo0
-                grid = range(
-                    1, 10
+                grid = list(
+                    range(1, 10)
                 )  # random.sample(xrange(1,10),9) ... damn jython that makes me think that inefficient stuff
                 for i in range(len(grid) - 1, 0, -1):
                     j = st.getRandom(8)

@@ -24,13 +24,13 @@ QUEST_NUMBER, QUEST_NAME, QUEST_DESCRIPTION = (
 )
 # 3- Quest specific definitions: Don't mess with it unless you know what you're doing
 # Quest items: Papyrus
-RE_PAP, BL_PAP, BK_PAP, WH_PAP = range(5966, 5970)
+RE_PAP, BL_PAP, BK_PAP, WH_PAP = list(range(5966, 5970))
 # Collectibles:
 COLLECTION = {
-    "Rev": range(5972, 5979),  # Revelations of the Seals
-    "Anc": range(5979, 5984),  # Ancient Epics
-    "Imp": range(5984, 5989),  # Imperial Genealogy
-    "ToI": range(5989, 6002),  # ToI Blueprints
+    "Rev": list(range(5972, 5979)),  # Revelations of the Seals
+    "Anc": list(range(5979, 5984)),  # Ancient Epics
+    "Imp": list(range(5984, 5989)),  # Imperial Genealogy
+    "ToI": list(range(5989, 6002)),  # ToI Blueprints
 }
 # name:[boots,gloves,helm],
 REWARD = {
@@ -129,7 +129,7 @@ class Quest(JQuest):
             st.exitQuest(1)
         elif event == "30844-9.htm":
             st.set("cond", "2")
-        elif len(event) == 5 and int(event) in NPC.keys():
+        elif len(event) == 5 and int(event) in list(NPC.keys()):
             if event == "30844":
                 htmltext = "30844-2.htm"
             else:
@@ -138,7 +138,7 @@ class Quest(JQuest):
                     htmltext = event + "-2.htm"
                 else:
                     htmltext = event + "-3.htm"
-        elif event in REWARD.keys():
+        elif event in list(REWARD.keys()):
             if check_n_take(st, "ToI"):
                 give_reward(st, event)
                 htmltext = "30844-11.htm"
@@ -196,8 +196,8 @@ COMPLETED = State("Completed", QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(WALDERAL)
 
-for i in NPC.keys():
+for i in list(NPC.keys()):
     QUEST.addTalkId(i)
 
-for i in MOB.keys():
+for i in list(MOB.keys()):
     QUEST.addKillId(i)

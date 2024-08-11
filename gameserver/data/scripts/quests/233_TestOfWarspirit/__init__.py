@@ -122,7 +122,7 @@ DROPLIST = {
 PART2_MOBS = [20601, 20602]
 PART1_MOBS = []
 
-for mob in DROPLIST.keys():
+for mob in list(DROPLIST.keys()):
     if mob in PART2_MOBS:
         continue
     PART1_MOBS.append(mob)

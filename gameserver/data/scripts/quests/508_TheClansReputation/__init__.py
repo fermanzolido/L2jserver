@@ -88,7 +88,7 @@ class Quest(JQuest):
                 st.set("cond", "1")
                 st.setState(STARTED)
         elif event.isdigit():
-            if int(event) in REWARDS_LIST.keys():
+            if int(event) in list(REWARDS_LIST.keys()):
                 st.set("raid", event)
                 htmltext = "30868-" + event + ".htm"
                 x, y, z = RADAR[int(event)]
@@ -120,7 +120,7 @@ class Quest(JQuest):
             id = st.getState()
             if id == CREATED and cond == 0:
                 htmltext = "30868-0c.htm"
-            elif id == STARTED and cond == 1 and raid in REWARDS_LIST.keys():
+            elif id == STARTED and cond == 1 and raid in list(REWARDS_LIST.keys()):
                 npc, item = REWARDS_LIST[raid]
                 count = st.getQuestItemsCount(item)
                 if not count:
@@ -154,7 +154,7 @@ class Quest(JQuest):
         if (
             st.getInt("cond") == 1
             and st.getState() == STARTED
-            and option in REWARDS_LIST.keys()
+            and option in list(REWARDS_LIST.keys())
         ):
             raid, item = REWARDS_LIST[option]
             npcId = npc.getNpcId()
@@ -174,6 +174,6 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(SIR_ERIC_RODEMAI)
 QUEST.addTalkId(SIR_ERIC_RODEMAI)
 
-for npc, item in REWARDS_LIST.values():
+for npc, item in list(REWARDS_LIST.values()):
     QUEST.addKillId(npc)
     STARTED.addQuestDrop(npc, item, 1)

@@ -272,7 +272,7 @@ def HasItems(st, check):
 
 
 def AutoChat(npc, text):
-    chars = npc.getKnownList().getKnownPlayers().values().toArray()
+    chars = list(npc.getKnownList().getKnownPlayers().values()).toArray()
     if chars != None:
         for pc in chars:
             sm = CreatureSay(npc.getObjectId(), 0, npc.getName(), text)
@@ -284,7 +284,7 @@ def HasRequestCompleted(st, level):
     rewards = Tor_Rewards_1
     if level == 2:
         rewards = Tor_Rewards_2
-    for req in rewards.keys():
+    for req in list(rewards.keys()):
         if st.getQuestItemsCount(req):
             if st.getQuestItemsCount(rewards[req][0]) >= rewards[req][1]:
                 return req
@@ -295,7 +295,7 @@ class Quest(JQuest):
 
     def __init__(self, id, name, descr):
         JQuest.__init__(self, id, name, descr)
-        self.questItemIds = range(3692, 3811) + [3471]
+        self.questItemIds = list(range(3692, 3811)) + [3471]
 
     def onAdvEvent(self, event, npc, player):
         st = player.getQuestState(qn)
@@ -395,7 +395,7 @@ class Quest(JQuest):
                 st.giveItems(3698, 1)
             st.takeItems(6708, -1)
         elif event == "30746-08.htm":
-            for item in Cyb_Rewards.keys():
+            for item in list(Cyb_Rewards.keys()):
                 if st.getQuestItemsCount(item):
                     st.takeItems(item, -1)
                     st.giveItems(57, Cyb_Rewards[item])
@@ -539,7 +539,7 @@ class Quest(JQuest):
         instructions_1 = st.getQuestItemsCount(Test_Instructions_1)
         instructions_2 = st.getQuestItemsCount(Test_Instructions_2)
         if cond == 1 and instructions_1:
-            if npcId in Level_1.keys():
+            if npcId in list(Level_1.keys()):
                 item, amount, chance = Level_1[npcId]
                 if rand < chance and st.getQuestItemsCount(item) < amount:
                     st.giveItems(item, 1)
@@ -558,7 +558,7 @@ class Quest(JQuest):
                 st.addSpawn(27143, 300000)
         elif cond == 2:
             if instructions_2:
-                if npcId in Level_2.keys():
+                if npcId in list(Level_2.keys()):
                     item, amount, chance = Level_2[npcId]
                     if rand < chance and st.getQuestItemsCount(item) < amount:
                         st.giveItems(item, 1)
@@ -577,7 +577,7 @@ class Quest(JQuest):
                         st.addSpawn(27147, 300000)
                     elif st.getQuestItemsCount(3726) == 0:
                         st.addSpawn(27148, 300000)
-            elif npcId in Tor_requests_1.keys():
+            elif npcId in list(Tor_requests_1.keys()):
                 req, give, giveAmount, amount, chance = Tor_requests_1[npcId]
                 if (
                     rand < chance
@@ -596,7 +596,7 @@ class Quest(JQuest):
                             npc, "We will destroy the legacy of the ancient empire!"
                         )
         elif cond == 3:
-            if npcId in Tor_requests_2.keys():
+            if npcId in list(Tor_requests_2.keys()):
                 req, give, amount, chance = Tor_requests_2[npcId]
                 if st.getQuestItemsCount(req) and st.getQuestItemsCount(give) < amount:
                     if rand < chance:
@@ -616,7 +616,7 @@ class Quest(JQuest):
                         AutoChat(npc, "Get out! The jewels are mine!")
             elif npcId == Gremlin_Filcher:
                 req = 0
-                for item in Filcher.keys():
+                for item in list(Filcher.keys()):
                     if st.getQuestItemsCount(item):
                         req = item
                         break
@@ -629,7 +629,7 @@ class Quest(JQuest):
                         else:
                             st.playSound("ItemSound.quest_itemget")
                         AutoChat(npc, "What!")
-        if npcId in Tor_requests_tospawn.keys() and rand < 10:
+        if npcId in list(Tor_requests_tospawn.keys()) and rand < 10:
             it1, it2, id = Tor_requests_tospawn[npcId]
             if st.getQuestItemsCount(it1) and not st.getQuestItemsCount(it2):
                 st.addSpawn(id, 300000)
@@ -671,11 +671,11 @@ QUEST.addTalkId(Cybellin)
 
 npcs = []
 for npc in (
-    Level_1.keys()
-    + Level_2.keys()
-    + Tor_requests_1.keys()
-    + Tor_requests_2.keys()
-    + Tor_requests_tospawn.keys()
+    list(Level_1.keys())
+    + list(Level_2.keys())
+    + list(Tor_requests_1.keys())
+    + list(Tor_requests_2.keys())
+    + list(Tor_requests_tospawn.keys())
     + Mobs
 ):
     if npc not in npcs:

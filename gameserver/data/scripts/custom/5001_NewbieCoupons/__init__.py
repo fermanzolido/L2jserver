@@ -11,7 +11,7 @@ qn = "5001_NewbieCoupons"
 COUPON_ONE = 7832
 COUPON_TWO = 7833
 
-NPCs = range(30598, 30603) + [31076, 31077, 32135]
+NPCs = list(range(30598, 30603)) + [31076, 31077, 32135]
 
 # Multisell
 WEAPON_MULTISELL = 305986001

@@ -8,7 +8,7 @@ from com.l2jfrozen.gameserver.network.serverpackets import PlaySound
 qn = "111_Elrokian_Hunters_Proof"
 
 # NPCS
-MARQUEZ, MUSHIKA, ASHAMAH, KIRIKASHIN = xrange(32113, 32117)
+MARQUEZ, MUSHIKA, ASHAMAH, KIRIKASHIN = list(range(32113, 32117))
 
 CHANCE = 25
 CHANCE2 = 75
@@ -158,13 +158,13 @@ QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(32113)
 
-for i in xrange(32113, 32117):
+for i in range(32113, 32117):
     QUEST.addTalkId(i)
 
 for i in (
-    range(22196, 22199)
-    + range(22200, 22206)
-    + range(22208, 22211)
-    + range(22218, 22222)
+    list(range(22196, 22199))
+    + list(range(22200, 22206))
+    + list(range(22208, 22211))
+    + list(range(22218, 22222))
 ):
     QUEST.addKillId(i)

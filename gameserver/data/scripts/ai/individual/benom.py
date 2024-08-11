@@ -186,7 +186,7 @@ class benom(JQuest):
             self.BenomWalkRouteStep = 0
         elif event == "Attacking":
             NumPlayers = []
-            for player in npc.getKnownList().getKnownPlayers().values():
+            for player in list(npc.getKnownList().getKnownPlayers().values()):
                 NumPlayers.append(player)
             if len(NumPlayers) > 0:
                 target = NumPlayers[Rnd.get(len(NumPlayers))]

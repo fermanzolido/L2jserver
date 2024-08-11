@@ -32,7 +32,7 @@ qn = "222_TestOfDuelist"
     GRANDIS_SKIN,
     TIMAK_ORCS_BELT,
     RAKINS_MACE,
-) = range(2762, 2784)
+) = list(range(2762, 2784))
 
 # Shadow Weapon Exchange Coupon
 SHADOW_WEAPON_COUPON_CGRADE = 8870
@@ -219,5 +219,5 @@ QUEST.addStartNpc(30623)
 
 QUEST.addTalkId(30623)
 
-for i in DROPLIST.keys():
+for i in list(DROPLIST.keys()):
     QUEST.addKillId(i)

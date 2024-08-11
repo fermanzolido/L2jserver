@@ -42,7 +42,7 @@ class Quest(JQuest):
         if not (st and event.isdigit()):
             return
         score = int(event)
-        if score in LIST.keys():
+        if score in list(LIST.keys()):
             crystal, ok, noadena, noscore = LIST[score]
             npcId = str(npc.getNpcId())
             if not st.getQuestItemsCount(score):

@@ -304,5 +304,5 @@ QUEST.addTalkId(MAO)
 QUEST.addTalkId(RODENPICULA)
 QUEST.addTalkId(NORNIL)
 
-for i in DROPLIST.keys():
+for i in list(DROPLIST.keys()):
     QUEST.addKillId(i)

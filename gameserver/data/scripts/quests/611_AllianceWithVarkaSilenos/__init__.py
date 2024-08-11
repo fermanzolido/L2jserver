@@ -355,9 +355,9 @@ class Quest(JQuest):
                         chance = Chance[npcId]
                         # This is support for quest 612: War With Ketra Orcs. Basically, if the person has both this quest and 612, then they only get one quest item, 50% chance for 612 quest item and 50% chance for this quest's item
                         if st2:
-                            if (
-                                st.getRandom(2) == 1 or item == 0
-                            ) and npcId in Chance_molar.keys():
+                            if (st.getRandom(2) == 1 or item == 0) and npcId in list(
+                                Chance_molar.keys()
+                            ):
                                 item = 57
                                 MAX = 100
                                 drop = Molar
@@ -379,7 +379,7 @@ QUEST.addStartNpc(Naran_Ashanuk)
 
 QUEST.addTalkId(Naran_Ashanuk)
 
-for mobId in Chance.keys():
+for mobId in list(Chance.keys()):
     QUEST.addKillId(mobId)
 STARTED.addQuestDrop(Naran_Ashanuk, Ketra_Badge_Soldier, 1)
 STARTED.addQuestDrop(Naran_Ashanuk, Ketra_Badge_Officer, 1)

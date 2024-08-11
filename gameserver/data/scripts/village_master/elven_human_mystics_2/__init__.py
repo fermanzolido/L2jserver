@@ -108,7 +108,7 @@ class Quest(JQuest):
         level = player.getLevel()
         if npcId not in NPCS:
             return
-        if not event in CLASSES.keys():
+        if not event in list(CLASSES.keys()):
             return event
         else:
             newclass, req_class, req_race, low_ni, low_i, ok_ni, ok_i, req_item = (

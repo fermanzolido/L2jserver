@@ -7,7 +7,7 @@ from com.l2jfrozen.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "4_LongLiveLordOfFlame"
 
 HONEY_KHANDAR, BEAR_FUR_CLOAK, BLOODY_AXE, ANCESTOR_SKULL, SPIDER_DUST, DEEP_SEA_ORB = (
-    range(1541, 1547)
+    list(range(1541, 1547))
 )
 NPC_GIFTS = {
     30585: BEAR_FUR_CLOAK,
@@ -61,12 +61,12 @@ class Quest(JQuest):
             elif cond == 2:
                 htmltext = "30578-06.htm"
                 st.giveItems(4, 1)
-                for item in NPC_GIFTS.values():
+                for item in list(NPC_GIFTS.values()):
                     st.takeItems(item, -1)
                 st.unset("cond")
                 st.setState(COMPLETED)
                 st.playSound("ItemSound.quest_finish")
-        elif npcId in NPC_GIFTS.keys() and cond == 1 and id == STARTED:
+        elif npcId in list(NPC_GIFTS.keys()) and cond == 1 and id == STARTED:
             item = NPC_GIFTS[npcId]
             npc = str(npcId)
             if st.getQuestItemsCount(item):
@@ -75,7 +75,7 @@ class Quest(JQuest):
                 st.giveItems(item, 1)
                 htmltext = npc + "-01.htm"
                 count = 0
-                for item in NPC_GIFTS.values():
+                for item in list(NPC_GIFTS.values()):
                     count += st.getQuestItemsCount(item)
                 if count == 6:
                     st.set("cond", "2")

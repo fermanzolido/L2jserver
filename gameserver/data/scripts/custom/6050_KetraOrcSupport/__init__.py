@@ -19,7 +19,7 @@ Atan = 31373  # Grocer
 Jaff = 31374  # Warehouse Keeper
 Jumara = 31375  # Trader
 Kurfa = 31376  # Gate Keeper
-NPCS = range(31370, 31377)
+NPCS = list(range(31370, 31377))
 
 Horn = 7186
 # "event number":[Buff Id,Buff Level,Cost]
@@ -46,7 +46,7 @@ class Quest(JQuest):
         if not st:
             return
         Alevel = player.getAllianceWithVarkaKetra()
-        if str(event) in BUFF.keys():
+        if str(event) in list(BUFF.keys()):
             skillId, level, horns = BUFF[event]
             if st.getQuestItemsCount(Horn) >= horns:
                 st.takeItems(Horn, horns)

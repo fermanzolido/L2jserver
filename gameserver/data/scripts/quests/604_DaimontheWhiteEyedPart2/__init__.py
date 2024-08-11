@@ -16,13 +16,13 @@ ALTAR = 31541
 # RaidBoss
 DAIMON = 25290
 # Items
-U_SUMMON, S_SUMMON, ESSENCE = range(7192, 7195)
+U_SUMMON, S_SUMMON, ESSENCE = list(range(7192, 7195))
 # Rewards dye +2int-2men/+2int-2wit/+2men-2int/+2men-2wit/+2wit-2int/+2wit-2men
-REWARDS = range(4595, 4601)
+REWARDS = list(range(4595, 4601))
 
 
 def AutoChat(npc, text):
-    chars = npc.getKnownList().getKnownPlayers().values().toArray()
+    chars = list(npc.getKnownList().getKnownPlayers().values()).toArray()
     if chars != None:
         for pc in chars:
             sm = CreatureSay(npc.getObjectId(), 0, npc.getName(), text)
@@ -32,10 +32,10 @@ def AutoChat(npc, text):
 class Quest(JQuest):
     def __init__(self, id, name, descr):
         JQuest.__init__(self, id, name, descr)
-        self.questItemIds = range(7193, 7195)
+        self.questItemIds = list(range(7193, 7195))
         test = self.loadGlobalQuestVar("604_respawn")
         if test.isdigit():
-            remain = long(test) - System.currentTimeMillis()
+            remain = int(test) - System.currentTimeMillis()
             if remain <= 0:
                 self.addSpawn(31541, 186304, -43744, -3193, 0, False, 57000)
             else:

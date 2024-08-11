@@ -57,7 +57,7 @@ class Quest(JQuest):
                 st.takeItems(WOLF_PELT, -1)
                 count = 0
                 while not count:
-                    for item in REWARDS.keys():
+                    for item in list(REWARDS.keys()):
                         qty, chance = REWARDS[item]
                         if st.getRandom(100) < chance and count == 0:
                             st.giveItems(item, st.getRandom(qty) + 1)

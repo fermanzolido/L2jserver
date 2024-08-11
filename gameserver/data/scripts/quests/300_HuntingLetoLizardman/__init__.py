@@ -90,7 +90,7 @@ QUEST.addStartNpc(RATH)
 
 QUEST.addTalkId(RATH)
 
-for mob in range(20577, 20581) + [20582]:
+for mob in list(range(20577, 20581)) + [20582]:
     QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(RATH, BRACELET, 1)

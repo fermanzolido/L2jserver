@@ -193,7 +193,7 @@ class Quest(JQuest):
         if event.isdigit():
             htmltext = None
             npcId = int(event)
-            if npcId in RADAR.keys():
+            if npcId in list(RADAR.keys()):
                 x, y, z = RADAR[npcId]  # L2EMU_EDIT Visor123 fix
                 st.addRadar(x, y, z)
                 htmltext = "MoveToLoc.htm"

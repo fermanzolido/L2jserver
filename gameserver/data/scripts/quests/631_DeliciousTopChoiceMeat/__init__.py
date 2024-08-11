@@ -45,7 +45,7 @@ class Quest(JQuest):
             st.playSound("ItemSound.quest_accept")
         elif event == "31537-05.htm" and st.getQuestItemsCount(TOP_QUALITY_MEAT) == 120:
             st.set("cond", "3")
-        elif event in REWARDS.keys():
+        elif event in list(REWARDS.keys()):
             htmltext = "31537-07.htm"
             item, qty = REWARDS[event]
             if (
@@ -114,7 +114,9 @@ QUEST.addStartNpc(TUNATUN)
 
 QUEST.addTalkId(TUNATUN)
 
-for npcId in range(21460, 21468) + range(21479, 21487) + range(21498, 21506):
+for npcId in (
+    list(range(21460, 21468)) + list(range(21479, 21487)) + list(range(21498, 21506))
+):
     QUEST.addKillId(npcId)
 
 STARTED.addQuestDrop(21460, TOP_QUALITY_MEAT, 1)

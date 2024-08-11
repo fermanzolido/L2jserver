@@ -15,7 +15,7 @@ qn = "106_ForgottenTruth"
     ANCIENT_CLAY_TABLET,
     KARTAS_TRANSLATION,
     ELDRITCH_DAGGER,
-) = range(984, 990)
+) = list(range(984, 990))
 
 ORC = 27070
 

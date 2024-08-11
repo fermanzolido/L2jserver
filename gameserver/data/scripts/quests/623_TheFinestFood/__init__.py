@@ -11,7 +11,7 @@ qn = "623_TheFinestFood"
 JEREMY = 31521
 
 # ITEMS
-LEAF_OF_FLAVA, BUFFALO_MEAT, ANTELOPE_HORN = range(7199, 7202)
+LEAF_OF_FLAVA, BUFFALO_MEAT, ANTELOPE_HORN = list(range(7199, 7202))
 
 # MOBS, DROPS, CHANCES & REWARDS
 BUFFALO, FLAVA, ANTELOPE = [21315, 21316, 21318]
@@ -130,7 +130,7 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(JEREMY)
 QUEST.addTalkId(JEREMY)
 
-for mob in DROPLIST.keys():
+for mob in list(DROPLIST.keys()):
     QUEST.addKillId(mob)
 
 for item in range(7199, 7202):

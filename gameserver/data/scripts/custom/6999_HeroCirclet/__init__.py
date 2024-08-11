@@ -6,7 +6,7 @@ from com.l2jfrozen.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "6999_HeroCirclet"
 
-MONUMENTS = [31690] + range(31769, 31773)
+MONUMENTS = [31690] + list(range(31769, 31773))
 
 
 class Quest(JQuest):

@@ -62,7 +62,7 @@ class Quest(JQuest):
         ###################
         # Start Locations #
         ###################
-        if TELEPORTERS.has_key(npcId):
+        if npcId in TELEPORTERS:
             st.getPlayer().teleToLocation(12661, 181687, -3560)
             st.setState(STARTED)
             st.set("id", str(TELEPORTERS[npcId]))
@@ -87,7 +87,7 @@ STARTED = State("Started", QUEST)
 
 QUEST.setInitialState(CREATED)
 
-for npcId in TELEPORTERS.keys():
+for npcId in list(TELEPORTERS.keys()):
     QUEST.addStartNpc(npcId)
     QUEST.addTalkId(npcId)
 

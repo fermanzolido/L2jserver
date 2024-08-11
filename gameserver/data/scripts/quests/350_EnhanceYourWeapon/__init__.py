@@ -46,7 +46,7 @@ NPC = [30115, 30856, 30194]
     RED_SOUL_CRYSTALX_ID,
     GREEN_SOUL_CRYSTALX_ID,
     BLUE_SOUL_CRYSTALX_ID,
-) = range(4629, 4665)
+) = list(range(4629, 4665))
 
 
 def check(st):

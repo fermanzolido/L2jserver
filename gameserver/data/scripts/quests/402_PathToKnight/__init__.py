@@ -29,7 +29,7 @@ MARK_OF_ESQUIRE = 1271
     GIANT_SPIDER_HUSK,
     EINHASAD_CHURCH_MARK3,
     HORRIBLE_SKULL,
-) = range(1161, 1180)
+) = list(range(1161, 1180))
 
 default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
 
@@ -335,8 +335,8 @@ QUEST.addTalkId(30379)
 QUEST.addTalkId(30417)
 QUEST.addTalkId(30653)
 
-for mob in DROPLIST.keys():
+for mob in list(DROPLIST.keys()):
     QUEST.addKillId(mob)
 
-for item in range(1162, 1180) + [MARK_OF_ESQUIRE]:
+for item in list(range(1162, 1180)) + [MARK_OF_ESQUIRE]:
     STARTED.addQuestDrop(20775, item, 1)

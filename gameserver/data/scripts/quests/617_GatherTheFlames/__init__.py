@@ -153,7 +153,7 @@ QUEST.addStartNpc(VULCAN)
 QUEST.addTalkId(VULCAN)
 QUEST.addTalkId(ROONEY)
 
-for mob in DROPLIST.keys():
+for mob in list(DROPLIST.keys()):
     QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(VULCAN, TORCH, 1)

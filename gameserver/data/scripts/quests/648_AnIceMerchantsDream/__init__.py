@@ -14,7 +14,7 @@ Rafforty = 32020
 Ice_Shelf = 32023
 
 # MOBs
-MOBS = range(22080, 22095) + range(22096, 22099)
+MOBS = list(range(22080, 22095)) + list(range(22096, 22099))
 
 # Items
 Hemocyte = 8057

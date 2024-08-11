@@ -32,7 +32,7 @@ class splendor(JQuest):
         npcId = npc.getNpcId()
         NewMob, chance, ModeSpawn = SplendorId[npcId]
         if Rnd.get(100) <= chance * Config.RATE_DROP_QUEST:
-            if SplendorId.has_key(npcId):
+            if npcId in SplendorId:
                 if ModeSpawn == 1:
                     npc.deleteMe()
                     newNpc = self.addSpawn(NewMob, npc)
@@ -54,7 +54,7 @@ class splendor(JQuest):
     def onKill(self, npc, player, isPet):
         npcId = npc.getNpcId()
         NewMob, chance, ModeSpawn = SplendorId[npcId]
-        if SplendorId.has_key(npcId):
+        if npcId in SplendorId:
             if ModeSpawn == 2:
                 self.AlwaysSpawn = False
         return
@@ -65,8 +65,8 @@ QUEST = splendor(-1, "splendor", "ai")
 CREATED = State("Start", QUEST)
 QUEST.setInitialState(CREATED)
 
-for i in SplendorId.keys():
+for i in list(SplendorId.keys()):
     QUEST.addAttackId(i)
 
-for j in SplendorId.keys():
+for j in list(SplendorId.keys()):
     QUEST.addKillId(j)

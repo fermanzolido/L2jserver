@@ -20,7 +20,7 @@ Diyabu = 31380  # Grocer
 Hagos = 31381  # Warehouse Keeper
 Shikon = 31382  # Trader
 Teranu = 31383  # Teleporter
-NPCS = range(31377, 31384)
+NPCS = list(range(31377, 31384))
 
 Seed = 7187
 # "event number":[Buff Id,Buff Level,Cost]
@@ -47,7 +47,7 @@ class Quest(JQuest):
         if not st:
             return
         Alevel = player.getAllianceWithVarkaKetra()
-        if str(event) in BUFF.keys():
+        if str(event) in list(BUFF.keys()):
             skillId, level, seeds = BUFF[event]
             if st.getQuestItemsCount(Seed) >= seeds:
                 st.takeItems(Seed, seeds)

@@ -33,7 +33,7 @@ class Quest(JQuest):
         self.questItemIds = [Starstone, Detector, Detector2, Letter, Starstone2]
 
     def activateDetector(self, npc, player, st):
-        for obj in npc.getKnownList().getKnownObjects().values():
+        for obj in list(npc.getKnownList().getKnownObjects().values()):
             if obj != None:
                 if obj == player and st.getInt("cond") == 17:
                     st.playSound("ItemSound.quest_middle")

@@ -163,5 +163,5 @@ QUEST.addStartNpc(LADD)
 QUEST.addTalkId(LADD)
 QUEST.addTalkId(JOAN)
 
-for i in DROPLIST.keys():
+for i in list(DROPLIST.keys()):
     QUEST.addKillId(i)

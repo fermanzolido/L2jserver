@@ -28,7 +28,7 @@ class Quest(JQuest):
         htmltext = event
         if event.isdigit():
             dest = int(event)
-            if dest in DATA.keys():
+            if dest in list(DATA.keys()):
                 x, y, z = DATA[dest]
                 if x and y and z:
                     if st.getQuestItemsCount(TOKEN):
@@ -56,6 +56,6 @@ CREATED = State("Start", QUEST)
 
 QUEST.setInitialState(CREATED)
 
-for i in DATA.keys():
+for i in list(DATA.keys()):
     QUEST.addStartNpc(i)
     QUEST.addTalkId(i)

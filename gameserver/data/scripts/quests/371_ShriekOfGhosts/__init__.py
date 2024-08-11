@@ -60,7 +60,7 @@ class Quest(JQuest):
                 test = st.getRandom(100)
                 st.takeItems(PORCELAIN, 1)
                 htmltext = "30929-07.htm"
-                for item in PORC.keys():
+                for item in list(PORC.keys()):
                     chance, html = PORC[item]
                     if test < chance:
                         st.giveItems(item, 1)
@@ -107,7 +107,7 @@ class Quest(JQuest):
             return
         npcId = npc.getNpcId()
         chance = st.getRandom(100)
-        if npcId in MOBS.keys():
+        if npcId in list(MOBS.keys()):
             urnchance, porcchance = MOBS[npcId]
             if chance < urnchance:
                 st.giveItems(URN, 1)
@@ -129,8 +129,8 @@ QUEST.addStartNpc(REVA)
 QUEST.addTalkId(REVA)
 QUEST.addTalkId(PATRIN)
 
-for mob in MOBS.keys():
+for mob in list(MOBS.keys()):
     QUEST.addKillId(mob)
 
-for rew in PORC.keys():
+for rew in list(PORC.keys()):
     STARTED.addQuestDrop(PATRIN, rew, 1)

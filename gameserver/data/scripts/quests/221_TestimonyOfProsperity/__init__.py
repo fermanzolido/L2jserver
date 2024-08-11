@@ -1054,5 +1054,5 @@ QUEST.addKillId(20232)
 QUEST.addKillId(20233)
 QUEST.addKillId(20234)
 
-for item in range(3239, 3276) + [3428, 3023, 3030]:
+for item in list(range(3239, 3276)) + [3428, 3023, 3030]:
     STARTED.addQuestDrop(30621, item, 1)

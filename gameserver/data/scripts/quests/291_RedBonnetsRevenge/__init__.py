@@ -8,7 +8,9 @@ from com.l2jfrozen.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "291_RedBonnetsRevenge"
 
 BLACK_WOLF_PELT = 1482
-GRANDMAS_PEARL, GRANDMAS_MIRROR, GRANDMAS_NECKLACE, GRANDMAS_HAIRPIN = range(1502, 1506)
+GRANDMAS_PEARL, GRANDMAS_MIRROR, GRANDMAS_NECKLACE, GRANDMAS_HAIRPIN = list(
+    range(1502, 1506)
+)
 SOE = 736
 
 

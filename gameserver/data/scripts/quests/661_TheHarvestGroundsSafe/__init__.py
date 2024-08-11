@@ -30,7 +30,7 @@ class Quest(JQuest):
 
     def __init__(self, id, name, descr):
         JQuest.__init__(self, id, name, descr)
-        self.questItemIds = range(8283, 8286)
+        self.questItemIds = list(range(8283, 8286))
 
     def onEvent(self, event, st):
         htmltext = event
@@ -86,7 +86,7 @@ class Quest(JQuest):
             return
         npcId = npc.getNpcId()
         rand = st.getRandom(100)
-        if npcId in DROPLIST.keys():
+        if npcId in list(DROPLIST.keys()):
             item, chance = DROPLIST[npcId]
             if rand < chance:
                 st.giveItems(item, 1)
@@ -103,5 +103,5 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NORMAN)
 QUEST.addTalkId(NORMAN)
 
-for id in DROPLIST.keys():
+for id in list(DROPLIST.keys()):
     QUEST.addKillId(id)

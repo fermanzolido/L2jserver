@@ -77,7 +77,7 @@ HR_SOBLING = 31147
 WF_CLIFF = 30182
 
 # Mobs
-MOBS = range(20647, 20651)
+MOBS = list(range(20647, 20651))
 
 
 class Quest(JQuest):

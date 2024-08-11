@@ -8,8 +8,8 @@ BLACK_LION_MARK = 1369
 ADENA_ID = 57
 
 # Drops & Rewards
-CARGO_BOX1, CARGO_BOX2, CARGO_BOX3, CARGO_BOX4 = range(3440, 3444)
-UNDEAD_ASH, BLOODY_AXE_INSIGNIAS, DELU_FANG, STAKATO_TALONS = range(3848, 3852)
+CARGO_BOX1, CARGO_BOX2, CARGO_BOX3, CARGO_BOX4 = list(range(3440, 3444))
+UNDEAD_ASH, BLOODY_AXE_INSIGNIAS, DELU_FANG, STAKATO_TALONS = list(range(3848, 3852))
 (
     SOPHIAS_LETTER1,
     SOPHIAS_LETTER2,
@@ -18,7 +18,7 @@ UNDEAD_ASH, BLOODY_AXE_INSIGNIAS, DELU_FANG, STAKATO_TALONS = range(3848, 3852)
     LIONS_CLAW,
     LIONS_EYE,
     GUILD_COIN,
-) = range(3671, 3678)
+) = list(range(3671, 3678))
 ALACRITY_POTION = 735
 SCROLL_ESCAPE = 736
 SOULSHOT_D = 1463
@@ -49,7 +49,7 @@ HEALING_POTION = 1061
     FRAGMENT_ANCIENT_TABLE3,
     FRAGMENT_ANCIENT_TABLE4,
     COMPLETE_TABLET,
-) = range(3444, 3467)
+) = list(range(3444, 3467))
 
 # Price to Open a Box
 OPEN_BOX_PRICE = 650
@@ -524,7 +524,7 @@ from com.l2jfrozen.gameserver.model.quest import QuestState
 from com.l2jfrozen.gameserver.model.quest.jython import QuestJython as JQuest
 
 # This Put all Mob Ids from dictionari in a list. So its possible to add new mobs, to one of this 4 Areas, without modification on the addKill Part.
-MOBS = DROPLIST.keys()
+MOBS = list(DROPLIST.keys())
 
 
 def giveRewards(st, item, count):

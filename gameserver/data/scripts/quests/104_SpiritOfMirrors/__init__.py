@@ -26,7 +26,7 @@ DROPLIST = {
 
 # Helper function - If player have all quest items returns 1, otherwise 0
 def HaveAllQuestItems(st):
-    for mobId in DROPLIST.keys():
+    for mobId in list(DROPLIST.keys()):
         if st.getQuestItemsCount(DROPLIST[mobId]) == 0:
             return 0
     return 1
@@ -81,7 +81,7 @@ class Quest(JQuest):
             ):
                 htmltext = "30017-04.htm"
             elif npcId == 30017 and st.getInt("cond") == 3 and HaveAllQuestItems(st):
-                for mobId in DROPLIST.keys():
+                for mobId in list(DROPLIST.keys()):
                     st.takeItems(DROPLIST[mobId], -1)
                 if player.getClassId().isMage() and st.getInt("onlyone") == 0:
                     st.giveItems(SPIRITSHOT_NO_GRADE, 500)
@@ -148,7 +148,7 @@ QUEST.addTalkId(30041)
 QUEST.addTalkId(30043)
 QUEST.addTalkId(30045)
 
-for mobId in DROPLIST.keys():
+for mobId in list(DROPLIST.keys()):
     QUEST.addKillId(mobId)
     STARTED.addQuestDrop(mobId, DROPLIST[mobId], 1)
 

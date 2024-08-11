@@ -124,7 +124,7 @@ R3 = [
 ]
 R4 = [1979, 1980, 2952, 2953]
 # Quest ingredients and rewards
-WISH_POTION, ANCIENT_CROWN, CERTIFICATE_OF_ROYALTY = range(3467, 3470)
+WISH_POTION, ANCIENT_CROWN, CERTIFICATE_OF_ROYALTY = list(range(3467, 3470))
 (
     ALCHEMY_TEXT,
     SECRET_BOOK,
@@ -132,7 +132,7 @@ WISH_POTION, ANCIENT_CROWN, CERTIFICATE_OF_ROYALTY = range(3467, 3470)
     POTION_RECIPE_2,
     MATILDS_ORB,
     FORBIDDEN_LOVE_SCROLL,
-) = range(3678, 3684)
+) = list(range(3678, 3684))
 (
     AMBER_SCALE,
     WIND_SOULSTONE,
@@ -142,7 +142,7 @@ WISH_POTION, ANCIENT_CROWN, CERTIFICATE_OF_ROYALTY = range(3467, 3470)
     ANT_SOLDIER_APHID,
     TYRANTS_CHITIN,
     BUGBEAR_BLOOD,
-) = range(3684, 3692)
+) = list(range(3684, 3692))
 # NPCs
 GRIMA = 27135
 SUCCUBUS_OF_SEDUCTION = 27136
@@ -484,7 +484,7 @@ class Quest(JQuest):
             st.set("cond", "2")
             st.giveItems(SECRET_BOOK, 1)
             st.playSound("ItemSound.quest_itemget")
-        elif npcId in DROPLIST.keys() and cond == 3:
+        elif npcId in list(DROPLIST.keys()) and cond == 3:
             item, chance = DROPLIST[npcId]
             if st.getRandom(100) <= chance and not st.getQuestItemsCount(item):
                 st.giveItems(item, 1)
@@ -572,7 +572,7 @@ QUEST.addTalkId(WISDOM_CHEST)
 
 QUEST.addKillId(SECRET_KEEPER_TREE)
 
-for mob in DROPLIST.keys():
+for mob in list(DROPLIST.keys()):
     QUEST.addKillId(mob)
     STARTED.addQuestDrop(mob, DROPLIST[mob][0], 1)
 

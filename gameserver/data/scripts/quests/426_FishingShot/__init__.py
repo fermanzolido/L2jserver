@@ -311,21 +311,21 @@ class Quest(JQuest):
         npcId = npc.getNpcId()
         drop = 0
         chance = 0
-        if npcId in MOBS1.keys():
+        if npcId in list(MOBS1.keys()):
             chance = MOBS1[npcId]
-        elif npcId in MOBS2.keys():
+        elif npcId in list(MOBS2.keys()):
             chance = MOBS2[npcId]
             drop = 1
-        elif npcId in MOBS3.keys():
+        elif npcId in list(MOBS3.keys()):
             chance = MOBS3[npcId]
             drop = 2
-        elif npcId in MOBS4.keys():
+        elif npcId in list(MOBS4.keys()):
             chance = MOBS4[npcId]
             drop = 3
-        elif npcId in MOBS5.keys():
+        elif npcId in list(MOBS5.keys()):
             chance = MOBS5[npcId]
             drop = 4
-        elif npcId in MOBSspecial.keys():
+        elif npcId in list(MOBSspecial.keys()):
             chance, drop = MOBSspecial[npcId]
         if st.getRandom(1000) <= chance:
             drop += 1
@@ -341,21 +341,21 @@ STARTED = State("Started", QUEST)
 
 QUEST.setInitialState(CREATED)
 
-for npc in range(31562, 31580) + [31616, 31696, 31697]:
+for npc in list(range(31562, 31580)) + [31616, 31696, 31697]:
     QUEST.addStartNpc(npc)
     QUEST.addTalkId(npc)
 
-for mob in MOBS1.keys():
+for mob in list(MOBS1.keys()):
     QUEST.addKillId(mob)
-for mob in MOBS2.keys():
+for mob in list(MOBS2.keys()):
     QUEST.addKillId(mob)
-for mob in MOBS3.keys():
+for mob in list(MOBS3.keys()):
     QUEST.addKillId(mob)
-for mob in MOBS4.keys():
+for mob in list(MOBS4.keys()):
     QUEST.addKillId(mob)
-for mob in MOBS5.keys():
+for mob in list(MOBS5.keys()):
     QUEST.addKillId(mob)
-for mob in MOBSspecial.keys():
+for mob in list(MOBSspecial.keys()):
     QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(20005, SWEET_FLUID, 1)

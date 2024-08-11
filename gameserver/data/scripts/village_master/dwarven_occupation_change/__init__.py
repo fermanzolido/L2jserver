@@ -97,7 +97,7 @@ class Quest(JQuest):
         race = player.getRace().ordinal()
         classid = player.getClassId().getId()
         level = player.getLevel()
-        if event in CLASSES.keys():
+        if event in list(CLASSES.keys()):
             (
                 prefix,
                 intended_race,
