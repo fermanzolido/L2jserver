@@ -375,7 +375,7 @@ class Quest(JQuest):
                     st.giveItems(MOBS[npcId], 1)
                     st.playSound("ItemSound.quest_itemget")
             elif DEBUG:
-                print("onKill says leader is not correct state" + str(part))
+                print(("onKill says leader is not correct state" + str(part)))
                 return "leader is not correct state"
         return
 
