@@ -1,42 +1,40 @@
-<html><title>Teleport Menu</title><body>
-<table width=260>
+<html><title>Menú de teletransporte</title><body>
+<table width="260">
 <tr>
-<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td width=180><center>Teleport Menu</center></td>
-<td width=40><button value="Back" action="bypass -h admin_show_moves" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td width="40"><button action="bypass -h admin_admin" back="sek.cbui94" fore="sek.cbui92" height="15" value="Main" width="40"></button></td>
+<td width="180"><center>Menú de teletransporte</center></td>
+<td width="40"><button action="bypass -h admin_show_moves" back="sek.cbui94" fore="sek.cbui92" height="15" value="Back" width="40"></button></td>
 </tr>
-</table><br><br>
+</table><br/><br/>
 <center><table><tr>
-<td><button value="  " action="bypass -h admin_tele" width=70 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="North" action="bypass -h admin_gonorth $offset" width=70 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Up" action="bypass -h admin_goup $offset" width=70 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr><tr>
-<td><button value="West" action="bypass -h admin_gowest $offset" width=70 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><edit var="offset" width=70></td>
-<td><button value="East" action="bypass -h admin_goeast $offset" width=70 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr><tr>
-<td><button value="  " action="bypass -h admin_tele" width=70 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="South" action="bypass -h admin_gosouth $offset" width=70 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Down" action="bypass -h admin_godown $offset" width=70 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr></table><br><br>
-<br><br>
-<table width=260><tr>
-<td>Movement:</td>
-<td><button value="Normal mode" action="bypass -h admin_teleto end" width=80 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Demonic mode " action="bypass -h admin_teleto r" width=80 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr></table>
-<br><br>
-<table width=260><tr>
-<td>GM Speed:</td>
-<td><button value="1" action="bypass -h admin_gmspeed_menu 1" width=25 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="2" action="bypass -h admin_gmspeed_menu 2" width=25 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="3" action="bypass -h admin_gmspeed_menu 3" width=25 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="4" action="bypass -h admin_gmspeed_menu 4" width=25 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Off" action="bypass -h admin_gmspeed_menu 0" width=25 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-</tr></table><br><br><br><br>
-Move to given Coords:
-<table width=260><tr>
-<td width=15>X:</td><td><edit var="char_cord_x" width=55></td>
-<td width=15>Y:</td><td><edit var="char_cord_y" width=55></td>
-<td width=15>Z:</td><td><edit var="char_cord_z" width=55></td>
-<td><button value="Tele" action="bypass -h admin_move_to $char_cord_x $char_cord_y $char_cord_z" width=25 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Walk" action="bypass -h admin_walk $char_cord_x $char_cord_y $char_cord_z" width=25 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td><button action="bypass -h admin_tele" back="sek.cbui94" fore="sek.cbui92" height="15" value="  " width="70"></button></td>
+<td><button action="bypass -h admin_gonorth $offset" back="sek.cbui94" fore="sek.cbui92" height="15" value="North" width="70"></button></td>
+<td><button action="bypass -h admin_goup $offset" back="sek.cbui94" fore="sek.cbui92" height="15" value="Up" width="70"></button></td></tr><tr>
+<td><button action="bypass -h admin_gowest $offset" back="sek.cbui94" fore="sek.cbui92" height="15" value="West" width="70"></button></td>
+<td><edit var="offset" width="70"></edit></td>
+<td><button action="bypass -h admin_goeast $offset" back="sek.cbui94" fore="sek.cbui92" height="15" value="East" width="70"></button></td></tr><tr>
+<td><button action="bypass -h admin_tele" back="sek.cbui94" fore="sek.cbui92" height="15" value="  " width="70"></button></td>
+<td><button action="bypass -h admin_gosouth $offset" back="sek.cbui94" fore="sek.cbui92" height="15" value="South" width="70"></button></td>
+<td><button action="bypass -h admin_godown $offset" back="sek.cbui94" fore="sek.cbui92" height="15" value="Down" width="70"></button></td></tr></table><br/><br/>
+<br/><br/>
+<table width="260"><tr>
+<td>Movimiento:</td>
+<td><button action="bypass -h admin_teleto end" back="sek.cbui94" fore="sek.cbui92" height="15" value="Normal mode" width="80"></button></td>
+<td><button action="bypass -h admin_teleto r" back="sek.cbui94" fore="sek.cbui92" height="15" value="Demonic mode " width="80"></button></td></tr></table>
+<br/><br/>
+<table width="260"><tr>
+<td>Velocidad del GM:</td>
+<td><button action="bypass -h admin_gmspeed_menu 1" back="sek.cbui94" fore="sek.cbui92" height="15" value="1" width="25"></button></td>
+<td><button action="bypass -h admin_gmspeed_menu 2" back="sek.cbui94" fore="sek.cbui92" height="15" value="2" width="25"></button></td>
+<td><button action="bypass -h admin_gmspeed_menu 3" back="sek.cbui94" fore="sek.cbui92" height="15" value="3" width="25"></button></td>
+<td><button action="bypass -h admin_gmspeed_menu 4" back="sek.cbui94" fore="sek.cbui92" height="15" value="4" width="25"></button></td>
+<td><button action="bypass -h admin_gmspeed_menu 0" back="sek.cbui94" fore="sek.cbui92" height="15" value="Off" width="25"></button></td>
+</tr></table><br/><br/><br/><br/>Mover a las coordenadas indicadas:<table width="260"><tr>
+<td width="15">INCÓGNITA:</td><td><edit var="char_cord_x" width="55"></edit></td>
+<td width="15">Y:</td><td><edit var="char_cord_y" width="55"></edit></td>
+<td width="15">O:</td><td><edit var="char_cord_z" width="55"></edit></td>
+<td><button action="bypass -h admin_move_to $char_cord_x $char_cord_y $char_cord_z" back="sek.cbui94" fore="sek.cbui92" height="15" value="Tele" width="25"></button></td>
+<td><button action="bypass -h admin_walk $char_cord_x $char_cord_y $char_cord_z" back="sek.cbui94" fore="sek.cbui92" height="15" value="Walk" width="25"></button></td>
 </tr></table>
 </center>
 </body></html>

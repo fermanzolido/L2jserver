@@ -1,31 +1,31 @@
-<html><title>Login server</title><body>
-<table width=260><tr>
-<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td width=180><center>Server Management Menu</center></td>
-<td width=40><button value="Back" action="bypass -h admin_admin4" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<html><title>Servidor de inicio de sesión</title><body>
+<table width="260"><tr>
+<td width="40"><button action="bypass -h admin_admin" back="sek.cbui94" fore="sek.cbui92" height="15" value="Main" width="40"></button></td>
+<td width="180"><center>Menú de administración del servidor</center></td>
+<td width="40"><button action="bypass -h admin_admin4" back="sek.cbui94" fore="sek.cbui92" height="15" value="Back" width="40"></button></td>
 </tr></table>
-<br><br>
-<table width=240>
+<br/><br/>
+<table width="240">
 <tr>
-<td width=100>Max Players:</td>
-<td><edit var="menu_command" width=120 height=15></td>
-<td><button value="Help" action="bypass -h admin_help help/login.htm" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-</tr></table><br><br>
-<table width=260><tr>
-<td>Registered as:</td><td>%server_name%</td>
+<td width="100">Máximo de jugadores:</td>
+<td><edit height="15" var="menu_command" width="120"></edit></td>
+<td><button action="bypass -h admin_help help/login.htm" back="sek.cbui94" fore="sek.cbui92" height="15" value="Help" width="45"></button></td>
+</tr></table><br/><br/>
+<table width="260"><tr>
+<td>Registrado como:</td><td>%nombre_servidor%</td>
 </tr><tr>
-<td>Status: %status%</td><td>Clock: %clock%</td>
+<td>Estado: %status%</td><td>Reloj: %clock%</td>
 </tr><tr>
-<td>Brackets: %brackets%</td><td>Max Players %max_players%</td>
+<td>Corchetes: %corchetes%</td><td>Máximo de jugadores %max_players%</td>
 </tr></table>
 <center>
-<br><br>
-<table width=260><tr>
-<td><button value="Gm Only" action="bypass -h admin_server_gm_only" width=80 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Kick all non GMs" action="bypass -h admin_kick_non_gm" width=80 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Everyone" action="bypass -h admin_server_all" width=80 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr><tr>
-<td><button value="Clock On" action="bypass -h admin_server_list_clock on" width=80 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Clock Off" action="bypass -h admin_server_list_clock off" width=80 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Set Max Players" action="bypass -h admin_server_max_player $menu_command" width=80 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr></table>
+<br/><br/>
+<table width="260"><tr>
+<td><button action="bypass -h admin_server_gm_only" back="sek.cbui94" fore="sek.cbui92" height="15" value="Gm Only" width="80"></button></td>
+<td><button action="bypass -h admin_kick_non_gm" back="sek.cbui94" fore="sek.cbui92" height="15" value="Kick all non GMs" width="80"></button></td>
+<td><button action="bypass -h admin_server_all" back="sek.cbui94" fore="sek.cbui92" height="15" value="Everyone" width="80"></button></td></tr><tr>
+<td><button action="bypass -h admin_server_list_clock on" back="sek.cbui94" fore="sek.cbui92" height="15" value="Clock On" width="80"></button></td>
+<td><button action="bypass -h admin_server_list_clock off" back="sek.cbui94" fore="sek.cbui92" height="15" value="Clock Off" width="80"></button></td>
+<td><button action="bypass -h admin_server_max_player $menu_command" back="sek.cbui94" fore="sek.cbui92" height="15" value="Set Max Players" width="80"></button></td></tr></table>
 </center>
 </body></html>

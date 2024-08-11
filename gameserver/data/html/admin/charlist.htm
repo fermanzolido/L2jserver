@@ -1,25 +1,22 @@
 <html><body>
-<table width=260><tr>
-<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td width=180><center>Character Selection Menu</center></td>
-<td width=40><button value="Back" action="bypass -h admin_admin2" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<table width="260"><tr>
+<td width="40"><button action="bypass -h admin_admin" back="sek.cbui94" fore="sek.cbui92" height="15" value="Main" width="40"></button></td>
+<td width="180"><center>Menú de selección de personajes</center></td>
+<td width="40"><button action="bypass -h admin_admin2" back="sek.cbui94" fore="sek.cbui92" height="15" value="Back" width="40"></button></td>
 </tr></table>
-<br><br>
-You can find a character by writing his name or a part of it and clicking Find below.<br>
+<br/><br/>Puedes encontrar un personaje escribiendo su nombre o parte de él y haciendo clic en Buscar a continuación.<br/>
 <center>
 <table><tr>
-<td><edit var="character_name" width=80></td><td><button value="Find" action="bypass -h admin_find_character $character_name" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-</tr></table><br>
-<img src="L2UI.SquareWhite" width=270 height=1>
-<img src="L2UI.SquareBlank" width=1 height=3>
+<td><edit var="character_name" width="80"></edit></td><td><button action="bypass -h admin_find_character $character_name" back="sek.cbui94" fore="sek.cbui92" height="15" value="Find" width="40"></button></td>
+</tr></table><br/>
+<img height="1" src="L2UI.SquareWhite" width="270"/>
+<img height="3" src="L2UI.SquareBlank" width="1"/>
 </center>
-<table width=270>		
-<tr><td width=80>Name:</td><td width=110>Class:</td><td width=40>Level:</td></tr>
-%players%
-</table>
+<table width="270">
+<tr><td width="80">Nombre:</td><td width="110">Clase:</td><td width="40">Nivel:</td></tr>%jugadores%</table>
 <center>
-<img src="L2UI.SquareBlank" width=1 height=3>
-<img src="L2UI.SquareWhite" width=270 height=1>
-<br>%pages%<br>
+<img height="3" src="L2UI.SquareBlank" width="1"/>
+<img height="1" src="L2UI.SquareWhite" width="270"/>
+<br/>%paginas%<br/>
 </center>
 </body></html>

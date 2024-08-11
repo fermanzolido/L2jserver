@@ -9084,3 +9084,612 @@ Caused by: java.net.ConnectException: Connection refused: connect
 16:07:10,961  INFO Util:141 - =====================================================================-[ Login ]
 16:07:10,967  INFO LoginServerThread:155 - Connecting to login on 127.0.0.1:9014
 16:07:11,006  INFO LoginServerThread:282 - Registered on login as Server 4 : Lionna
+16:10:25,833  INFO Util:141 - ======================================================================-[ Team ]
+16:10:25,833  INFO L2Frozen:35 -                                                                             
+16:10:25,833  INFO L2Frozen:36 -          #     #####          ##### ##### ##### ##### ##### ##    #         
+16:10:25,833  INFO L2Frozen:37 -          #         #          #     #   # #   #     # #     # #   #         
+16:10:25,833  INFO L2Frozen:38 -          #      ###    ####   ###   #   # #   #   #   ###   #  #  #         
+16:10:25,833  INFO L2Frozen:39 -          #     #              #     ###   #   # #     #     #   # #         
+16:10:25,833  INFO L2Frozen:40 -          ##### #####          #     #  ## ##### ##### ##### #    ##         
+16:10:25,833  INFO L2Frozen:41 -                                                                             
+16:10:25,895  INFO Util:141 - ==================================================================-[ Database ]
+16:10:25,911  INFO MLog:80 - MLog clients using log4j logging.
+16:10:26,067  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+16:10:26,291  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 0, acquireRetryDelay -> 500, autoCommitOnClose -> true, automaticTestTable -> connection_test_table, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge132b5ijqhzq155lwoh|631330c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge132b5ijqhzq155lwoh|631330c, idleConnectionTestPeriod -> 3600, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost/l2jdb, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 50, maxStatements -> 0, maxStatementsPerConnection -> 100, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {password=******, user=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+16:10:26,301  INFO Loader:212 - L2DatabaseFactory: loaded.
+16:10:26,301  INFO Util:141 - ===================================================================-[ Threads ]
+16:10:26,301  INFO HtmCache:82 - Cache[HTML]: Running lazy cache
+16:10:26,320  INFO CrestCache:150 - Cache[Crest]: 0,000MB on 0 files loaded. (Forget Time: 300s , Capacity: 50)
+16:10:26,335  INFO L2ScriptEngineManager:89 - Initializing Script Engine Manager
+16:10:26,351  INFO L2ScriptEngineManager:118 - Script Engine: BeanShell Engine 1.1 - Language: BeanShell - Language Version: 2.0b5
+16:10:26,367  INFO L2ScriptEngineManager:118 - Script Engine: java 1.6 - Language: java - Language Version: 1.6
+16:10:26,538  INFO L2ScriptEngineManager:118 - Script Engine: jython 2.2.1 - Language: python - Language Version: 2.2.1
+16:10:26,554  INFO Util:141 - =====================================================================-[ World ]
+16:10:26,569  INFO L2World:963 - L2World: Setting up World Regions
+16:10:26,585  INFO L2World:991 - L2World: (87x128) World Region Grid set up.
+16:10:26,600  INFO Announcements:192 - Announcements: Loaded 2 Announcements.
+16:10:26,616  INFO AutoAnnouncementHandler:84 - GameServer: Loaded 0 Auto Announcements.
+16:10:26,616  INFO IdFactory:136 - Updated characters online status.
+16:10:26,663  INFO BitSetIDFactory:79 - IDFactory: 102912 id's available.
+16:10:26,663  INFO StaticObjects:60 - StaticObject: Loaded 30 StaticObject Templates.
+16:10:26,663  INFO TeleportLocationTable:94 - TeleportLocationTable: Loaded 828 Teleport Location Templates
+16:10:26,663  INFO TeleportLocationTable:134 - TeleportLocationTable: Loaded {} Custom Teleport Location Templates. 178
+16:10:26,745  INFO ExperienceData:95 - ExperienceData: Loaded 87 levels
+16:10:26,746  INFO ExperienceData:96 - ExperienceData: Max Player Level is: 80
+16:10:26,746  INFO ExperienceData:97 - ExperienceData: Max Pet Level is: 80
+16:10:26,748  INFO DuelManager:56 - Initializing DuelManager
+16:10:26,751  INFO ClassDamageManager:107 - Loaded 31 classes Damages configurations
+16:10:26,752  INFO AutoSaveManager:56 - Initializing AutoSaveManager
+16:10:26,753  INFO Util:141 - ====================================================================-[ Skills ]
+16:10:27,757  INFO SkillsEngine:121 - SkillsEngine: Loaded 30524 Skill templates from XML files.
+16:10:27,766  INFO SkillTreeTable:76 - SkillSpellbookTable: Loaded 334 spellbooks
+16:10:27,767  INFO Loader:270 - Skills: All skills loaded.
+16:10:27,767  INFO Util:141 - =====================================================================-[ Items ]
+16:10:27,925  INFO ItemTable:300 - ItemTable: Loaded 1014 Armors.
+16:10:27,934  INFO ItemTable:306 - ItemTable: Loaded 6893 Items.
+16:10:28,074  INFO ItemTable:312 - ItemTable: Loaded 1313 Weapons.
+16:10:28,076  INFO ItemTable:649 - Highest item id used: 20006
+16:10:28,083  INFO ArmorSetsTable:87 - Loaded: 51 armor sets.
+16:10:28,085  INFO CustomArmorSetsTable:72 - ArmorSetsTable: Loaded custom armor sets.
+16:10:28,102  INFO ExtractableItemsData:148 - Extractable items data: Loaded 334 extractable items!
+16:10:28,105  INFO SummonItemsData:133 - Summon items data: Loaded 12 summon items.
+16:10:28,108  INFO SkillTreeTable:168 - FishTable: Loaded 270 Fishes.
+16:10:28,109  INFO Util:141 - =======================================================================-[ Npc ]
+16:10:28,111  INFO NpcWalkerRoutesTable:57 - Initializing Walkers Routes Table.
+16:10:28,114  INFO NpcWalkerRoutesTable:124 - WalkerRoutesTable: Loaded 167 Npc Walker Routes.
+16:10:28,273  INFO NpcTable:724 - NpcTable: Loaded 6592 Npc Templates.
+16:10:28,274  INFO NpcTable:724 - NpcTable: Loaded 6610 Npc Templates.
+16:10:28,296  INFO NpcTable:302 - CustomDropList : Added 0 custom droplist
+16:10:28,334  INFO NpcTable:441 - NpcTable: Loaded 447 Minions.
+16:10:28,335  INFO Util:141 - ================================================================-[ Characters ]
+16:10:28,342  INFO ForumsBBSManager:113 - Loaded 5 forums. Last forum id used: 5
+16:10:28,345  INFO ClanTable:154 - Restored 0 clans from the database.
+16:10:28,349  INFO CharTemplateTable:274 - CharTemplateTable: Loaded 89 Character Templates.
+16:10:28,353  INFO LevelUpData:106 - LevelUpData: Loaded 89 Character Level Up Templates.
+16:10:28,355  INFO HennaTable:115 - HennaTable: Loaded 180 Templates.
+16:10:28,398  INFO HennaTreeTable:138 - HennaTreeTable: Loaded 7128 Henna Tree Templates.
+16:10:28,400  INFO HennaTable:170 - Helper Buff Table: Loaded 14 templates
+16:10:28,400  INFO Util:141 - ===================================================================-[ Geodata ]
+16:10:28,402  INFO GeoData:588 - Geo Engine: - Loading Geodata...
+16:10:28,403  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/15_20.l2j -> region offset: 500X: 15 Y: 20
+16:10:28,407  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,408  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/15_21.l2j -> region offset: 501X: 15 Y: 21
+16:10:28,408  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,408  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/15_22.l2j -> region offset: 502X: 15 Y: 22
+16:10:28,409  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,409  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/15_23.l2j -> region offset: 503X: 15 Y: 23
+16:10:28,409  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,409  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/15_24.l2j -> region offset: 504X: 15 Y: 24
+16:10:28,409  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,410  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/15_25.l2j -> region offset: 505X: 15 Y: 25
+16:10:28,410  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,410  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/15_26.l2j -> region offset: 506X: 15 Y: 26
+16:10:28,410  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,411  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_10.l2j -> region offset: 522X: 16 Y: 10
+16:10:28,472  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 16816814 Loaded: 16816814
+16:10:28,472  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_11.l2j -> region offset: 523X: 16 Y: 11
+16:10:28,478  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 1601630 Loaded: 1601630
+16:10:28,478  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_12.l2j -> region offset: 524X: 16 Y: 12
+16:10:28,482  INFO GeoData:720 - Geo Engine: - Max Layers: 3 Size: 1353668 Loaded: 1353668
+16:10:28,482  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_13.l2j -> region offset: 525X: 16 Y: 13
+16:10:28,483  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,483  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_14.l2j -> region offset: 526X: 16 Y: 14
+16:10:28,483  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,483  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_15.l2j -> region offset: 527X: 16 Y: 15
+16:10:28,484  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,484  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_16.l2j -> region offset: 528X: 16 Y: 16
+16:10:28,484  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,484  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_17.l2j -> region offset: 529X: 16 Y: 17
+16:10:28,485  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,485  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_18.l2j -> region offset: 530X: 16 Y: 18
+16:10:28,485  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,485  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_19.l2j -> region offset: 531X: 16 Y: 19
+16:10:28,486  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,486  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_20.l2j -> region offset: 532X: 16 Y: 20
+16:10:28,490  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 223068 Loaded: 223068
+16:10:28,490  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_21.l2j -> region offset: 533X: 16 Y: 21
+16:10:28,493  INFO GeoData:720 - Geo Engine: - Max Layers: 3 Size: 516482 Loaded: 516482
+16:10:28,494  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_22.l2j -> region offset: 534X: 16 Y: 22
+16:10:28,494  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,495  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_23.l2j -> region offset: 535X: 16 Y: 23
+16:10:28,495  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,495  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_24.l2j -> region offset: 536X: 16 Y: 24
+16:10:28,498  INFO GeoData:720 - Geo Engine: - Max Layers: 3 Size: 1450518 Loaded: 1450518
+16:10:28,498  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_25.l2j -> region offset: 537X: 16 Y: 25
+16:10:28,502  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 2138002 Loaded: 2138002
+16:10:28,502  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/16_26.l2j -> region offset: 538X: 16 Y: 26
+16:10:28,502  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,503  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_10.l2j -> region offset: 554X: 17 Y: 10
+16:10:28,506  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 1598462 Loaded: 1598462
+16:10:28,507  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_11.l2j -> region offset: 555X: 17 Y: 11
+16:10:28,511  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 1633812 Loaded: 1633812
+16:10:28,511  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_12.l2j -> region offset: 556X: 17 Y: 12
+16:10:28,511  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,512  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_13.l2j -> region offset: 557X: 17 Y: 13
+16:10:28,512  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,512  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_14.l2j -> region offset: 558X: 17 Y: 14
+16:10:28,513  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,514  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_15.l2j -> region offset: 559X: 17 Y: 15
+16:10:28,514  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,514  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_16.l2j -> region offset: 560X: 17 Y: 16
+16:10:28,515  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,516  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_17.l2j -> region offset: 561X: 17 Y: 17
+16:10:28,516  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,516  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_18.l2j -> region offset: 562X: 17 Y: 18
+16:10:28,516  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,517  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_19.l2j -> region offset: 563X: 17 Y: 19
+16:10:28,517  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,517  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_20.l2j -> region offset: 564X: 17 Y: 20
+16:10:28,520  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 3314810 Loaded: 3314810
+16:10:28,520  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_21.l2j -> region offset: 565X: 17 Y: 21
+16:10:28,523  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 4570950 Loaded: 4570950
+16:10:28,524  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_22.l2j -> region offset: 566X: 17 Y: 22
+16:10:28,526  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 4353056 Loaded: 4353056
+16:10:28,526  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_23.l2j -> region offset: 567X: 17 Y: 23
+16:10:28,529  INFO GeoData:720 - Geo Engine: - Max Layers: 3 Size: 902280 Loaded: 902280
+16:10:28,529  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_24.l2j -> region offset: 568X: 17 Y: 24
+16:10:28,533  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 278004 Loaded: 278004
+16:10:28,533  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_25.l2j -> region offset: 569X: 17 Y: 25
+16:10:28,534  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 2285538 Loaded: 2285538
+16:10:28,535  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/17_26.l2j -> region offset: 570X: 17 Y: 26
+16:10:28,535  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,535  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_10.l2j -> region offset: 586X: 18 Y: 10
+16:10:28,538  INFO GeoData:720 - Geo Engine: - Max Layers: 8 Size: 3826426 Loaded: 3826426
+16:10:28,539  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_11.l2j -> region offset: 587X: 18 Y: 11
+16:10:28,539  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,539  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_12.l2j -> region offset: 588X: 18 Y: 12
+16:10:28,539  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,540  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_13.l2j -> region offset: 589X: 18 Y: 13
+16:10:28,540  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,540  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_14.l2j -> region offset: 590X: 18 Y: 14
+16:10:28,544  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 4318008 Loaded: 4318008
+16:10:28,544  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_15.l2j -> region offset: 591X: 18 Y: 15
+16:10:28,544  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,545  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_16.l2j -> region offset: 592X: 18 Y: 16
+16:10:28,545  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,545  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_17.l2j -> region offset: 593X: 18 Y: 17
+16:10:28,545  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,546  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_18.l2j -> region offset: 594X: 18 Y: 18
+16:10:28,546  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,546  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_19.l2j -> region offset: 595X: 18 Y: 19
+16:10:28,549  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 3277650 Loaded: 3277650
+16:10:28,549  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_20.l2j -> region offset: 596X: 18 Y: 20
+16:10:28,552  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 4368058 Loaded: 4368058
+16:10:28,552  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_21.l2j -> region offset: 597X: 18 Y: 21
+16:10:28,555  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 4257062 Loaded: 4257062
+16:10:28,555  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_22.l2j -> region offset: 598X: 18 Y: 22
+16:10:28,558  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 5695118 Loaded: 5695118
+16:10:28,558  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_23.l2j -> region offset: 599X: 18 Y: 23
+16:10:28,562  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 5262180 Loaded: 5262180
+16:10:28,562  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_24.l2j -> region offset: 600X: 18 Y: 24
+16:10:28,566  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 3516124 Loaded: 3516124
+16:10:28,566  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_25.l2j -> region offset: 601X: 18 Y: 25
+16:10:28,570  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 228612 Loaded: 228612
+16:10:28,570  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/18_26.l2j -> region offset: 602X: 18 Y: 26
+16:10:28,570  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,570  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_10.l2j -> region offset: 618X: 19 Y: 10
+16:10:28,573  INFO GeoData:720 - Geo Engine: - Max Layers: 8 Size: 3873432 Loaded: 3873432
+16:10:28,574  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_11.l2j -> region offset: 619X: 19 Y: 11
+16:10:28,574  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,574  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_12.l2j -> region offset: 620X: 19 Y: 12
+16:10:28,574  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,575  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_13.l2j -> region offset: 621X: 19 Y: 13
+16:10:28,577  INFO GeoData:720 - Geo Engine: - Max Layers: 3 Size: 3402602 Loaded: 3402602
+16:10:28,577  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_14.l2j -> region offset: 622X: 19 Y: 14
+16:10:28,580  INFO GeoData:720 - Geo Engine: - Max Layers: 3 Size: 4693466 Loaded: 4693466
+16:10:28,580  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_15.l2j -> region offset: 623X: 19 Y: 15
+16:10:28,582  INFO GeoData:720 - Geo Engine: - Max Layers: 3 Size: 3936872 Loaded: 3936872
+16:10:28,582  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_16.l2j -> region offset: 624X: 19 Y: 16
+16:10:28,585  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 3466828 Loaded: 3466828
+16:10:28,585  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_17.l2j -> region offset: 625X: 19 Y: 17
+16:10:28,586  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 1269380 Loaded: 1269380
+16:10:28,586  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_18.l2j -> region offset: 626X: 19 Y: 18
+16:10:28,589  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 4882924 Loaded: 4882924
+16:10:28,589  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_19.l2j -> region offset: 627X: 19 Y: 19
+16:10:28,592  INFO GeoData:720 - Geo Engine: - Max Layers: 3 Size: 2566634 Loaded: 2566634
+16:10:28,592  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_20.l2j -> region offset: 628X: 19 Y: 20
+16:10:28,595  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 3724650 Loaded: 3724650
+16:10:28,595  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_21.l2j -> region offset: 629X: 19 Y: 21
+16:10:28,598  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 3332632 Loaded: 3332632
+16:10:28,598  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_22.l2j -> region offset: 630X: 19 Y: 22
+16:10:28,600  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 4630154 Loaded: 4630154
+16:10:28,600  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_23.l2j -> region offset: 631X: 19 Y: 23
+16:10:28,606  INFO GeoData:720 - Geo Engine: - Max Layers: 11 Size: 9498762 Loaded: 9498762
+16:10:28,606  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_24.l2j -> region offset: 632X: 19 Y: 24
+16:10:28,608  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 2870100 Loaded: 2870100
+16:10:28,608  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_25.l2j -> region offset: 633X: 19 Y: 25
+16:10:28,608  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,609  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/19_26.l2j -> region offset: 634X: 19 Y: 26
+16:10:28,609  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,609  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_10.l2j -> region offset: 650X: 20 Y: 10
+16:10:28,611  INFO GeoData:720 - Geo Engine: - Max Layers: 8 Size: 2071990 Loaded: 2071990
+16:10:28,611  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_11.l2j -> region offset: 651X: 20 Y: 11
+16:10:28,612  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,612  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_12.l2j -> region offset: 652X: 20 Y: 12
+16:10:28,612  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,612  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_13.l2j -> region offset: 653X: 20 Y: 13
+16:10:28,614  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 4223650 Loaded: 4223650
+16:10:28,614  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_14.l2j -> region offset: 654X: 20 Y: 14
+16:10:28,618  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 7877620 Loaded: 7877620
+16:10:28,619  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_15.l2j -> region offset: 655X: 20 Y: 15
+16:10:28,621  INFO GeoData:720 - Geo Engine: - Max Layers: 3 Size: 3932294 Loaded: 3932294
+16:10:28,621  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_16.l2j -> region offset: 656X: 20 Y: 16
+16:10:28,623  INFO GeoData:720 - Geo Engine: - Max Layers: 9 Size: 3504878 Loaded: 3504878
+16:10:28,624  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_17.l2j -> region offset: 657X: 20 Y: 17
+16:10:28,627  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 5709916 Loaded: 5709916
+16:10:28,628  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_18.l2j -> region offset: 658X: 20 Y: 18
+16:10:28,630  INFO GeoData:720 - Geo Engine: - Max Layers: 3 Size: 3619170 Loaded: 3619170
+16:10:28,630  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_19.l2j -> region offset: 659X: 20 Y: 19
+16:10:28,632  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 2651036 Loaded: 2651036
+16:10:28,633  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_20.l2j -> region offset: 660X: 20 Y: 20
+16:10:28,635  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 5135826 Loaded: 5135826
+16:10:28,636  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_21.l2j -> region offset: 661X: 20 Y: 21
+16:10:28,641  INFO GeoData:720 - Geo Engine: - Max Layers: 9 Size: 9843752 Loaded: 9843752
+16:10:28,642  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_22.l2j -> region offset: 662X: 20 Y: 22
+16:10:28,645  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 4832250 Loaded: 4832250
+16:10:28,646  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_23.l2j -> region offset: 663X: 20 Y: 23
+16:10:28,648  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 3431390 Loaded: 3431390
+16:10:28,649  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_24.l2j -> region offset: 664X: 20 Y: 24
+16:10:28,649  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,650  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_25.l2j -> region offset: 665X: 20 Y: 25
+16:10:28,650  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,650  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/20_26.l2j -> region offset: 666X: 20 Y: 26
+16:10:28,651  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,651  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_10.l2j -> region offset: 682X: 21 Y: 10
+16:10:28,651  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,652  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_11.l2j -> region offset: 683X: 21 Y: 11
+16:10:28,652  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,652  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_12.l2j -> region offset: 684X: 21 Y: 12
+16:10:28,653  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,653  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_13.l2j -> region offset: 685X: 21 Y: 13
+16:10:28,653  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 284682 Loaded: 284682
+16:10:28,654  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_14.l2j -> region offset: 686X: 21 Y: 14
+16:10:28,657  INFO GeoData:720 - Geo Engine: - Max Layers: 7 Size: 7660720 Loaded: 7660720
+16:10:28,657  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_15.l2j -> region offset: 687X: 21 Y: 15
+16:10:28,661  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 6861616 Loaded: 6861616
+16:10:28,661  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_16.l2j -> region offset: 688X: 21 Y: 16
+16:10:28,664  INFO GeoData:720 - Geo Engine: - Max Layers: 10 Size: 7195714 Loaded: 7195714
+16:10:28,665  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_17.l2j -> region offset: 689X: 21 Y: 17
+16:10:28,666  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 1782142 Loaded: 1782142
+16:10:28,666  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_18.l2j -> region offset: 690X: 21 Y: 18
+16:10:28,670  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 6043604 Loaded: 6043604
+16:10:28,670  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_19.l2j -> region offset: 691X: 21 Y: 19
+16:10:28,672  INFO GeoData:720 - Geo Engine: - Max Layers: 7 Size: 2869586 Loaded: 2869586
+16:10:28,673  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_20.l2j -> region offset: 692X: 21 Y: 20
+16:10:28,675  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 3781162 Loaded: 3781162
+16:10:28,675  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_21.l2j -> region offset: 693X: 21 Y: 21
+16:10:28,679  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 7233862 Loaded: 7233862
+16:10:28,680  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_22.l2j -> region offset: 694X: 21 Y: 22
+16:10:28,683  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 5973246 Loaded: 5973246
+16:10:28,683  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_23.l2j -> region offset: 695X: 21 Y: 23
+16:10:28,686  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 5335506 Loaded: 5335506
+16:10:28,687  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_24.l2j -> region offset: 696X: 21 Y: 24
+16:10:28,690  INFO GeoData:720 - Geo Engine: - Max Layers: 7 Size: 6419744 Loaded: 6419744
+16:10:28,691  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/21_25.l2j -> region offset: 697X: 21 Y: 25
+16:10:28,692  INFO GeoData:720 - Geo Engine: - Max Layers: 3 Size: 751114 Loaded: 751114
+16:10:28,693  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_13.l2j -> region offset: 717X: 22 Y: 13
+16:10:28,695  INFO GeoData:720 - Geo Engine: - Max Layers: 7 Size: 6344024 Loaded: 6344024
+16:10:28,696  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_14.l2j -> region offset: 718X: 22 Y: 14
+16:10:28,700  INFO GeoData:720 - Geo Engine: - Max Layers: 7 Size: 7792440 Loaded: 7792440
+16:10:28,701  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_15.l2j -> region offset: 719X: 22 Y: 15
+16:10:28,705  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 7761592 Loaded: 7761592
+16:10:28,705  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_16.l2j -> region offset: 720X: 22 Y: 16
+16:10:28,712  INFO GeoData:720 - Geo Engine: - Max Layers: 7 Size: 12006282 Loaded: 12006282
+16:10:28,712  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_17.l2j -> region offset: 721X: 22 Y: 17
+16:10:28,714  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 4638198 Loaded: 4638198
+16:10:28,714  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_18.l2j -> region offset: 722X: 22 Y: 18
+16:10:28,717  INFO GeoData:720 - Geo Engine: - Max Layers: 9 Size: 4226282 Loaded: 4226282
+16:10:28,718  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_19.l2j -> region offset: 723X: 22 Y: 19
+16:10:28,719  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 4035796 Loaded: 4035796
+16:10:28,720  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_20.l2j -> region offset: 724X: 22 Y: 20
+16:10:28,722  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 3394924 Loaded: 3394924
+16:10:28,722  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_21.l2j -> region offset: 725X: 22 Y: 21
+16:10:28,725  INFO GeoData:720 - Geo Engine: - Max Layers: 8 Size: 4813790 Loaded: 4813790
+16:10:28,726  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_22.l2j -> region offset: 726X: 22 Y: 22
+16:10:28,729  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 5563560 Loaded: 5563560
+16:10:28,729  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_23.l2j -> region offset: 727X: 22 Y: 23
+16:10:28,731  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 4409314 Loaded: 4409314
+16:10:28,731  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_24.l2j -> region offset: 728X: 22 Y: 24
+16:10:28,733  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 3935170 Loaded: 3935170
+16:10:28,734  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_25.l2j -> region offset: 729X: 22 Y: 25
+16:10:28,776  INFO GeoData:720 - Geo Engine: - Max Layers: 7 Size: 5374500 Loaded: 5374500
+16:10:28,777  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/22_26.l2j -> region offset: 730X: 22 Y: 26
+16:10:28,777  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,778  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_10.l2j -> region offset: 746X: 23 Y: 10
+16:10:28,778  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 276870 Loaded: 276870
+16:10:28,778  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_11.l2j -> region offset: 747X: 23 Y: 11
+16:10:28,780  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 3265184 Loaded: 3265184
+16:10:28,781  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_12.l2j -> region offset: 748X: 23 Y: 12
+16:10:28,783  INFO GeoData:720 - Geo Engine: - Max Layers: 7 Size: 7139550 Loaded: 7139550
+16:10:28,784  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_13.l2j -> region offset: 749X: 23 Y: 13
+16:10:28,786  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 6485174 Loaded: 6485174
+16:10:28,787  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_14.l2j -> region offset: 750X: 23 Y: 14
+16:10:28,790  INFO GeoData:720 - Geo Engine: - Max Layers: 7 Size: 7548792 Loaded: 7548792
+16:10:28,790  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_15.l2j -> region offset: 751X: 23 Y: 15
+16:10:28,796  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 10894422 Loaded: 10894422
+16:10:28,796  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_16.l2j -> region offset: 752X: 23 Y: 16
+16:10:28,799  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 6424884 Loaded: 6424884
+16:10:28,800  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_17.l2j -> region offset: 753X: 23 Y: 17
+16:10:28,802  INFO GeoData:720 - Geo Engine: - Max Layers: 7 Size: 6472620 Loaded: 6472620
+16:10:28,803  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_18.l2j -> region offset: 754X: 23 Y: 18
+16:10:28,806  INFO GeoData:720 - Geo Engine: - Max Layers: 21 Size: 8017312 Loaded: 8017312
+16:10:28,806  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_19.l2j -> region offset: 755X: 23 Y: 19
+16:10:28,810  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 7039468 Loaded: 7039468
+16:10:28,810  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_20.l2j -> region offset: 756X: 23 Y: 20
+16:10:28,813  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 7313328 Loaded: 7313328
+16:10:28,813  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_21.l2j -> region offset: 757X: 23 Y: 21
+16:10:28,817  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 5915114 Loaded: 5915114
+16:10:28,817  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_22.l2j -> region offset: 758X: 23 Y: 22
+16:10:28,819  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 4418070 Loaded: 4418070
+16:10:28,820  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_23.l2j -> region offset: 759X: 23 Y: 23
+16:10:28,822  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 5295316 Loaded: 5295316
+16:10:28,823  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_24.l2j -> region offset: 760X: 23 Y: 24
+16:10:28,825  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 4671462 Loaded: 4671462
+16:10:28,826  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_25.l2j -> region offset: 761X: 23 Y: 25
+16:10:28,828  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 3264202 Loaded: 3264202
+16:10:28,828  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/23_26.l2j -> region offset: 762X: 23 Y: 26
+16:10:28,828  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,829  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_10.l2j -> region offset: 778X: 24 Y: 10
+16:10:28,829  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 262506 Loaded: 262506
+16:10:28,829  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_11.l2j -> region offset: 779X: 24 Y: 11
+16:10:28,831  INFO GeoData:720 - Geo Engine: - Max Layers: 3 Size: 3305300 Loaded: 3305300
+16:10:28,831  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_12.l2j -> region offset: 780X: 24 Y: 12
+16:10:28,837  INFO GeoData:720 - Geo Engine: - Max Layers: 7 Size: 11142898 Loaded: 11142898
+16:10:28,837  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_13.l2j -> region offset: 781X: 24 Y: 13
+16:10:28,838  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 2186778 Loaded: 2186778
+16:10:28,838  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_14.l2j -> region offset: 782X: 24 Y: 14
+16:10:28,841  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 6155286 Loaded: 6155286
+16:10:28,841  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_15.l2j -> region offset: 783X: 24 Y: 15
+16:10:28,844  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 5781964 Loaded: 5781964
+16:10:28,845  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_16.l2j -> region offset: 784X: 24 Y: 16
+16:10:28,847  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 5839078 Loaded: 5839078
+16:10:28,848  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_17.l2j -> region offset: 785X: 24 Y: 17
+16:10:28,850  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 5651342 Loaded: 5651342
+16:10:28,850  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_18.l2j -> region offset: 786X: 24 Y: 18
+16:10:28,852  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 4063066 Loaded: 4063066
+16:10:28,852  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_19.l2j -> region offset: 787X: 24 Y: 19
+16:10:28,854  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 3335538 Loaded: 3335538
+16:10:28,854  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_20.l2j -> region offset: 788X: 24 Y: 20
+16:10:28,860  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 7885768 Loaded: 7885768
+16:10:28,860  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_21.l2j -> region offset: 789X: 24 Y: 21
+16:10:28,863  INFO GeoData:720 - Geo Engine: - Max Layers: 4 Size: 4126332 Loaded: 4126332
+16:10:28,863  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_22.l2j -> region offset: 790X: 24 Y: 22
+16:10:28,864  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 2483886 Loaded: 2483886
+16:10:28,864  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_23.l2j -> region offset: 791X: 24 Y: 23
+16:10:28,864  INFO GeoData:720 - Geo Engine: - Max Layers: 2 Size: 720254 Loaded: 720254
+16:10:28,865  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_24.l2j -> region offset: 792X: 24 Y: 24
+16:10:28,865  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 340626 Loaded: 340626
+16:10:28,865  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_25.l2j -> region offset: 793X: 24 Y: 25
+16:10:28,865  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 586578 Loaded: 586578
+16:10:28,866  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/24_26.l2j -> region offset: 794X: 24 Y: 26
+16:10:28,866  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,866  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/25_10.l2j -> region offset: 810X: 25 Y: 10
+16:10:28,866  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,866  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/25_11.l2j -> region offset: 811X: 25 Y: 11
+16:10:28,867  INFO GeoData:720 - Geo Engine: - Max Layers: 7 Size: 3659954 Loaded: 3659954
+16:10:28,867  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/25_12.l2j -> region offset: 812X: 25 Y: 12
+16:10:28,874  INFO GeoData:720 - Geo Engine: - Max Layers: 8 Size: 13722452 Loaded: 13722452
+16:10:28,875  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/25_14.l2j -> region offset: 814X: 25 Y: 14
+16:10:28,882  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 13850476 Loaded: 13850476
+16:10:28,883  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/25_15.l2j -> region offset: 815X: 25 Y: 15
+16:10:28,889  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 12010470 Loaded: 12010470
+16:10:28,889  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/25_16.l2j -> region offset: 816X: 25 Y: 16
+16:10:28,892  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 6498272 Loaded: 6498272
+16:10:28,893  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/25_17.l2j -> region offset: 817X: 25 Y: 17
+16:10:28,897  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 8580214 Loaded: 8580214
+16:10:28,898  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/25_18.l2j -> region offset: 818X: 25 Y: 18
+16:10:28,899  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 4095078 Loaded: 4095078
+16:10:28,900  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/25_19.l2j -> region offset: 819X: 25 Y: 19
+16:10:28,905  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 9445748 Loaded: 9445748
+16:10:28,905  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/25_20.l2j -> region offset: 820X: 25 Y: 20
+16:10:28,907  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 2397506 Loaded: 2397506
+16:10:28,907  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/25_21.l2j -> region offset: 821X: 25 Y: 21
+16:10:28,910  INFO GeoData:720 - Geo Engine: - Max Layers: 6 Size: 4703208 Loaded: 4703208
+16:10:28,910  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/26_11.l2j -> region offset: 843X: 26 Y: 11
+16:10:28,911  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 977682 Loaded: 977682
+16:10:28,911  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/26_12.l2j -> region offset: 844X: 26 Y: 12
+16:10:28,912  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 1388820 Loaded: 1388820
+16:10:28,912  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/26_14.l2j -> region offset: 846X: 26 Y: 14
+16:10:28,914  INFO GeoData:720 - Geo Engine: - Max Layers: 5 Size: 2747550 Loaded: 2747550
+16:10:28,914  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/26_15.l2j -> region offset: 847X: 26 Y: 15
+16:10:28,914  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,914  INFO GeoData:671 - Geo Engine: - Loading: data/geodata/26_16.l2j -> region offset: 848X: 26 Y: 16
+16:10:28,914  INFO GeoData:720 - Geo Engine: - Max Layers: 0 Size: 196608 Loaded: 0
+16:10:28,914  INFO Util:141 - ===================================================================-[ Economy ]
+16:10:28,974  WARN TradeController:299 - L2TradeList 363 itemId  1856 has an ADENA sell price lower then reference price.. Automatically Updating it..
+16:10:28,974  WARN TradeController:299 - L2TradeList 364 itemId  1856 has an ADENA sell price lower then reference price.. Automatically Updating it..
+16:10:29,053  WARN TradeController:397 - TradeController: Buylists could not be initialized.
+16:10:29,055  INFO TradeController:574 - TradeController: Loaded 0 Custom Buylists.
+16:10:29,269  INFO Loader:330 - Multisell: loaded.
+16:10:29,270  INFO Util:141 - ================================================================-[ Clan Halls ]
+16:10:29,272  INFO ClanHallManager:72 - Initializing ClanHallManager
+16:10:29,341  INFO ClanHallManager:122 - Loaded: 0 clan halls
+16:10:29,342  INFO ClanHallManager:123 - Loaded: 44 free clan halls
+16:10:29,346  INFO FortressOfResistance:151 - Fortress of Resistanse: siege will start the 16/8/24, 21:00
+16:10:29,349  INFO DevastatedCastle:161 - Devastated Castle: siege will start the 12/8/24, 18:00
+16:10:29,355  INFO BanditStrongholdSiege:78 - SiegeManager of Bandits Stronghold
+16:10:29,357  INFO AuctionManager:130 - Initializing AuctionManager
+16:10:29,390  INFO AuctionManager:159 - Loaded: 38 auction(s)
+16:10:29,390  INFO Util:141 - ======================================================================-[ Zone ]
+16:10:29,397  INFO ZoneData:104 - Loading zones...
+16:10:29,452  INFO ArenaManager:39 - Initializing ArenaManager
+16:10:29,495  INFO TownManager:42 - Initializing TownManager
+16:10:29,575  INFO OlympiadStadiaManager:40 - Initializing OlympiadStadiaManager
+16:10:29,684  INFO CastleManager:117 - Initializing CastleManager
+16:10:29,704  INFO CastleManager:133 - Loaded: 9 castles
+16:10:29,731  INFO GrandBossManager:83 - Initializing GrandBossManager
+16:10:29,733  INFO GrandBossManager:130 - GrandBossManager: Loaded 15 Instances
+16:10:29,812  INFO FishingZoneManager:39 - Initializing FishingZoneManager
+16:10:30,226  INFO FortManager:56 - Initializing FortManager
+16:10:30,250  INFO FortManager:114 - Loaded: 21 fortress
+16:10:30,685  INFO GrandBossManager:182 - GrandBossManager: Initialized 17 Grand Boss Zones
+16:10:30,685  INFO ZoneData:594 - Done: loaded 565 zones.
+16:10:30,685  INFO Util:141 - =================================================================-[ Spawnlist ]
+16:10:30,733  INFO CustomNpcInstanceManager:201 - CustomNpcInstanceManager: loaded 0 NPC to PC polymorphs.
+16:10:30,919  INFO Siege:1236 - Siege of Dion: Sat Aug 17 20:00:00 ART 2024
+16:10:30,984  INFO Siege:1236 - Siege of Oren: Sun Aug 18 16:00:00 ART 2024
+16:10:31,577  INFO Siege:1236 - Siege of Gludio: Sat Aug 17 20:00:00 ART 2024
+16:10:31,580  INFO Siege:1236 - Siege of Giran: Sun Aug 18 16:00:00 ART 2024
+16:10:31,582  INFO Siege:1236 - Siege of Innadril: Sun Aug 18 16:00:00 ART 2024
+16:10:31,583  INFO Siege:1236 - Siege of Aden: Sat Aug 17 20:00:00 ART 2024
+16:10:31,629  INFO Siege:1236 - Siege of Goddard: Sun Aug 18 16:00:00 ART 2024
+16:10:31,639  INFO DayNightSpawnManager:74 - DayNightSpawnManager: Day/Night handler initialised
+16:10:31,654  INFO Siege:1236 - Siege of Rune: Sat Aug 17 20:00:00 ART 2024
+16:10:31,655  INFO Siege:1236 - Siege of Schuttgart: Sat Aug 17 20:00:00 ART 2024
+16:10:31,786  INFO SpawnTable:182 - SpawnTable: Loaded 37241 Npc Spawn Locations. 
+16:10:31,787  INFO SpawnTable:183 - SpawnTable: Spawning completed, total number of NPCs in the world: 37241
+16:10:31,864  INFO RaidBossSpawnManager:129 - RaidBossSpawnManager: Loaded 182 Instances
+16:10:31,865  INFO RaidBossSpawnManager:130 - RaidBossSpawnManager: Scheduled 0 Instances
+16:10:31,867  INFO DayNightSpawnManager:134 - DayNightSpawnManager: Deleted 0 night creatures
+16:10:31,872  INFO DayNightSpawnManager:176 - DayNightSpawnManager: Spawning 232 day creatures
+16:10:31,872  INFO Util:141 - ==========================================================-[ Dimensional Rift ]
+16:10:31,875  INFO DimensionalRiftManager:172 - DimensionalRiftManager: Loaded 7 room types with 56 rooms.
+16:10:31,880  INFO DimensionalRiftManager:280 - DimensionalRiftManager: Loaded 462 dimensional rift spawns, 0 errors.
+16:10:31,880  INFO Util:141 - ======================================================================-[ Misc ]
+16:10:31,886  INFO RecipeTable:88 - RecipeController: Loaded 871 Recipes.
+16:10:31,888  INFO AugmentationData:99 - Initializing AugmentationData.
+16:10:31,903  INFO AugmentationData:120 - AugmentationData: Loaded: 52 augmentation stats.
+16:10:31,904  INFO MercTicketManager:67 - Initializing MercTicketManager
+16:10:31,906  INFO MercTicketManager:738 - Loaded: 0 Mercenary Tickets
+16:10:31,907  INFO PetitionManager:87 - Initializing PetitionManager
+16:10:31,907  INFO CursedWeaponsManager:105 - Initializing CursedWeaponsManager
+16:10:31,912  INFO CursedWeaponsManager:82 - Loaded: 2 cursed weapon(s).
+16:10:31,921  INFO ItemsAutoDestroy:58 - Initializing ItemsAutoDestroy.
+16:10:31,921  INFO Util:141 - =====================================================================-[ Manor ]
+16:10:31,923  INFO L2Manor:385 - ManorManager: Loaded 256 seeds
+16:10:31,924  INFO CastleManorManager:79 - Initializing CastleManorManager
+16:10:31,928  INFO Util:141 - ===================================================================-[ Castles ]
+16:10:31,930  INFO SiegeManager:214 - Initializing SiegeManager
+16:10:31,932  INFO FortSiegeManager:190 - Initializing FortSiegeManager
+16:10:31,934  INFO CrownManager:47 - CrownManager: initialized
+16:10:31,934  INFO Util:141 - ======================================================================-[ Boat ]
+16:10:31,935  INFO BoatManager:58 - Initializing BoatManager
+16:10:31,941  INFO Util:141 - =====================================================================-[ Doors ]
+16:10:31,942  INFO DoorTable:96 - Searching clan halls doors:
+16:10:31,990  INFO DoorTable:121 - DoorTable: Loaded 1001 Door Templates.
+16:10:31,990  INFO Util:141 - ===========================================================-[ Four Sepulchers ]
+16:10:31,994  INFO GrandBossManager:130 - GrandBossManager: Loaded 15 Instances
+16:10:32,040  INFO GrandBossManager:345 - FourSepulchersManager: Beginning in Attack time
+16:10:32,040  INFO Util:141 - ===============================================================-[ Seven Signs ]
+16:10:32,043  INFO SevenSigns:287 - SevenSigns: Currently in the Competition (Quest Event) period!
+16:10:32,044  INFO SevenSigns:1440 - SevenSigns: The Seal of Avarice remains unclaimed.
+16:10:32,044  INFO SevenSigns:1440 - SevenSigns: The Seal of Gnosis remains unclaimed.
+16:10:32,044  INFO SevenSigns:1440 - SevenSigns: The Seal of Strife remains unclaimed.
+16:10:32,044  INFO SevenSigns:301 - SevenSigns: The competition, if the current trend continues, will end in a tie this week.
+16:10:32,045  INFO SevenSigns:325 - SevenSigns: Next period begins in 1 days, 1 hours and 49 mins.
+16:10:32,134  INFO SevenSignsFestival:3393 - SevenSignsFestival: The first Festival of Darkness cycle begins in 2 minute(s).
+16:10:32,135  INFO Util:141 - ===========================================================-[ Olympiad System ]
+16:10:32,135  WARN Olympiad:207 - config/olympiad.cfg cannot be loaded... It will be created on next save or server shutdown..
+16:10:32,137  INFO Olympiad:322 - Olympiad System: Loading Olympiad System....
+16:10:32,137  INFO Olympiad:324 - Olympiad System: Currently in Olympiad Period
+16:10:32,138  INFO Olympiad:334 - Olympiad System: 29989 minutes until period ends
+16:10:32,138  INFO Olympiad:340 - Olympiad System: Next weekly change is in 10079 minutes
+16:10:32,138  INFO Olympiad:344 - Olympiad System: Loaded 0 Nobles
+16:10:32,139  INFO Olympiad:746 - Olympiad System: Competition Period Starts in 0 days, 1 hours and 49 mins.
+16:10:32,139  INFO Olympiad:748 - Olympiad System: Event starts/started : Sun Aug 11 18:00:32 ART 2024
+16:10:32,143  INFO Hero:216 - Hero System: Loaded 0 Heroes.
+16:10:32,143  INFO Hero:217 - Hero System: Loaded 0 all time Heroes.
+16:10:32,143  INFO Util:141 - =============================================================-[ Access Levels ]
+16:10:32,147  INFO AccessLevels:105 - AccessLevels: Access level with name {} is using reserved master access level {}. Ignoring it.. Master Access 1
+16:10:32,147  INFO AccessLevels:182 - AccessLevels: Master Access Level is 1
+16:10:32,148  INFO AccessLevels:183 - AccessLevels: User Access Level is 0
+16:10:32,151  INFO AdminCommandAccessRights:82 - Admin Access Rights: Loaded 483 Access Rigths from database.
+16:10:32,151  INFO GmListTable:92 - GmListTable: initalized.
+16:10:32,152  INFO Util:141 - ==================================================================-[ Handlers ]
+16:10:32,169  INFO GameServer:155 - ItemHandler: Loaded 2047 handlers.
+16:10:32,179  INFO GameServer:125 - SkillHandler: Loaded 76 handlers.
+16:10:32,215  INFO AdminCommandHandler:194 - AdminCommandHandler: Loaded 500 handlers.
+16:10:32,217  INFO GameServer:86 - UserCommandHandler: Loaded 16 handlers.
+16:10:32,220  INFO GameServer:124 - VoicedCommandHandler: Loaded 23 handlers.
+16:10:32,220  INFO Loader:433 - AutoChatHandler : Loaded 32 handlers in total.
+16:10:32,220  INFO Loader:434 - AutoSpawnHandler : Loaded 129 handlers in total.
+16:10:32,222  INFO Util:141 - ========================================================================-[ AI ]
+16:10:32,222  INFO AILoader:58 - AI load:
+16:10:32,222  INFO AILoader:60 -  - Antharas_l2j
+16:10:32,223  INFO QuestManager:51 - Initializing QuestManager
+16:10:32,224  INFO AILoader:63 -  - Baium_l2j
+16:10:32,225  INFO AILoader:66 -  - Core
+16:10:32,229  INFO AILoader:69 -  - Queen Ant
+16:10:32,230  INFO AILoader:72 -  - Van Halter
+16:10:32,239  INFO GrandBossManager:268 - GrandBossManager: Updated High Priestess van Halter(29062) status to 1
+16:10:32,240  INFO AILoader:74 -  - Gordon
+16:10:32,240  INFO AILoader:77 -  - Monastery_l2j
+16:10:32,241  INFO AILoader:80 -  - Transform
+16:10:32,242  INFO AILoader:82 -  - Fairy Trees
+16:10:32,242  INFO AILoader:84 -  - Summon Minions
+16:10:32,243  INFO AILoader:86 -  - Zombie Gatekeepers
+16:10:32,243  INFO AILoader:88 -  - Ice Fairy Sirra
+16:10:32,250  INFO AILoader:90 -  - Golkonda
+16:10:32,250  INFO AILoader:92 -  - Hallate
+16:10:32,250  INFO AILoader:94 -  - Kernon
+16:10:32,250  INFO AILoader:96 -  - Varka/Ketra Ally
+16:10:32,251  INFO AILoader:98 -  - Barakiel
+16:10:32,251  INFO AILoader:101 -  - Orfen
+16:10:32,252  INFO AILoader:104 -  - Zaken_l2j
+16:10:32,253  INFO AILoader:107 -  - Frintezza_l2j
+16:10:32,256  INFO AILoader:110 -  - Valakas_l2j
+16:10:32,257  INFO Util:141 - ===================================================================-[ Scripts ]
+16:10:33,110  INFO QuestManager:127 - Replaced: SagasSuperclass with a new version
+16:10:35,462  INFO Loader:490 - Compiled Scripts Cache is disabled.
+16:10:35,469  INFO FaenorScriptEngine:77 - [FeanorScriptEngine] Loading Packages ...
+16:10:35,470  INFO FaenorScriptEngine:93 - [FeanorScriptEngine] No Packages Loaded ...
+16:10:35,476  INFO Util:141 - ====================================================================-[ Quests ]
+16:10:35,476  INFO QuestManager:95 - Loaded: 454 quests
+16:10:35,476  INFO Util:141 - ===============================================================-[ Game Server ]
+16:10:35,477  INFO IrcManager:44 - Initializing IRCManager
+16:10:35,483  WARN IrcManager:79 - java.net.ConnectException: Connection refused: connect
+16:10:35,483  INFO L2IrcClient:186 - IRC: Disconnected
+16:10:35,483  INFO irc:189 - IRC: Disconnected
+16:10:35,484  INFO Loader:530 - IdFactory: Free ObjectID's remaining: 1879005870
+16:10:35,485  INFO Util:141 - ===============================================================-[ Custom Mods ]
+16:10:35,486  INFO CoupleManager:57 - Initializing CoupleManager
+16:10:35,486  INFO CoupleManager:95 - Loaded: 0 couples(s)
+16:10:35,487  INFO AwayManager:46 - AwayManager: initialized.
+16:10:35,487  INFO PcPoint:33 - PcBang point event started.
+16:10:35,489  INFO PowerPak:67 - Buffer is Enabled.
+16:10:35,491  INFO BuffTable:116 - Loaded 112 buff templates
+16:10:35,494  INFO BufferSkillsTable:109 - BufferSkillsTable: Loaded 91 skills and 9 types.
+16:10:35,495  INFO PowerPak:142 - Raid Info is Enabled.
+16:10:35,495  INFO Util:141 - ==============================================================-[ EventManager ]
+16:10:35,505  INFO Loader:568 - TVT Event is Enabled.
+16:10:35,505  INFO Loader:570 - CTF Event is Enabled.
+16:10:35,505  INFO Loader:572 - DM Event is Enabled.
+16:10:35,506  INFO OfflineTradeTable:181 - Loading offline traders...
+16:10:35,507  INFO OfflineTradeTable:286 - Loaded: 0 offline trader(s)
+16:10:35,507  INFO Util:141 - ================================================================-[ Protection ]
+16:10:35,508  INFO Loader:583 - Check skills on enter actived.
+16:10:35,508  INFO Loader:586 - Check bad name on enter actived.
+16:10:35,508  INFO Loader:589 - Check OverEnchant items on enter actived.
+16:10:35,508  INFO Loader:592 - Bypass Validation actived.
+16:10:35,508  INFO Loader:595 - L2Walker protection actived.
+16:10:35,511  INFO Loader:601 - Full packets flood protector actived.
+16:10:35,512  INFO Loader:604 - Client flood protection actived.
+16:10:35,512  INFO Util:141 - ======================================================================-[ Info ]
+16:10:35,512  INFO Loader:607 - Operating System: Windows 11 10.0 amd64
+16:10:35,512  INFO Loader:608 - Available CPUs: 8
+16:10:35,512  INFO Loader:609 - Maximum Numbers of Connected Players: 1000
+16:10:35,513  INFO Loader:610 - GameServer Started, free memory 471 Mb of 1024 Mb
+16:10:35,513  INFO Loader:611 - Used memory: 552 MB
+16:10:35,513  INFO Util:141 - =============================================================-[ Java specific ]
+16:10:35,513  INFO Loader:614 - JRE name: Oracle Corporation
+16:10:35,513  INFO Loader:615 - JRE specification version: 21
+16:10:35,514  INFO Loader:616 - JRE version: 21.0.4
+16:10:35,514  INFO Loader:617 - --- Detecting Java Virtual Machine (JVM)
+16:10:35,514  INFO Loader:618 - JVM installation directory: C:\Program Files\Java\jdk-21
+16:10:35,514  INFO Loader:619 - JVM Avaible Memory(RAM): 1024 MB
+16:10:35,515  INFO Loader:620 - JVM specification version: 21
+16:10:35,515  INFO Loader:621 - JVM specification vendor: Oracle Corporation
+16:10:35,515  INFO Loader:622 - JVM specification name: Java Virtual Machine Specification
+16:10:35,515  INFO Loader:623 - JVM implementation version: 21.0.4+8-LTS-274
+16:10:35,515  INFO Loader:624 - JVM implementation vendor: Oracle Corporation
+16:10:35,515  INFO Loader:625 - JVM implementation name: Java HotSpot(TM) 64-Bit Server VM
+16:10:35,516  INFO Util:141 - ====================================================================-[ Status ]
+16:10:35,745  INFO Loader:629 - Server Loaded in 9 seconds
+16:10:35,756  INFO Util:141 - ====================================================================-[ Telnet ]
+16:10:35,757  INFO Loader:641 - Telnet server is disabled.
+16:10:35,757  INFO Util:141 - =====================================================================-[ Login ]
+16:10:35,764  INFO LoginServerThread:155 - Connecting to login on 127.0.0.1:9014
+16:10:35,821  INFO LoginServerThread:282 - Registered on login as Server 4 : Lionna
+16:15:26,761  INFO AutoSaveManager:162 - [AutoSaveManager] ConnectionCheckTask, players connections checked.
+16:15:26,761  INFO AutoSaveManager:115 - [AutoSaveManager] AutoSaveTask, 0 players data saved.
+16:15:26,761  INFO AutoSaveManager:198 - [AutoSaveManager] AutoCleanDBTask, 0 entries cleaned from db.

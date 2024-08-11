@@ -1,26 +1,22 @@
 <html><body>
-<table width=260><tr>
-<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td width=180><center>Account details</center></td>
-<td width=40><button value="Back" action="bypass -h admin_show_characters 0" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<table width="260"><tr>
+<td width="40"><button action="bypass -h admin_admin" back="sek.cbui94" fore="sek.cbui92" height="15" value="Main" width="40"></button></td>
+<td width="180"><center>Detalles de la cuenta</center></td>
+<td width="40"><button action="bypass -h admin_show_characters 0" back="sek.cbui94" fore="sek.cbui92" height="15" value="Back" width="40"></button></td>
 </tr></table>
-<table width=270>
+<table width="270">
 <tr>
-<td width=100>Parameters:</td>
-<td><edit var="menu_command" width=120 height=15></td>
-<td><button value="Help" action="bypass -h admin_help help/accountinfo.htm" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-</tr></table><br>
-<table width=270>
+<td width="100">Parámetros:</td>
+<td><edit height="15" var="menu_command" width="120"></edit></td>
+<td><button action="bypass -h admin_help help/accountinfo.htm" back="sek.cbui94" fore="sek.cbui92" height="15" value="Help" width="45"></button></td>
+</tr></table><br/>
+<table width="270">
 <tr>
-<td><button value="Ban Account" action="bypass -h admin_ban %account%" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Reset Account" action="bypass -h admin_unban %account%" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Custom Level" action="bypass -h admin_account_level %account% $menu_command" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-</tr><tr>	
-<td><button value="TODO: " action="bypass -h admin_show_characters 0" width=90 height=15 back="sek.cbui92" fore="sek.cbui92"></td>
-<td><button value="TODO: " action="bypass -h admin_show_characters 0" width=90 height=15 back="sek.cbui92" fore="sek.cbui92"></td>
-<td><button value="TODO: " action="bypass -h admin_show_characters 0" width=90 height=15 back="sek.cbui92" fore="sek.cbui92"></td>
-</tr></table><br>
-Account: %account%<br>
-These are another characters in the %player%'s account:<br>
-%characters%
-</body></html>
+<td><button action="bypass -h admin_ban %account%" back="sek.cbui94" fore="sek.cbui92" height="15" value="Ban Account" width="90"></button></td>
+<td><button action="bypass -h admin_unban %account%" back="sek.cbui94" fore="sek.cbui92" height="15" value="Reset Account" width="90"></button></td>
+<td><button action="bypass -h admin_account_level %account% $menu_command" back="sek.cbui94" fore="sek.cbui92" height="15" value="Custom Level" width="90"></button></td>
+</tr><tr>
+<td><button action="bypass -h admin_show_characters 0" back="sek.cbui92" fore="sek.cbui92" height="15" value="TODO: " width="90"></button></td>
+<td><button action="bypass -h admin_show_characters 0" back="sek.cbui92" fore="sek.cbui92" height="15" value="TODO: " width="90"></button></td>
+<td><button action="bypass -h admin_show_characters 0" back="sek.cbui92" fore="sek.cbui92" height="15" value="TODO: " width="90"></button></td>
+</tr></table><br/>Cuenta: %account%<br/>Estos son otros personajes en la cuenta de %player%:<br/>%caracteres%</body></html>

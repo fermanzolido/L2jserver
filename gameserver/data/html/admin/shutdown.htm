@@ -1,23 +1,23 @@
-<html><title>Shutdown Server</title><body>
-<table width=260><tr>
-<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td width=180><center>Server Management</center></td>
-<td width=40><button value="Back" action="bypass -h admin_admin4" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<html><title>Apagar el servidor</title><body>
+<table width="260"><tr>
+<td width="40"><button action="bypass -h admin_admin" back="sek.cbui94" fore="sek.cbui92" height="15" value="Main" width="40"></button></td>
+<td width="180"><center>Gestión de servidores</center></td>
+<td width="40"><button action="bypass -h admin_admin4" back="sek.cbui94" fore="sek.cbui92" height="15" value="Back" width="40"></button></td>
 </tr></table>
-<table width=240><tr>
-<td width=100>Shutdown time:</td>
-<td><edit var="menu_command" width=120 height=15></td>
-<td><button value="Help" action="bypass -h admin_help help/shutdown.htm" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-</tr></table><br><br>
-<table width=260>	
-<tr><td>Players Online:</td><td>%count%</td></tr>
-<tr><td>Used Memory:</td><td>%used% bytes</td></tr>
-<tr><td>Server Rates:</td><td>%xp%x, %sp%x, %adena%x, %drop%x</td></tr>
-<tr><td>Game Time:</td><td>%time%</td></tr>
-</table><br><br>
+<table width="240"><tr>
+<td width="100">Hora de apagado:</td>
+<td><edit height="15" var="menu_command" width="120"></edit></td>
+<td><button action="bypass -h admin_help help/shutdown.htm" back="sek.cbui94" fore="sek.cbui92" height="15" value="Help" width="45"></button></td>
+</tr></table><br/><br/>
+<table width="260">
+<tr><td>En línea:</td><td>%contar%</td></tr>
+<tr><td>Memoria usada:</td><td>%usados% bytes</td></tr>
+<tr><td>Tarifas del servidor:</td><td>%xp%x, %sp%x, %adena%x, %drop%x</td></tr>
+<tr><td>Hora del juego:</td><td>%tiempo%</td></tr>
+</table><br/><br/>
 <center><table><tr><td>
-<button value="Shutdown" action="bypass -h admin_server_shutdown $menu_command" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></td><td>			
-<button value="Restart" action="bypass -h admin_server_restart $menu_command" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></td><td>			
-<button value="Abort" action="bypass -h admin_server_abort" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<button action="bypass -h admin_server_shutdown $menu_command" back="sek.cbui94" fore="sek.cbui92" height="15" value="Shutdown" width="60"></button></td><td>
+<button action="bypass -h admin_server_restart $menu_command" back="sek.cbui94" fore="sek.cbui92" height="15" value="Restart" width="60"></button></td><td>
+<button action="bypass -h admin_server_abort" back="sek.cbui94" fore="sek.cbui92" height="15" value="Abort" width="60"></button></td></tr>
 </table></center>
 </body></html>

@@ -1,26 +1,25 @@
 <html><body>
-<table width=260><tr>
-<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td width=180><center>Character Editor</center></td>
-<td width=40><button value="Back" action="bypass -h admin_current_player" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<table width="260"><tr>
+<td width="40"><button action="bypass -h admin_admin" back="sek.cbui94" fore="sek.cbui92" height="15" value="Main" width="40"></button></td>
+<td width="180"><center>Editor de personajes</center></td>
+<td width="40"><button action="bypass -h admin_current_player" back="sek.cbui94" fore="sek.cbui92" height="15" value="Back" width="40"></button></td>
 </tr></table>
-<br><br>
-<center>Editing <font color="LEVEL">%name%</font></center>
-<br>
-<table width=270><tr><td width=20>Lv:</td><td width=40>%level%</td><td width=50>Class:</td><td width=160>%class%</td></tr></table>
-<br>Note: Don't forget that modifying players skills can ruin the game...
-<br><center>
-<table width=270>
+<br/><br/>
+<center>Edición<font color="LEVEL">%nombre%</font></center>
+<br/>
+<table width="270"><tr><td width="20">Nivel:</td><td width="40">%nivel%</td><td width="50">Clase:</td><td width="160">%clase%</td></tr></table>
+<br/>Nota: No olvides que modificar las habilidades de los jugadores puede arruinar el juego...<br/><center>
+<table width="270">
 <tr>
-	<td><button value="Add skills" action="bypass -h admin_skill_list" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-	<td><button value="Take skills" action="bypass -h admin_get_skills" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td><button action="bypass -h admin_skill_list" back="sek.cbui94" fore="sek.cbui92" height="15" value="Add skills" width="90"></button></td>
+<td><button action="bypass -h admin_get_skills" back="sek.cbui94" fore="sek.cbui92" height="15" value="Take skills" width="90"></button></td>
 </tr>
 <tr>
-	<td><button value="Delete skills" action="bypass -h admin_remove_skills 0" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-	<td><button value="Give taken skills" action="bypass -h admin_reset_skills" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td><button action="bypass -h admin_remove_skills 0" back="sek.cbui94" fore="sek.cbui92" height="15" value="Delete skills" width="90"></button></td>
+<td><button action="bypass -h admin_reset_skills" back="sek.cbui94" fore="sek.cbui92" height="15" value="Give taken skills" width="90"></button></td>
 </tr>
 <tr>
-	<td><button value="Give All Skills" action="bypass -h admin_give_all_skills" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-	<td><button value="Remove All Skills" action="bypass -h admin_remove_all_skills" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td><button action="bypass -h admin_give_all_skills" back="sek.cbui94" fore="sek.cbui92" height="15" value="Give All Skills" width="90"></button></td>
+<td><button action="bypass -h admin_remove_all_skills" back="sek.cbui94" fore="sek.cbui92" height="15" value="Remove All Skills" width="90"></button></td>
 </tr>
 </table></center></body></html> 

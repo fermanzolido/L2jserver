@@ -1,19 +1,17 @@
 <html><body>
-<table width=260><tr>
-<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td width=180><center>Announcements Menu</center></td>
-<td width=40><button value="Back" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
-</table><br><br>
-<center>New announcement:</center>
-<center><multiedit var="new_announcement" width=240 height=30></center><br>
+<table width="260"><tr>
+<td width="40"><button action="bypass -h admin_admin" back="sek.cbui94" fore="sek.cbui92" height="15" value="Main" width="40"></button></td>
+<td width="180"><center>Menú de anuncios</center></td>
+<td width="40"><button action="bypass -h admin_admin" back="sek.cbui94" fore="sek.cbui92" height="15" value="Back" width="40"></button></td></tr>
+</table><br/><br/>
+<center>Nuevo anuncio:</center>
+<center><multiedit height="30" var="new_announcement" width="240"></multiedit></center><br/>
 <center><table><tr>
-<td><button value="Add" action="bypass -h admin_add_announcement $new_announcement" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Announce" action="bypass -h admin_announce_menu $new_announcement" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td><button value="Reload" action="bypass -h admin_announce_announcements" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td><button action="bypass -h admin_add_announcement $new_announcement" back="sek.cbui94" fore="sek.cbui92" height="15" value="Add" width="60"></button></td>
+<td><button action="bypass -h admin_announce_menu $new_announcement" back="sek.cbui94" fore="sek.cbui92" height="15" value="Announce" width="60"></button></td>
+<td><button action="bypass -h admin_announce_announcements" back="sek.cbui94" fore="sek.cbui92" height="15" value="Reload" width="60"></button></td>
 </tr>
 <tr>
-<td align="center"><button value="Auto Annunce" action="bypass -h admin_autoannounce $menu_command" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td align="center"><button action="bypass -h admin_autoannounce $menu_command" back="sek.cbui94" fore="sek.cbui92" height="15" value="Auto Annunce" width="55"></button></td>
 </tr>
-</table></center>
-%announces%
-</body></html>
+</table></center>%anuncia%</body></html>

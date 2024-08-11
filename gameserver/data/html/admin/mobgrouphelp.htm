@@ -1,36 +1,29 @@
 <html><body>
 <center>
-<table width=260>
+<table width="260">
 <tr>
-<td width=40><button value="Main" action="bypass -h admin_admin" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-<td width=180>Mob Group Control Instructions</td>
-<td width=40><button value="Back" action="bypass -h admin_mobmenu" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td width="40"><button action="bypass -h admin_admin" back="sek.cbui94" fore="sek.cbui92" height="15" value="Main" width="45"></button></td>
+<td width="180">Instrucciones para el control de grupos de mafias.</td>
+<td width="40"><button action="bypass -h admin_mobmenu" back="sek.cbui94" fore="sek.cbui92" height="15" value="Back" width="45"></button></td>
 </tr>
-</table><br>
+</table><br/>
 </center>
-<font color="LEVEL">//mobgroup_create</font> [groupId] [npcId] [number]<br>
-Creates a group with [number] mobs of type [npcId], in the group [groupId].<br>
-There is no visual effect using this command, and the members of this group need to be spawned to become active.<br><br>
-<font color="LEVEL">//mobgroup_remove</font> [groupId]<br>
-Removes/deletes the group [groupId], subsequently unspawning any group members still alive.<br><br>
-<font color="LEVEL">//mobgroup_spawn</font> [groupId] [locx] [locy] [locz]<br>
-Spawns the members of group [groupId]. If a location isn't specified, the group will be spawned around the GM.<br>
-By default, mobs are in an idle state, and await further commands.<br>
-<font color="LEVEL">//mobgroup_unspawn</font> [groupId]<br>
-Unspawns the members of group [groupId]. The group is not deleted and can be invoked by the use of //mobgroup_spawn once more.<br>
-<font color="LEVEL">//mobgroup_list</font> ([groupId])<br>
-Lists all created monster groups. If [groupId] is specified, then a list of the members of that group is displayed.<br>
-<img src="L2UI.SquareGray" width="200" height="1"><br>
-<font color="999999">Other Commands</font><br>
-<font color="LEVEL">//mobgroup_follow</font> [groupId] - The group [groupId] will follow the GM.<br>
-<font color="LEVEL">//mobgroup_return</font> [groupId] - The group [groupId] will return to the GM.<br>
-<font color="LEVEL">//mobgroup_teleport</font> [groupId] ([playerName]) - The group [groupId] will be teleport to and follow the specified player (or the GM if none specified).<br>
-<font color="LEVEL">//mobgroup_attack</font> [groupId] - The group [groupId] will attack the GM's current target (if any).<br>
-<font color="LEVEL">//mobgroup_rnd</font> [groupId] - The group [groupId] will attack a randomly selected targets.<br>
-<font color="LEVEL">//mobgroup_attackgrp</font> [groupId1] [groupId2] - The group [groupId1] will attack the members in [groupId2].<br>
-<font color="LEVEL">//mobgroup_casting</font> [groupId] - The group [groupId] mobs will only use their skills to attack.<br>
-<font color="LEVEL">//mobgroup_nomove</font> [groupId] [on/off] - Toggle the mobs of group [groupId] to no longer move. Interesting when used with casting-only mode.<br>
-<font color="LEVEL">//mobgroup_invul</font> [groupId] [on/off] - Toggle the mobs of group [groupId] to be invulnerable.<br>
-<font color="LEVEL">//mobgroup_idle</font> [groupId] - Return the mobs in group [groupId] to an idle (waiting) state.<br>
-<font color="LEVEL">//mobgroup_kill</font> [groupId] - Kills all alive mobs in group [groupId].<br>
+<font color="LEVEL">//crear grupo de mob</font>[ID de grupo] [ID de npc] [número]<br/>Crea un grupo con [número] mobs del tipo [npcId], en el grupo [groupId].<br/>No hay ningún efecto visual al utilizar este comando, y los miembros de este grupo deben generarse para que se active.<br/><br/>
+<font color="LEVEL">//eliminar grupo de mafia</font>[Identificación del grupo]<br/>Elimina/elimina el grupo [groupId], y posteriormente deja de aparecer cualquier miembro del grupo que aún esté vivo.<br/><br/>
+<font color="LEVEL">//grupo de mob_spawn</font>[ID de grupo] [locx] [locy] [locz]<br/>Genera los miembros del grupo [groupId]. Si no se especifica una ubicación, el grupo se generará alrededor del GM.<br/>De forma predeterminada, los mobs están en un estado inactivo y esperan más comandos.<br/>
+<font color="LEVEL">//grupo de mob_desaparecer</font>[Identificación del grupo]<br/>Elimina a los miembros del grupo [groupId]. El grupo no se elimina y se puede invocar mediante el uso de //mobgroup_spawn una vez más.<br/>
+<font color="LEVEL">//lista de grupos de mobs</font>([ID del grupo])<br/>Enumera todos los grupos de monstruos creados. Si se especifica [groupId], se muestra una lista de los miembros de ese grupo.<br/>
+<img height="1" src="L2UI.SquareGray" width="200"/><br/>
+<font color="999999">Otros comandos</font><br/>
+<font color="LEVEL">//grupo de mob_seguir</font>[groupId] - El grupo [groupId] seguirá al GM.<br/>
+<font color="LEVEL">//grupo de mob_retorno</font>[groupId] - El grupo [groupId] regresará al GM.<br/>
+<font color="LEVEL">//teletransporte de grupo móvil</font>[groupId] ([playerName]) - El grupo [groupId] se teletransportará y seguirá al jugador especificado (o al GM si no se especificó ninguno).<br/>
+<font color="LEVEL">//ataque de grupo de mobs</font>[groupId] - El grupo [groupId] atacará al objetivo actual del GM (si lo hay).<br/>
+<font color="LEVEL">//grupo de mob_rnd</font>[groupId] - El grupo [groupId] atacará objetivos seleccionados al azar.<br/>
+<font color="LEVEL">//grupo de mob_ataque_rp</font>[groupId1] [groupId2] - El grupo [groupId1] atacará a los miembros de [groupId2].<br/>
+<font color="LEVEL">//casting de grupos de mobs</font>[groupId] - Los mobs del grupo [groupId] solo usarán sus habilidades para atacar.<br/>
+<font color="LEVEL">//grupo de mob_nomove</font>[groupId] [on/off] - Activa o desactiva los monstruos del grupo [groupId] para que ya no se muevan. Resulta interesante cuando se utiliza con el modo de solo lanzamiento.<br/>
+<font color="LEVEL">//grupo de mob_invul</font>[groupId] [on/off] - Activa o desactiva los mobs del grupo [groupId] para que sean invulnerables.<br/>
+<font color="LEVEL">//grupo móvil_inactivo</font>[groupId] - Devuelve los mobs del grupo [groupId] a un estado inactivo (en espera).<br/>
+<font color="LEVEL">//asesinato de un grupo de la mafia</font>[groupId] - Mata a todos los mobs vivos en el grupo [groupId].<br/>
 </body></html>
